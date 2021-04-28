@@ -9,6 +9,43 @@
 
 */
 
+/*
+    General Design
+*/
+
+/*
+    InterSections
+    
+    Deadicated sections of the page
+    each the width of the whole screen
+*/
+    
+    header.intersection {
+        background-image: url("Pictures/MoonSurface.png");
+        background-repeat: no-repeat;
+    }
+
+
+    .intersection {
+    margin: auto auto;
+    height: 75vh;
+    
+    /*color for debugging
+    background-color: aliceblue
+    */
+}
+
+.intersection:nth-child(2n+3) {
+    
+    /* color for debbuging
+    background-color: red;
+    */
+}
+
+
+
+
+
 
 /*
     PC Web Design
@@ -58,42 +95,7 @@ img#SpacePig {
         to{
             transform: rotate(359deg);
         }
-    }
-
-/*
-    InterSections
-    
-    Deadicated sections of the page
-    each the width of the whole screen
-*/
-    
-    header.intersection {
-        background-image: url("Pictures/MoonSurface.png");
-        background-size: 100%;
-    }
-
-
-.intersection {
-    margin: auto auto;
-    height: 75vh;
-    
-    /*color for debugging
-    background-color: aliceblue
-    */
-}
-
-.intersection:nth-child(2n+3) {
-    
-    /* color for debbuging
-    background-color: red;
-    */
-
-    
-}
-    
-    
-    
-    
+    }  
 }
 
 
