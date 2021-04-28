@@ -9,13 +9,20 @@
 
 */
 
+
+/*
+    PC Web Design
+*/
+@media only screen and (min-width: 600px) {
+    
+    
 /*
     Body Background 
 */
 
 body {
     z-index: 0;
-  
+    background-color: grey;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
@@ -26,32 +33,32 @@ body {
     Space Pig CSS 
 */
 
-
-
-
 div#SpacePigContainer {
     z-index: 1;
     position: fixed;
     height: 0vh;
-    width: 20vw;
+    width: 30vw;
     top: 25vh;
+    left: 10vw;
     margin: 0 auto;
-    
-    
     background-color: green;
     
 }
 
 img#SpacePig {
     width: 100%;
-    
+    animation: rotation 5s infinite linear;
 }
-
-
-
-
-
-
+    
+/*Animation for pig rotating*/
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(359deg);
+        }
+    }
 
 /*
     InterSections
@@ -59,16 +66,73 @@ img#SpacePig {
     Deadicated sections of the page
     each the width of the whole screen
 */
+    
+    header.intersection {
+        background-image: url("Pictures/MoonSurface.png");
+        background-size: 100%;
+    }
 
 
 .intersection {
     margin: auto auto;
-    height: 10vh;
+    height: 75vh;
+    
+    /*color for debugging
     background-color: aliceblue
+    */
 }
 
 .intersection:nth-child(2n+3) {
+    
+    /* color for debbuging
     background-color: red;
+    */
+
+    
 }
     
+    
+    
+    
+}
+
+
+/*
+    To BG
+*/
+
+@media only screen and (min-width: 2000px) {
+    
+    html{
+        background-color: black;
+    }
+    
+    
+    body{
+        width: 90%;
+        margin: 0 auto;
+        border-right: 15px solid white;
+        border-left: 15px solid white;
+    }
+    
+    h1{
+        color: blue;
+    }
+    
+    header.intersection {
+    margin: auto auto;
+    height: 100vh;
+    
+    /*color for debugging
+    background-color: aliceblue
+    */
+    }
+}
+
+
+/*
+    Half Monitor Web Design
+*/
+
+
 
