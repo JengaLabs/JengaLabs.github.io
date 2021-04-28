@@ -1,0 +1,74 @@
+/*
+
+    Title: Index Style Sheet
+
+    By: Pig240 and the interwebs
+    Date: 4/27/2021
+    
+
+
+*/
+
+/*
+    Body Background 
+*/
+
+body {
+    z-index: 0;
+  
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+
+
+/*
+    Space Pig CSS 
+*/
+
+
+
+
+div#SpacePigContainer {
+    z-index: 1;
+    position: fixed;
+    height: 0vh;
+    width: 20vw;
+    top: 25vh;
+    margin: 0 auto;
+    
+    
+    background-color: green;
+    
+}
+
+img#SpacePig {
+    width: 100%;
+    
+}
+
+
+
+
+
+
+
+/*
+    InterSections
+    
+    Deadicated sections of the page
+    each the width of the whole screen
+*/
+
+
+.intersection {
+    margin: auto auto;
+    height: 10vh;
+    background-color: aliceblue
+}
+
+.intersection:nth-child(2n+3) {
+    background-color: red;
+}
+    
+
