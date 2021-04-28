@@ -23,34 +23,72 @@
     header.intersection {
         background-image: url("Pictures/MoonSurface.png");
         background-repeat: no-repeat;
+        background-size: cover;
+        
     }
 
 
     .intersection {
     margin: auto auto;
-    height: 75vh;
+    height: 80vh;
     
     /*color for debugging
     background-color: aliceblue
     */
-}
+    }
 
-.intersection:nth-child(2n+3) {
-    
-    /* color for debbuging
-    background-color: red;
+
+
+    /*
+        Selects the header position of space pig
     */
-}
+    .intersection:nth-child(1):hover ~ #SpacePigContainer{
+    transform: translateX(0vw);
+    
+    
+    }
+    
+
+    /* 
+        Moves the space pig to the left side smoothly
+    */
+    .intersection:nth-child(2n+3):hover ~ #SpacePigContainer{
+    transform: translateX(0ww);
+    
+    
+    }
 
 
+    /*
+        Moves the space pig to right side smoothly 
+    */
+
+    .intersection:nth-child(2n):hover ~ #SpacePigContainer{
+    
+    transform: translateX(50vw);
+    
+    }
 
 
+ 
+    /*
+        Space Pig
+    */
+
+    div#SpacePigContainer {
+        pointer-events: none;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    img#SpacePig {
+        pointer-events: none;
+    } 
 
 
-/*
-    PC Web Design
-*/
-@media only screen and (min-width: 600px) {
+    /*
+        PC Web Design
+    */  
+    @media only screen and (min-width: 600px) {
     
     
 /*
