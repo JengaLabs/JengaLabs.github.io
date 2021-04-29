@@ -5,95 +5,24 @@
     By: Pig240 and the interwebs
     Date: 4/27/2021
     
-
-
 */
 
 /*
     General Design
+    decription: for a desktop user, the user will scroll 
+    down to different sections that have a breif description
+    of what they lead to. Their is space pig that moves left
+    and right acorss the screen as each section as an object on
+    either left or right. The background is empty space. 
 */
 
 /*
-    InterSections
-    
-    Deadicated sections of the page
-    each the width of the whole screen
+    Whole page
 */
-    
-    header.intersection {
-        background-image: url("Pictures/MoonSurface.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-    }
 
-
-    .intersection {
-    margin: auto auto;
-    height: 80vh;
-    
-    /*color for debugging
-    background-color: aliceblue
-    */
-    }
-
-
-
-    /*
-        Selects the header position of space pig
-    */
-    .intersection:nth-child(1):hover ~ #SpacePigContainer{
-    transform: translateX(0vw);
-    
-    
-    }
-    
-
-    /* 
-        Moves the space pig to the left side smoothly
-    */
-    .intersection:nth-child(2n+3):hover ~ #SpacePigContainer{
-    transform: translateX(0ww);
-    
-    
-    }
-
-
-    /*
-        Moves the space pig to right side smoothly 
-    */
-
-    .intersection:nth-child(2n):hover ~ #SpacePigContainer{
-    
-    transform: translateX(50vw);
-    
-    }
-
-
- 
-    /*
-        Space Pig
-    */
-
-    div#SpacePigContainer {
-        pointer-events: none;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    img#SpacePig {
-        pointer-events: none;
-    } 
-
-
-    /*
-        PC Web Design
-    */  
-    @media only screen and (min-width: 600px) {
-    
-    
-/*
-    Body Background 
-*/
+html {
+    background-color: black;
+}
 
 body {
     z-index: 0;
@@ -101,31 +30,82 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-
-
-
-/*
-    Space Pig CSS 
+    /*
+    InterSections
+    
+    description: Deadicated sections of the page
+    each the width of the whole screen and height of 80%.
 */
-
-div#SpacePigContainer {
-    z-index: 1;
-    position: fixed;
-    height: 0vh;
-    width: 30vw;
-    top: 25vh;
-    left: 10vw;
-    margin: 0 auto;
-    background-color: green;
     
-}
+    header.intersection {
+        background-image: url("Pictures/MoonSurface.png");
+        background-repeat: no-repeat;
+        background-size: cover;   
+    }
 
-img#SpacePig {
-    width: 100%;
-    animation: rotation 5s infinite linear;
-}
+    .intersection {
+    margin: auto auto;
+    height: 80vh;
+    }
+
+    /*
+        Space Pig
+    should only be seen when on a desktop version,
+    might turn him to scroll bar for phones but for 
+    now we will just hide him.
+    */
+
+    div#SpacePigContainer {
+    display: none;
+    }
+
     
-/*Animation for pig rotating*/
+
+
+    
+
+
+    /*==============================
+        Desktop Web Design
+    ================================
+    */
+    @media only screen and (min-width: 600px) {
+    
+    /* 
+        Space Pig:
+    Desktop mode has space pig fly between sections from 
+    left to right with smooth animations. 
+    */
+        
+    div#SpacePigContainer {
+        display: block;
+        pointer-events: none;
+        
+        /* Put space pig on own layer */
+        z-index: 1;
+        /*Space pig always sticky */
+        position: fixed;
+        
+        height: 0vh;
+        width: 30vw;
+        top: 25vh;
+        left: 10vw;
+        margin: 0 auto;
+        /* Smooth animations for left and right */
+        transition: transform 0.5s ease-in-out;
+    }
+
+    img#SpacePig {
+        /*Hide pig clickable */
+        pointer-events: none;
+        /*Set pig to width of container*/
+        width: 100%;
+        /*Set spinning forever */
+        animation: rotation 5s infinite linear;
+    } 
+        
+    
+    /*Animation for pig rotating*/
     @keyframes rotation {
         from {
             transform: rotate(0deg);
@@ -134,25 +114,99 @@ img#SpacePig {
             transform: rotate(359deg);
         }
     }  
+
+    /*
+        Move Space Pig back to start position 
+    when hovering on header
+    */
+    .intersection:nth-child(1):hover ~ #SpacePigContainer{
+        transform: translateX(0vw);
+    }
+
+    /* 
+        Moves the space pig to the left side 
+    when on odd number.
+    */
+    .intersection:nth-child(2n+3):hover ~ #SpacePigContainer{
+        transform: translateX(0ww);
+    }
+
+    /*
+        Moves the space pig to right side 
+    when on even number.
+    */
+    .intersection:nth-child(2n):hover ~ #SpacePigContainer{
+    transform: translateX(50vw);
+    }
+    
+    /*
+        Right section of header
+    first things the user sees, a city a down.
+    Top of city has a down arrow, on hover it will 
+    "Blast the city off " revealing text section 
+    */
+    
+    header.intersection section {
+        background-color: blue;
+        width: 40vw;
+        position: relative;
+        width: 40vw;
+        left: 50vw;
+        top: 10vh;
+        height: 50vh;
+        
+        z-index: 2;
+        }
+        
+    /*
+        City, 
+    blast off on hover and possibly will stay blasted after
+        hover.
+    */
+    
+        header.intersection section#SpaceCity {
+        background-color: aqua;
+        z-index: 2;
+        }
+        
+    header.intersection section#SpaceCity:hover {
+       transform: translateY(30vh);
+        
+    }
+
+    /*
+        Navigator is the section with nav
+    and descriptions/links to places 
+    */
+        
+    header.intersection section#navigator{
+        z-index: 2;
+        position: absolute;
+        background-color: green;
+    }
+        
+        header.intersection sectionSpaceCity:hover ~ section#navigator {
+            background-image: url(Pictures/SpacePig.png);
+        }
+
+
+
 }
+    
+    
 
 
 /*
-    To BG
+    To BIG
 */
 
 @media only screen and (min-width: 2000px) {
     
-    html{
-        background-color: black;
-    }
+    
     
     
     body{
-        width: 90%;
-        margin: 0 auto;
-        border-right: 15px solid white;
-        border-left: 15px solid white;
+        
     }
     
     h1{
@@ -170,9 +224,6 @@ img#SpacePig {
 }
 
 
-/*
-    Half Monitor Web Design
-*/
 
 
 
