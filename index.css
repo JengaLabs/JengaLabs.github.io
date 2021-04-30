@@ -26,7 +26,7 @@ html {
 
 body {
     z-index: 0;
-    background-color: grey;
+    
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
@@ -141,53 +141,41 @@ body {
     
     /*
         Right section of header
-    first things the user sees, a city a down.
+    first things the user sees, a city with a down arrow.
     Top of city has a down arrow, on hover it will 
     "Blast the city off " revealing text section 
     */
     
     header.intersection section {
-        background-color: blue;
-        width: 40vw;
-        position: relative;
         width: 40vw;
         left: 50vw;
         top: 10vh;
         height: 50vh;
-        
-        z-index: 2;
-        }
-        
-    /*
-        City, 
-    blast off on hover and possibly will stay blasted after
-        hover.
-    */
-    
-        header.intersection section#SpaceCity {
-        background-color: aqua;
-        z-index: 2;
-        }
-        
-    header.intersection section#SpaceCity:hover {
-       transform: translateY(30vh);
-        
-    }
-
-    /*
-        Navigator is the section with nav
-    and descriptions/links to places 
-    */
-        
-    header.intersection section#navigator{
-        z-index: 2;
         position: absolute;
-        background-color: green;
+        
+        
     }
         
-        header.intersection sectionSpaceCity:hover ~ section#navigator {
-            background-image: url(Pictures/SpacePig.png);
+    header.intersection section img {
+        width: 100%;  
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+        
+    /* City image that overlays the text area */
+    header.intersection section:hover > img {
+        transform: translateY(50vh);
+        
+    }
+    
+    /* Move city animation */
+        @keyframes CityFloat{
+            0% {transform: translate(0vh)}
+            100% {transform: translate(50vh)}
         }
+    
+
+    
 
 
 
