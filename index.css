@@ -141,7 +141,7 @@ body {
     
     /*
         Right section of header
-    first things the user sees, a city with a down arrow.
+    first thing the user sees, a city with a down arrow.
     Top of city has a down arrow, on hover it will 
     "Blast the city off " revealing text section 
     */
@@ -152,10 +152,60 @@ body {
         top: 10vh;
         height: 50vh;
         position: absolute;
-        
-        
     }
         
+    /* Navigator container */
+    header.intersection section div {
+        position: absolute;
+        top:0px; 
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }  
+    
+        
+    /* Title section of navigator*/
+    header.intersection section div header {
+        height: 10vh;
+        border: 1vh solid white;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        color: green;
+    }
+        
+    /*The Navigator Header Text */
+    header.intersection section div header h1 {
+        height: 100%;   
+        flex: 3;
+        font-size: 10vh;
+        text-align: center;
+        background-color: rgb(51, 50, 50);
+        color: green;
+    }
+    
+    /* The buttons on navigator */
+    header.intersection section div header button {
+        flex: 0.5;
+    }    
+    
+    /* text of the navigator */
+    header.intersection section div aside {
+        height: 90%;    
+        width: 100%;
+        background-color: blue;
+        opacity: 0%;
+        transition: opacity 0.5s ease-in; 
+    }   
+    
+        header.intersection section:hover > div aside {
+            opacity: 100%;
+        }    
+        
+        
+        
+        
+    /* Set city size and animation smoothing */
     header.intersection section img {
         width: 100%;  
         height: 100%;
@@ -164,15 +214,10 @@ body {
         
     /* City image that overlays the text area */
     header.intersection section:hover > img {
-        transform: translateY(50vh);
+        transform: translateY(55vh);
         
     }
     
-    /* Move city animation */
-        @keyframes CityFloat{
-            0% {transform: translate(0vh)}
-            100% {transform: translate(50vh)}
-        }
     
 
     
