@@ -69,7 +69,7 @@ body {
         Desktop Web Design
     ================================
     */
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 700px) and (max-width: 1500px) {
     
     /* 
         Space Pig:
@@ -167,40 +167,68 @@ body {
     /* Title section of navigator*/
     header.intersection section div header {
         height: 10vh;
-        border: 1vh solid white;
-        width: 100%;
+        padding: 0;
+        width: 38vw;
         display: flex;
         flex-direction: row;
         color: green;
+        border-top: 1vh solid white;
+        border-left: 1vw solid white;
+        border-right: 1vw solid white;   
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        background-color: rgb(51, 50, 50);
+        
+        
+    }
+        
+    /*The navigator header*/
+    header.intersection section div header nav{
+        flex: 3;
+        height: 100%;
+    }
+        
+    header.intersection section div header nav ul {
+        position: relative;
+        margin-top: 6%;
+        margin-bottom: 4%;
+        height: 50%;
+        
     }
         
     /*The Navigator Header Text */
-    header.intersection section div header h1 {
-        height: 100%;   
-        flex: 3;
-        font-size: 10vh;
+    header.intersection section div header nav ul li{
+        font-size: 2em;
+        width: 100%;
         text-align: center;
-        background-color: rgb(51, 50, 50);
+        z-index: -1;
+        float: left;
         color: green;
+         
     }
     
     /* The buttons on navigator */
     header.intersection section div header button {
         flex: 0.5;
+        
     }    
     
     /* text of the navigator */
     header.intersection section div aside {
-        height: 90%;    
-        width: 100%;
+        height: 40vh;    
+        width: 38vw;
         background-color: blue;
         opacity: 0%;
+        border-bottom: 1vh solid white;
+        border-left: 1vw solid white;
+        border-right: 1vw solid white;   
+        
         transition: opacity 0.5s ease-in; 
     }   
     
-        header.intersection section:hover > div aside {
-            opacity: 100%;
-        }    
+    header.intersection section:hover > div aside {
+        opacity: 100%;
+    }    
         
         
         
@@ -226,6 +254,19 @@ body {
 
 }
     
+    /*==============================
+        Phone Web Design
+    ================================
+    */
+    @media only screen and (max-width: 699px) {
+        html {
+            background-color: blue;
+        }
+        
+        header {
+             background-size: contain;   
+        }
+    }
     
 
 
