@@ -1,11 +1,7 @@
-/*
-
-    Title: Index Style Sheet
-
-    By: Pig240 and the interwebs
-    Date: 4/27/2021
-    
-*/
+/*Import Charset */
+@charset "UTF-8";
+/* Import Google Font Arimo */
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
 /*
     General Design
@@ -16,19 +12,24 @@
     either left or right. The background is empty space. 
 */
 
-/*
-    Whole page
-*/
 
-html {
+
+
+
+
+    html {
     background-color: black;
-}
+    }
 
-body {
-    z-index: 0;
     
+
+    body {
+        
+    z-index: 0;
+    font-family: 'Arimo', sans-serif;
+
     overflow-x: hidden; /* Hide horizontal scrollbar */
-}
+    }
 
     /*
     InterSections
@@ -65,19 +66,55 @@ body {
     
 
 
+   
+
+    
     /*==============================
-        Desktop Web Design
+        Small Phone Web Design
     ================================
     */
-    @media only screen and (min-width: 700px) and (max-width: 2000px) {
-    
-    /* 
-        Space Pig:
-    Desktop mode has space pig fly between sections from 
-    left to right with smooth animations. 
-    */
+    @media only screen and (max-width: 600px) {
         
-    div#SpacePigContainer {
+        html {
+            background-color: red;
+        }
+    
+    }
+    
+    /*==============================
+        Small Devises Web Design
+    ================================
+    */
+    @media only screen and (min-width: 600px) {
+        html {
+            background-color: green;
+        }
+    }
+    
+    /*==============================
+        Medium Devises Web Design
+    ================================
+    */
+    @media only screen and (min-width: 768px) {
+        html {
+            background-color: black;
+        }
+    }
+
+    /*==============================
+        Large Desktop Web Design
+    ================================
+    */
+    @media only screen and (min-width: 992px) 
+    {
+
+        
+        /* 
+            Space Pig:
+            Desktop mode has space pig fly between sections from left to right with smooth animations. 
+        */
+        
+        div#SpacePigContainer {
         display: block;
         pointer-events: none;
         
@@ -95,7 +132,7 @@ body {
         transition: transform 0.5s ease-in-out;
     }
 
-    img#SpacePig {
+        img#SpacePig {
         /*Hide pig clickable */
         pointer-events: none;
         /*Set pig to width of container*/
@@ -105,168 +142,150 @@ body {
     } 
         
     
-    /*Animation for pig rotating*/
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
+        /*Animation for pig rotating*/
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(359deg);
+            }
+        }  
+
+        /*
+            Move Space Pig back to start position 
+        when hovering on header
+        */
+        .intersection:nth-child(1):hover ~ #SpacePigContainer{
+            transform: translateX(0vw);
         }
-        to{
-            transform: rotate(359deg);
+
+        /* 
+            Moves the space pig to the left side 
+        when on odd number.
+        */
+        .intersection:nth-child(2n+3):hover ~ #SpacePigContainer{
+            transform: translateX(0ww);
         }
-    }  
 
-    /*
-        Move Space Pig back to start position 
-    when hovering on header
-    */
-    .intersection:nth-child(1):hover ~ #SpacePigContainer{
-        transform: translateX(0vw);
-    }
+        /*
+            Moves the space pig to right side 
+        when on even number.
+        */
+        .intersection:nth-child(2n):hover ~ #SpacePigContainer{
+        transform: translateX(50vw);
+        }
 
-    /* 
-        Moves the space pig to the left side 
-    when on odd number.
-    */
-    .intersection:nth-child(2n+3):hover ~ #SpacePigContainer{
-        transform: translateX(0ww);
-    }
+        /*
+            Right section of header
+        first thing the user sees, a city with a down arrow.
+        Top of city has a down arrow, on hover it will 
+        "Blast the city off " revealing text section 
+        */
 
-    /*
-        Moves the space pig to right side 
-    when on even number.
-    */
-    .intersection:nth-child(2n):hover ~ #SpacePigContainer{
-    transform: translateX(50vw);
-    }
-    
-    /*
-        Right section of header
-    first thing the user sees, a city with a down arrow.
-    Top of city has a down arrow, on hover it will 
-    "Blast the city off " revealing text section 
-    */
-    
-    header.intersection section {
-        width: 40vw;
-        left: 50vw;
-        top: 10vh;
-        height: 50vh;
-        position: absolute;
-    }
-        
-    /* Navigator container */
-    header.intersection section div {
-        position: absolute;
-        top:0px; 
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }  
-    
-        
-    /* Title section of navigator*/
-    header.intersection section div header {
-        height: 10vh;
-        padding: 0;
-        width: 38vw;
-        display: flex;
-        flex-direction: row;
-        color: green;
-        border-top: 1vh solid white;
-        border-left: 1vw solid white;
-        border-right: 1vw solid white;   
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        background-color: rgb(51, 50, 50);
-        
-        
-    }
-        
-    /*The navigator header*/
-    header.intersection section div header nav{
-        flex: 3;
-        height: 100%;
-    }
-        
-    header.intersection section div header nav ul {
-        position: relative;
-        margin-top: 6%;
-        margin-bottom: 4%;
-        height: 50%;
-        
-    }
-        
-    /*The Navigator Header Text */
-    header.intersection section div header nav ul li{
-        font-size: 2em;
-        width: 100%;
-        text-align: center;
-        z-index: -1;
-        float: left;
-        color: green;
-         
-    }
-    
-    /* The buttons on navigator */
-    header.intersection section div header button {
-        flex: 0.5;
-        
-    }    
-    
-    /* text of the navigator */
-    header.intersection section div aside {
-        height: 40vh;    
-        width: 38vw;
-        background-color: blue;
-        opacity: 0%;
-        border-bottom: 1vh solid white;
-        border-left: 1vw solid white;
-        border-right: 1vw solid white;   
-        
-        transition: opacity 0.5s ease-in; 
-    }   
-    
-    header.intersection section:hover > div aside {
-        opacity: 100%;
-    }    
-        
-        
-        
-        
-    /* Set city size and animation smoothing */
-    header.intersection section img {
-        width: 100%;  
-        height: 100%;
-        transition: transform 0.5s ease-in-out;
-    }
-        
-    /* City image that overlays the text area */
-    header.intersection section:hover > img {
-        transform: translateY(55vh);
-        
-    }
-    
-    
+        header.intersection section {
+            width: 40vw;
+            left: 50vw;
+            top: 10vh;
+            height: 50vh;
+            position: absolute;
+        }
 
-    
+        /* Navigator container */
+        header.intersection section div {
+            position: absolute;
+            top:0px; 
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }  
 
 
+        /* Title section of navigator*/
+        header.intersection section div header {
+            height: 10vh;
+            padding: 0;
+            width: 38vw;
+            display: flex;
+            flex-direction: row;
+            color: green;
+            border-top: 1vh solid white;
+            border-left: 1vw solid white;
+            border-right: 1vw solid white;   
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: rgb(51, 50, 50);
 
-}
-    
-    /*==============================
-        Phone Web Design
-    ================================
-    */
-    @media only screen and (max-width: 699px) {
-        html {
+
+        }
+
+        /*The navigator header*/
+        header.intersection section div header nav{
+            flex: 3;
+            height: 100%;
+        }
+
+        header.intersection section div header nav ul {
+            position: relative;
+            margin-top: 6%;
+            margin-bottom: 4%;
+            height: 50%;
+
+        }
+
+        /*The Navigator Header Text */
+        header.intersection section div header nav ul li{
+            font-size: 2em;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+            float: left;
+            color: green;
+
+        }
+
+        /* The buttons on navigator */
+        header.intersection section div header button {
+            flex: 1;
+
+        }    
+
+        /* text of the navigator */
+        header.intersection section div aside {
+            height: 40vh;    
+            width: 38vw;
             background-color: blue;
+            opacity: 0%;
+            border-bottom: 1vh solid white;
+            border-left: 1vw solid white;
+            border-right: 1vw solid white;   
+
+            transition: opacity 0.5s ease-in; 
+        }   
+
+        header.intersection section:hover > div aside {
+            opacity: 100%;
+        }    
+
+
+
+
+        /* Set city size and animation smoothing */
+        header.intersection section img {
+            width: 100%;  
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
         }
-        
-        header {
-             background-size: contain;   
+
+        /* City image that overlays the text area */
+        header.intersection section:hover > img {
+            transform: translateY(55vh);
+
         }
-    }
+
+    
+}
+
     
 
 
@@ -277,7 +296,9 @@ body {
 @media only screen and (min-width: 2000px) {
     
     
-    
+    html{
+        background-color: pink;
+    }
     
     body{
         
