@@ -266,22 +266,44 @@
         header.intersection section:hover > div aside {
             opacity: 100%;
         }    
-
-
-
-
         /* Set city size and animation smoothing */
         header.intersection section img {
             width: 100%;  
             height: 100%;
             transition: transform 0.5s ease-in-out;
         }
-
         /* City image that overlays the text area */
         header.intersection section:hover > img {
             transform: translateY(55vh);
 
         }
+        
+        
+        /* Second Section =============== */
+        
+        section.intersection:nth-child(2) {
+            
+        }
+        
+        /*Pig station container */
+        section.intersection:nth-child(2) div#SpacePigStationContainer {
+            width: 30vw;
+            
+        }
+        
+        /* Pig Station image */
+        section.intersection:nth-child(2) div#SpacePigStationContainer img {
+            position: relative;
+            left: 5vw;
+            width: 100%;
+            transition:  transform 0.5s ease-in-out;
+        }
+        
+        section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
+            transform: translateX(-5vw) scale(1.2);
+            
+        }
+        
 
     
 }
