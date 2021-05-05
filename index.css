@@ -1,4 +1,4 @@
-/*Import Charset */
+﻿/*Import Charset */
 @charset "UTF-8";
 /* Import Google Font Arimo */
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
@@ -254,17 +254,25 @@
         header.intersection section div aside {
             height: 40vh;    
             width: 38vw;
-            background-color: blue;
+            background-color: grey;
             opacity: 0%;
             border-bottom: 1vh solid white;
             border-left: 1vw solid white;
             border-right: 1vw solid white;   
-
+            display: flex;
+            
             transition: opacity 0.5s ease-in; 
         }   
 
+        /*Styles for text area of navagation box*/
+        #navText #nerd{
+            color: yellow;
+        }
+
+
+        /*On hover make navagation text area visable */
         header.intersection section:hover > div aside {
-            opacity: 100%;
+            opacity: 100;
         }    
         /* Set city size and animation smoothing */
         header.intersection section img {
@@ -298,11 +306,13 @@
             width: 100%;
             transition:  transform 0.5s ease-in-out;
         }
-        
+
+        /*Rotates, enlarge and roate the space station to be readable*/
         section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
-            transform: translateX(-5vw) scale(1.2);
-            
+            transform: translateX(-15vw) scale(1.5) rotate(-45deg); 
         }
+
+        /*Increase opacity of text of space station text area*/
         
 
     
