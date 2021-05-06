@@ -85,10 +85,161 @@
         Small Devises Web Design
     ================================
     */
-    @media only screen and (min-width: 600px) {
-        html {
-            background-color: green;
+    @media only screen and (min-width: 600px) and (max-width: 767px) {
+        /*Should apear without space pig appearance*/
+
+        
+         html {
+            background-color: black;
+            
+         }
+
+
+        /*Inersection height*/
+        .intersection {
+            height: 100vh;
         }
+
+                   
+        /*Moon picture*/
+        header.intersection {
+            background-size: contain;
+        }
+
+        /*First header section */
+        header.intersection section {
+            width: 70vw;
+            height: 100vh;
+            position:absolute;
+            left: 15vw;
+         }
+
+        /* Navigator container */
+        header.intersection section div {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;     
+        }
+
+
+        /* Title section of navigator*/
+        header.intersection section div header {
+            height: 15vh;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            color: green;
+            border-top: 1vh solid white;
+            border-left: 1vw solid white;
+            border-right: 1vw solid white;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            background-color: rgb(51, 50, 50);
+        }        
+
+                    /*The navigator header*/
+            header.intersection section div header nav {
+                flex: 3;
+                height: 100%;
+                               
+            }
+
+                        header.intersection section div header nav ul {
+                            position: relative;
+                            margin-top: 10%;
+                            margin-bottom: 4%;
+                            height: 50%;
+                            
+                        }
+
+            /*The Navigator Header Text */
+            header.intersection section div header nav ul li {
+                font-size: 3em;
+                width: 100%;
+                text-align: center;
+                z-index: -1;
+                float: left;
+                color: green;
+                                
+                                
+            }
+
+                    /* The buttons on navigator */
+                    header.intersection section div header button {
+                        flex: 1;
+                        font-size: 2em;
+                        
+                    }
+
+                /* text of the navigator */
+                header.intersection section div aside {
+                    height: 30vh;
+                    width: 100%;
+                    background-color: grey;
+                    opacity: 0;
+                    border-bottom: 1vh solid white;
+                    border-left: 1vw solid white;
+                    border-right: 1vw solid white;
+                    display: flex;
+                    transition: opacity 0.5s ease-in;
+                }
+
+        /*Styles for text area of navagation box*/
+        #navText .navagationAbout {
+            position: relative;
+            margin: 2vh 5vw;
+            color: green;
+            font-size: 1.2em;
+            overflow-y: auto;
+            height: 38vh;
+        }
+
+
+        /*On hover make navagation text area visable */
+        header.intersection section:hover > div aside {
+            opacity: 100;
+        }
+        /* Set city size and animation smoothing */
+        header.intersection section img {
+            position: relative;
+            width: 100%;
+            top: -1.5vh;
+            transition: transform 0.5s ease-in-out;
+        }
+        /* City image that overlays the text area */
+        header.intersection section:hover > img {
+            transform: translateY(55vh);
+        }
+
+
+        /* Second Section =============== */
+
+        section.intersection:nth-child(2) {
+        }
+
+            /*Pig station container */
+            section.intersection:nth-child(2) div#SpacePigStationContainer {
+                width: 30vw;
+            }
+
+                /* Pig Station image */
+                section.intersection:nth-child(2) div#SpacePigStationContainer img {
+                    position: relative;
+                    left: 5vw;
+                    width: 100%;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                /*Rotates, enlarge and roate the space station to be readable*/
+                section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
+                    transform: translateX(15vw) translateY(20vh) scale(2) rotate(-45deg);
+                }
+
+
+       
     }
     
     /*==============================
@@ -96,17 +247,25 @@
     ================================
     */
     @media only screen and (min-width: 768px) {
-        html {
-            background-color: black;
-        }
+        
+        
     }
 
     /*==============================
-        Large Desktop Web Design
+        Large Desktop Web Design 992
     ================================
     */
-    @media only screen and (min-width: 992px) 
+    @media only screen and (min-width: 768px) 
     {
+
+        html {
+            background-color: black;
+        }
+
+        /*Inersection height*/
+        .intersection {
+            height: 80vh;
+        }
 
         
         /* 
@@ -203,7 +362,7 @@
 
         /* Title section of navigator*/
         header.intersection section div header {
-            height: 10vh;
+            height: 12vh;
             padding: 0;
             width: 38vw;
             display: flex;
@@ -215,7 +374,7 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             background-color: rgb(51, 50, 50);
-
+            
 
         }
 
@@ -230,7 +389,7 @@
             margin-top: 6%;
             margin-bottom: 4%;
             height: 50%;
-
+            
         }
 
         /*The Navigator Header Text */
@@ -255,7 +414,7 @@
             height: 40vh;    
             width: 38vw;
             background-color: grey;
-            opacity: 0%;
+            opacity: 0;
             border-bottom: 1vh solid white;
             border-left: 1vw solid white;
             border-right: 1vw solid white;   
@@ -265,8 +424,13 @@
         }   
 
         /*Styles for text area of navagation box*/
-        #navText #nerd{
-            color: yellow;
+        #navText .navagationAbout {
+            position: relative;
+            margin: 2vh 5vw;
+            color: green;
+            font-size: 1.2em;
+            overflow-y: auto;
+            height: 38vh;
         }
 
 
@@ -276,8 +440,9 @@
         }    
         /* Set city size and animation smoothing */
         header.intersection section img {
+            position:relative;
             width: 100%;  
-            height: 100%;
+            top: -1.5vh;
             transition: transform 0.5s ease-in-out;
         }
         /* City image that overlays the text area */
@@ -308,9 +473,9 @@
         }
 
         /*Rotates, enlarge and roate the space station to be readable*/
-        section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
-            transform: translateX(-15vw) scale(1.5) rotate(-45deg); 
-        }
+            section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
+                transform: translateX(-15vw) translateY(-20vh) scale(1.5) rotate(-45deg);
+            }
 
         /*Increase opacity of text of space station text area*/
         
