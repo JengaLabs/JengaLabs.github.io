@@ -176,7 +176,7 @@
 
                 /* text of the navigator */
                 header.intersection section div aside {
-                    height: 30vh;
+                    height: 40vh;
                     width: 100%;
                     background-color: grey;
                     opacity: 0;
@@ -194,7 +194,7 @@
             color: green;
             font-size: 1.2em;
             overflow-y: auto;
-            height: 38vh;
+            height: 95%;
         }
 
 
@@ -426,7 +426,7 @@
         /*Styles for text area of navagation box*/
         #navText .navagationAbout {
             position: relative;
-            margin: 2vh 5vw;
+            margin: 2vh 1vw;
             color: green;
             font-size: 1.2em;
             overflow-y: auto;
