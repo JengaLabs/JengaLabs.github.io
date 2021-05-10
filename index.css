@@ -60,9 +60,8 @@
     display: none;
     }
 
+
     
-
-
     
 
 
@@ -85,26 +84,50 @@
         Small Devises Web Design
     ================================
     */
-    @media only screen and (min-width: 600px) and (max-width: 767px) {
-        /*Should apear without space pig appearance*/
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    /*Should apear without space pig appearance*/
+
+
+    html {
+        background-color: black;
+        
+    }
+
+
+    /* Just learned custom scrollbars are not compatable with firefox */
+
+    /*Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8vw;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        background-image: url(Pictures/SpacePig.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
         
-         html {
-            background-color: black;
-            
-         }
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
 
 
-        /*Inersection height*/
-        .intersection {
-            height: 100vh;
-        }
 
-                   
-        /*Moon picture*/
-        header.intersection {
-            background-size: contain;
-        }
+    /*Inersection height*/
+    .intersection {
+        height: 100vh;
+    }
+
+
+    /*Moon picture*/
+    header.intersection {
+        background-size: contain;
+    }
+
+   
 
         /*First header section */
         header.intersection section {
@@ -140,32 +163,32 @@
             background-color: rgb(51, 50, 50);
         }        
 
-                    /*The navigator header*/
-            header.intersection section div header nav {
-                flex: 3;
-                height: 100%;
+         /*The navigator header*/
+        header.intersection section div header nav {
+            flex: 3;
+            height: 100%;
                                
-            }
+        }
 
-                        header.intersection section div header nav ul {
-                            position: relative;
-                            margin-top: 10%;
-                            margin-bottom: 4%;
-                            height: 50%;
+        header.intersection section div header nav ul {
+            position: relative;
+            margin-top: 10%;
+            margin-bottom: 4%;
+            height: 50%;
                             
-                        }
+        }
 
-            /*The Navigator Header Text */
-            header.intersection section div header nav ul li {
-                font-size: 3em;
-                width: 100%;
-                text-align: center;
-                z-index: -1;
-                float: left;
-                color: green;
+        /*The Navigator Header Text */
+        header.intersection section div header nav ul li {
+            font-size: 3em;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+            float: left;
+            color: green;
                                 
                                 
-            }
+        }
 
                     /* The buttons on navigator */
                     header.intersection section div header button {
