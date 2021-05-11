@@ -49,6 +49,8 @@
     height: 80vh;
     }
 
+
+
     /*
         Space Pig
     should only be seen when on a desktop version,
@@ -84,14 +86,17 @@
         Small Devises Web Design
     ================================
     */
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
     /*Should apear without space pig appearance*/
 
 
     html {
         background-color: black;
+
         
     }
+
+    
 
 
     /* Just learned custom scrollbars are not compatable with firefox */
@@ -278,7 +283,7 @@
         Large Desktop Web Design 992
     ================================
     */
-    @media only screen and (min-width: 768px) 
+    @media only screen and (min-width: 801px) 
     {
 
         html {
@@ -429,7 +434,7 @@
         /* The buttons on navigator */
         header.intersection section div header button {
             flex: 1;
-
+            font-size: 3em;
         }    
 
         /* text of the navigator */
@@ -446,16 +451,29 @@
             transition: opacity 0.5s ease-in; 
         }   
 
-        /*Styles for text area of navagation box*/
-        #navText .navagationAbout {
+        /*
+            Styles for text area of navagation box
+
+        */
+
+        /*Text area in general*/
+        #navText .navigationText {
             position: relative;
             margin: 2vh 1vw;
-            color: green;
             font-size: 1.2em;
             overflow-y: auto;
             height: 38vh;
         }
 
+        /*Section header text*/
+        #navText .navigationText h2 {
+            font-size: 2em;
+        }
+
+        /*Section bold text */
+        #navText .navigationText b {
+            font-weight: 600;
+        }
 
         /*On hover make navagation text area visable */
         header.intersection section:hover > div aside {
