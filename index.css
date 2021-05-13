@@ -402,11 +402,10 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             background-color: rgb(51, 50, 50);
-            flex-basis: auto;
             
+
         }
 
-<<<<<<< HEAD
         /*The Navigator Header Text */
         #navHead {
             font-size: 2em;
@@ -419,33 +418,6 @@
         /* The buttons on navigator */
         header.intersection section div header button {
             color: blue;          
-=======
-
-        /*The Navigator Header Text */
-        button#navHead {
-            word-wrap: break-word;
-            font-size: 2.2em;
-            max-width: 60%;
-            min-width: 60%;
-            text-decoration: none;
-
-            transform: none;
-            animation: none;
-        }
-
-        /*On hover of title should do nothing*/
-            button#navHead:hover, button#navHead:focus, button#navHead:active {
-                
-                
-            }
-
-
-        /* The buttons on navigator */
-        header.intersection section div header button {
-            font-size: 3em;
-            max-width: 20%;
-            min-width: 20%;
->>>>>>> c3d61ab9da259489b592669d24dfc9a5e901852a
         }    
 
         /* text of the navigator */
