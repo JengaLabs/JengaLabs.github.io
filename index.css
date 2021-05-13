@@ -407,20 +407,25 @@
         }
 
         /*The Navigator Header Text */
-        #navHead {
-            font-size: 2em;
-            text-align: center;
-            z-index: -1;
-            color: green;
-            height: 100%;
+        button#navHead {
+            word-wrap: break-word;
+            font-size: 2.2em;
+            max-width: 60%;
+            min-width: 60%;
+            text-decoration: none;
+            transform: none;
+            animation: none;
         }
 
         /* The buttons on navigator */
         header.intersection section div header button {
-            color: blue;          
-        }    
+            font-size: 3em;
+            max-width: 20%;
+            min-width: 20%;
+        }
 
-        /* text of the navigator */
+
+         /* text of the navigator */
         header.intersection section div aside {
             height: 40vh;    
             width: 38vw;
