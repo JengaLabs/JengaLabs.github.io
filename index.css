@@ -92,7 +92,7 @@
 
     html {
         background-color: black;
-
+        
         
     }
 
@@ -406,35 +406,18 @@
 
         }
 
-        /*The navigator header*/
-        header.intersection section div header nav{
-            flex: 3;
-            height: 100%;
-        }
-
-        header.intersection section div header nav ul {
-            position: relative;
-            margin-top: 6%;
-            margin-bottom: 4%;
-            height: 50%;
-            
-        }
-
         /*The Navigator Header Text */
-        header.intersection section div header nav ul li{
+        #navHead {
             font-size: 2em;
-            width: 100%;
             text-align: center;
             z-index: -1;
-            float: left;
             color: green;
-
+            height: 100%;
         }
 
         /* The buttons on navigator */
         header.intersection section div header button {
-            flex: 1;
-            font-size: 3em;
+            color: blue;          
         }    
 
         /* text of the navigator */
