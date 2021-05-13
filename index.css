@@ -49,7 +49,9 @@
     height: 80vh;
     }
 
-
+    input, button, submit {
+        border: none;
+    } 
 
     /*
         Space Pig
@@ -86,7 +88,7 @@
         Small Devises Web Design
     ================================
     */
-@media only screen and (min-width: 600px) and (max-width: 800px) {
+    @media only screen and (min-width: 600px) and (max-width: 800px) {
     /*Should apear without space pig appearance*/
 
 
@@ -166,41 +168,26 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             background-color: rgb(51, 50, 50);
-        }        
-
-         /*The navigator header*/
-        header.intersection section div header nav {
-            flex: 3;
-            height: 100%;
-                               
-        }
-
-        header.intersection section div header nav ul {
-            position: relative;
-            margin-top: 10%;
-            margin-bottom: 4%;
-            height: 50%;
-                            
         }
 
         /*The Navigator Header Text */
-        header.intersection section div header nav ul li {
-            font-size: 3em;
-            width: 100%;
-            text-align: center;
-            z-index: -1;
-            float: left;
-            color: green;
-                                
-                                
+        button#navHead {
+            word-wrap: break-word;
+            font-size: 2.2em;
+            max-width: 60%;
+            min-width: 60%;
+            text-decoration: none;
+            transform: none;
+            animation: none;
         }
 
-                    /* The buttons on navigator */
-                    header.intersection section div header button {
-                        flex: 1;
-                        font-size: 2em;
-                        
-                    }
+       
+        /* The buttons on navigator */
+        header.intersection section div header button {
+            font-size: 2em;
+            max-width: 20%;
+            min-width: 20%;
+        }
 
                 /* text of the navigator */
                 header.intersection section div aside {
@@ -224,6 +211,26 @@
             overflow-y: auto;
             height: 95%;
         }
+
+
+        /*Text area in general*/
+        #navText .navigationText {
+            position: relative;
+            margin: 2vh 1vw;
+            font-size: 1.2em;
+            overflow-y: auto;
+            height: 38vh;
+        }
+
+            /*Section header text*/
+            #navText .navigationText h2 {
+                font-size: 2em;
+            }
+
+            /*Section bold text */
+            #navText .navigationText b {
+                font-weight: 600;
+            }
 
 
         /*On hover make navagation text area visable */
@@ -503,7 +510,7 @@
 
         /*Rotates, enlarge and roate the space station to be readable*/
             section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
-                transform: translateX(-15vw) translateY(-20vh) scale(1.5) rotate(-45deg);
+                transform: translateX(-15vw) translateY(-15vh) scale(1.5) rotate(-45deg);
             }
 
         /*Increase opacity of text of space station text area*/
