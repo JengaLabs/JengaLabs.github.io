@@ -64,11 +64,11 @@
     display: none;
     }
 
-    /*
+   
     section.intersection:nth-child(2n+1) {
         background-color: blue; 
     }
-    */
+   
 
 
    
@@ -293,7 +293,7 @@
         Large Desktop Web Design 992
     ================================
     */
-@media only screen and (min-width: 801px) {
+    @media only screen and (min-width: 801px) {
 
     html {
         background-color: black;
@@ -306,9 +306,9 @@
 
 
     /* 
-            Space Pig:
-            Desktop mode has space pig fly between sections from left to right with smooth animations. 
-        */
+        Space Pig:
+        Desktop mode has space pig fly between sections from left to right with smooth animations. 
+    */
 
     div#SpacePigContainer {
         display: block;
@@ -421,14 +421,37 @@
         text-decoration: none;
         transform: none;
         animation: none;
+        border: 3px solid black;
+        animation: Glow 2s infinite ease-in-out; 
     }
 
+    /* Glow effect to get people to hover on my name*/
+    @keyframes Glow {
+        0% {border-color: rgb(239, 239, 239);}
+        50% {border-color: black;}
+        100% {border-color: rgb(239, 239, 239);}
+    }
+
+    /*Turn off glow effect when section is hovered on */
+    header.intersection section:hover > div header button#navHead {
+        animation: none;
+        border-width: 2px;
+    }
+
+
     /* The buttons on navigator */
-    header.intersection section div header button {
+    header.intersection section div header button.button {
         font-size: 3em;
         max-width: 20%;
         min-width: 20%;
+    } 
+    /* The buttons on navigator when hovered*/
+    header.intersection section div header button.button:hover {
+        border: 2px solid black;
     }
+
+    
+    
 
 
     /* Navigator aside area */
@@ -488,12 +511,9 @@
 
     /* Second Section =============== */
 
-    section.intersection:nth-child(2) {
-
-    }
-
+    
     /*Pig Space Station Container */
-    section.intersection:nth-child(2) div#SpacePigStationContainer {
+    div#SpacePigStationContainer {
         width: 30vw;
         left: 5vw;
         position: relative;
@@ -501,7 +521,7 @@
     }
 
     /* Pig Space Station image */
-    section.intersection:nth-child(2) div#SpacePigStationContainer img {
+    div#SpacePigStationContainer img {
         position: relative;
         top: 0px;
         width: 100%;
@@ -512,7 +532,7 @@
     /*Rotates, enlarge and roate the space station to be readable*/
     div#SpacePigStationContainer:hover > img {
         /*z-index: 0;*/
-        transform: translateX(-15vw) translateY(-15vh) scale(1.5) rotate(-50deg);
+        transform: translateX(-13vw) translateY(-12vh) scale(1.5) rotate(-50deg);
     }
 
     /*Container for text and imgs of the space station*/
@@ -527,8 +547,8 @@
         min-width: 100%;
         max-width: 35vw;
         width: 20vw;
-        min-height: 100%;
-        max-height: 30vh;
+        min-height: 80%;
+        max-height: 10vh;
         border-radius: 25px;
         padding: 2vh 2vw;
         transform: scale(0.1);
@@ -538,10 +558,10 @@
 
     /*Slide on screen Space pig station box in */
     section.intersection div#SpacePigStationContainer:hover > aside#SpacePigStationBox {
-        transform: translateX(29vw) scale(1);
+        transform: translateX(30vw) scale(1);
         opacity: 100;
-        
-        top: 30%;
+        z-index: 1;
+        top: 35%;
     }
 
     /*Web Repair Section*/
