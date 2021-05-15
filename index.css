@@ -510,7 +510,7 @@
     }
 
     /*Rotates, enlarge and roate the space station to be readable*/
-    section.intersection:nth-child(2) div#SpacePigStationContainer:hover > img {
+    div#SpacePigStationContainer:hover > img {
         /*z-index: 0;*/
         transform: translateX(-15vw) translateY(-15vh) scale(1.5) rotate(-50deg);
     }
@@ -537,13 +537,55 @@
     }
 
     /*Slide on screen Space pig station box in */
-    section.intersection:nth-child(2) div#SpacePigStationContainer:hover > aside#SpacePigStationBox {
+    section.intersection div#SpacePigStationContainer:hover > aside#SpacePigStationBox {
         transform: translateX(29vw) scale(1);
         opacity: 100;
         
         top: 30%;
     }
+
+    /*Web Repair Section*/
     
+    /*Web Repair Planet container*/
+    div#WebRepairPlanet {
+        position: relative;
+        left: 80vw;
+        width: 35vw;
+    }
+
+    /*Web Repair Image*/
+    div#WebRepairPlanet img {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    /*Animate Repair planet*/
+    div#WebRepairPlanet:hover > img {
+        transform: translateX(-20vw) translateY(-10vh) rotate(-90deg);
+    }
+
+    /*Container for text and ims of the web repair planet*/
+    aside#WebRepairBox {
+        border: 5px solid grey;
+        border-radius: 25px;
+        padding: 2vh 2vw;
+        color: black;
+        background-color: white;
+        position: absolute;
+        top: 34%;
+        min-width: 100%;
+        max-width: 35vw;
+        min-height: 70%;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /*Web Repair Text Area animations */
+    div#WebRepairPlanet:hover > aside#WebRepairBox {
+        transform: translateX(-28vw);
+        opacity: 100;
+    }
     
 }
 
