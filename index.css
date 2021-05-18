@@ -509,7 +509,7 @@
     }
 
 
-    /* Second Section =============== */
+    /* About me section =============== */
 
     
     /*Pig Space Station Container */
@@ -564,7 +564,7 @@
         top: 35%;
     }
 
-    /*Web Repair Section*/
+    /*Web Repair Section ===============*/
     
     /*Web Repair Planet container*/
     div#WebRepairPlanet {
@@ -607,6 +607,54 @@
         opacity: 100;
     }
     
+    /* Project Section ======================*/
+
+    /*Container 4 Projects*/
+    div#ProjectContainer {
+        position: relative;
+        left: 64vw;
+        width: 35vw;
+        /*background-color: blue;*/
+    }
+    
+    /*Graphic 4 Projects*/
+    div#ProjectContainer img {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    /*Graphic on hover of section*/
+    div#ProjectContainer:hover > img {
+        transform: translateY(-40%) rotate(12deg);
+    }
+
+    /*Content for Projects*/
+    div#ProjectContainer aside#ProjectBox {
+        position: absolute;
+        top: 10%;
+        left: 15vw;
+        opacity: 0;
+        min-width: 15vw;
+        width: 15vw;
+        min-height: 50%;
+        max-height: 50vh;
+        height: 50%;
+        padding: 1vh 1vw;
+        transition: all 0.5s ease-in-out;
+        background-color: white;
+        border: 5px solid grey; 
+        border-radius: 25px;
+    }
+
+    /*Content on hover of section*/
+    div#ProjectContainer:hover > aside#ProjectBox {
+        opacity: 1;
+        height: 80%;
+        left: 2vw;
+        top: 20%;
+        width: 25vw;
+    }
+
 }
 
     
