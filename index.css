@@ -419,6 +419,7 @@
         max-width: 60%;
         min-width: 60%;
         text-decoration: none;
+        line-break: loose;
         transform: none;
         animation: none;
         border: 3px solid black;
