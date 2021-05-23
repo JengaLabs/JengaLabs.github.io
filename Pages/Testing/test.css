@@ -1,0 +1,26 @@
+
+
+    body div {
+        background-color: blue;
+        width: 20vw;
+        height: 50vh;
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+        }
+
+    body div div {
+        background: white;
+        margin: 5% 2.5%;
+        min-height: 100px;
+        max-height: 90%;
+        width: 44%;
+        overflow: hidden;
+    }
+
+
+
+
+
+

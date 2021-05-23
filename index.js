@@ -28,7 +28,7 @@ let navigation = [
     ["R Carrots", "<div class = 'navigationText'> <h2> Reviews </h2> <p> After finishing a game or curriculum, I find that it is important to leave a review. This is because, not only does it help me learn to articulate my thoughts better. It helps others by comparing what they thought and your thoughts. By knowing what others like, it helps determine whether you'll like. If you know someone who hates beef and they tell you about an amazing burger place where they had a beef brisket. That must be a pretty good burger joint, huh? </p> <h2> Content </h2> <p> I have thoughts on all sorts of media, but I'll try and keep it tailored to things I'm competent in such as code and course work. If I find that a course particularly stands out in quality, than I'll definitely recommend it to those who are learning the subject. While when playing a game and I find time and time again that I'm just monotonously performing a fetch quest. Than I'm going to say that the game is boring, but I'll explain why I feel fetch quests are boring. </p> <h2>Experience </h2> <p>Now I'm not a great writer as you can tell. I like to think however I'm an expert RTS player. I have experience with multiple games, movies, programs, code and more. As to know what you like, you gotta try things you hate.</p> </div>"],
     ["Navigation", ""]  
 ];
-
+ 
 
 
 //Move navagation slides to another number 
