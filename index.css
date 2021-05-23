@@ -638,15 +638,18 @@
         min-width: 15vw;
         width: 20vw;
         height: 10%;
-        padding: 3vh 3vw;
+        padding: 3vh 2vw;
         transition: all 0.5s ease-in-out;
-        background-color: white;
         border: 5px solid grey; 
         border-radius: 25px;
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+        border-right: none;
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
         overflow-y: scroll;
+        background-image: linear-gradient(#F0FFFF, #000000);
         }
 
     /*Content on hover of section*/
@@ -656,16 +659,60 @@
         height: 80%;
         left: 2vw;
         top: 20%;
-        width: 25vw;
+        width: 30vw;
                 
     }
 
-        aside#ProjectBox div {
+    /*Project box, individual project*/
+    aside#ProjectBox div {
         background-color: white;
-        flex: 40%;
-        height: 80%;
-               
-        }
+        width: 44%;
+        margin: 2% 2.5%;
+        height: 95%;
+        
+    }
+
+    /*Project box projects styles*/
+    /*Project style heading*/
+    aside#ProjectBox div h2 {
+        font-size: 2em;
+        text-align: center;
+        margin: 1% 0;
+    }
+    aside#ProjectBox div h3 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /*Graphic of Project*/
+    aside#ProjectBox div img {
+        width: 100%;
+    }
+
+    /*Progres bar*/
+    aside#ProjectBox div div.ProgressBar {
+        width: 80%;
+        margin: 0 0;
+        height: 8%;
+        background-color: dimgrey;
+        margin: 0 10%;
+    }
+
+    aside#ProjectBox div div.ProgressBar div {
+        margin: 0 0;
+        background-color: aqua;
+        height: 100%;
+        font-size: 1.5em;
+        
+    }
+
+    /*Project text area*/
+    aside#ProjectBox div aside{
+        width: 80%;
+        margin: 0 10%;
+    }   
+
+
 
     /*End Of Project section ===============*/
 
