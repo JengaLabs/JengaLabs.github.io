@@ -39,7 +39,7 @@
 */
     
     header.intersection {
-        background-image: url("Pictures/MoonSurface.png");
+        background-image: url("../Pictures/MoonSurface.png");
         background-repeat: no-repeat;
         background-size: cover;   
     }
