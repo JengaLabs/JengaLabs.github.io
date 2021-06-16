@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+
+
+
+body {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+
+section {
+    width: 38vw;
+    padding: 15% 6%;
+}
+
+h2 {
+    
+}
+
+
+h6 {
+    text-align: right;
+    margin-bottom: 5%;
+}
+
+nav {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+nav a {
+    flex: 1;
+    font-size: calc(1em + 1.5vw);
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+}
+
+nav a:hover ~ div{
+    background-color: #aeb0b5;
+    left: 25vw;
+}
+
+nav a:first-child:hover ~ div {
+    transform: translate(-6v);
+    left: 6vw;
+}
+
+nav div {
+    position: fixed;
+    z-index: -1;
+    width: 50%;
+    background-color: none;
+    width: 19vw;
+    height: calc(1em + 2vw);
+    transform: translateY();
+    left: 25vw;
+    transition: left 0.1s linear;
+}
+
+
+
+canvas {
+    
+    width: 50vw;
+    height: 100%;
+    
+}
+
+
+
+
+
+
