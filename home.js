@@ -1,39 +1,5 @@
 "use strict";
-//Class that has a first in last out 
-class Stack {
 
-    // Array used to implement stack
-    constructor() {
-        this.items = [];
-    }
-
-    //Functions include
-    // push (item)
-    // pop()
-
-
-    //Push adds an element to the stack
-    push(element) {
-        this.items.push(element);
-    }
-
-    //Pop removes an element from the statck 
-    pop() {
-        if (this.items.length == 0) {
-            return "Underflow";
-        } else {
-            return this.items.pop(0);
-        }
-    }
-
-    //See whats in the top 
-    peek() {
-        // return the top most element from the stack
-        // but does'nt delete it.
-        return this.items[this.items.length - 1];
-    }
-
-}
 
 //Vector 2 class to store positions
 class Vector2 {
@@ -60,181 +26,207 @@ class Vector2 {
 
 }
 
-
+//Get the canvas 
 const canvas = document.getElementById("Lcanvas");
-const ctx = canvas.getContext("2d");
+//Find canvas 2d
+const canvasContext = canvas.getContext("2d");
 
-//Seed of the tree
-const axiom = "A";
 
+
+//method that builds l system string 
+var lsystem = function (startString, rules, iterations) {
+    //Current generation string
+    var currentString = startString;
+    for (let i = 0; i < iterations; i++) {
+        //Add the next generation every iteration
+        currentString = nextGeneration(currentString, rules);
+    }
+    //Return finished string
+    return currentString;
+}
+
+var nextGeneration = function (currentString, rules) {
+    var result = "";
+    for (let e = 0; e < currentString.length; e++) {
+        //Current char in the generation string
+        var char = currentString[e];
+        //find the corsponding rule
+        var ruleResult = rules[char];
+        //Check if rule result can be added to generation 
+        result += ruleResult === undefined ? char : ruleResult;
+    }
+    return result;
+}
+
+function DrwaTree() {
+    canvasContext.save();
+    //change line width
+    canvasContext.lineWidth = 0.01;
+    canvasContext.scale(canvas.width, canvas.height);
+    //Move context over
+    canvasContext.translate(0.5, 1);
+
+    //reverse canvas so drawing is easier with math
+    canvasContext.scale(1, -1);
+    canvasContext.save();
+
+    //Generate the tree
+    interval = setInterval("CreateBranch()", 1);
+    interval2 = setInterval("CreateBranch()", 1)
+}
+
+
+//L system string generated
 //Store how many times a generation is created
-var iterations = 3;
+var iterations = 8;
 
-//Curnent generation string
-var currentString;
 
-//Store the next generation
-var nextString = ""
 
-//Final tree
-var treeStack = new Stack();
+//Declare tree rules
+var ruleset1 = {
+    "A": "B[+A]B[-A]+A",
+    "B": "BB",
+
+};
+/*
+var ruleset1 = {
+    "A": "A[+A]BA[-A]",
+    "B": "BBA",
+    var axiom = "A[+A]BA[-A]";
+};
+*/
+
+//Starting string
+var axiom = "A";
+
+
+
+
+//Create l system results 
+var result = lsystem(axiom, ruleset1, iterations);
+
+
+
+
+//
+var lineLenght = 1 / (Math.pow(2, iterations + 2));
+//Current position
+var currentPosition = {
+    y: 0,
+    x: 0,
+};
+
+
+
+//Draw the tree using result
+DrwaTree();
+
+
+
 
 //Start pos = center of screen 
 var initialPosition = new Vector2(canvas.width / 2, canvas.height);
 
-//pens position
-var penPosition = new Vector2(initialPosition.x, initialPosition.y);
 
-//Stack of positions
-var transformStack = new Stack();
-//temp char to hold values 
-var tempChar = '';
 
-//keep track of time passed 
 var interval;
-
-//declare ruels
-var rules = [
-    //key , value 
-    ['A', '[B-[A]+A]+B[+BA]-A]'],
-    ['B', 'BB'],
-    ['C', '[A][A]']
-];
+var interval2;
+var angle = 20;
 
 
 
-Generate();
 
 
-function Generate() {
-    //Create a parrent
-    
 
-    //set the current generation
-    currentString = axiom;
 
-    for (let i = 0; i < iterations; i++) {
-        
-        //loop till reached max generations
-        for (let z = 0; z < currentString.length; z++) {
 
-            
-            //check if the rule is in the rule book
-            for (let b = 0; b < rules.length; b++) {
-                
-                if (rules[b][0] == currentString.charAt(z)) {
-                    //add if rules is in book
-                    nextString += rules[b][1];
-                }
-                
-            }
-            
 
-            
-        }
 
-        //get next generation as current
-        currentString = nextString;
-        //reset next generation
-        nextString = "";
 
-    }
 
-    //Generate object
-    
 
-    //loop through every letter in the generations
-    for (let i = currentString.length; i > 0 ; i--) {
-        //Switch case for what each value pair does
-        treeStack.push(currentString.charAt(i));
-    }
 
-    
-
-    
-    //treeStack.push(currentString.charAt(i));
-    interval = setInterval("CreateBranch()", 10);
-
-    
-}
-
-var pos;
 
 function CreateBranch() {
-
-    tempChar = treeStack.pop();
     
-    
-    switch (tempChar) {
-        case 'A':
-            
-            break;
-        case 'B':
-            //Move up a half step
+    if (result.length > 1) {
+        commands[result.charAt(0)]();
+        //Remove last char from string
+        //console.log(result.charAt(result.length - 1));
+        result = result.slice(1, result.length);
 
-            ctx.moveTo(treeStack.peek().x, treeStack.peek().y);
-            initialPosition.SetVector(initialPosition.x, initialPosition.y - Math.floor(Math.random() * 5));
-            ctx.lineTo(initialPosition.x, initialPosition.y);
-            ctx.stroke();
-            break;
-        case '+':
-            ctx.moveTo(initialPosition.x, initialPosition.y);
-            initialPosition.SetVector(initialPosition.x + Math.floor(Math.random() * 20), initialPosition.y - Math.floor(Math.random() * 2));
-            ctx.lineTo(initialPosition.x, initialPosition.y);
-            ctx.stroke();
-            break;
-        case '-':
-            ctx.moveTo(initialPosition.x, initialPosition.y);
-            initialPosition.SetVector(initialPosition.x - Math.floor(Math.random() * 20), initialPosition.y  - Math.floor(Math.random() * 2));
-            ctx.lineTo(initialPosition.x, initialPosition.y);
-            ctx.stroke();
-            break;
-        case '*':
-            ctx.moveTo(initialPosition.x, initialPosition.y);
-            initialPosition.SetVector(initialPosition.x + Math.floor(Math.random() * 10), initialPosition.y - Math.floor(Math.random() * 5));
-            ctx.lineTo(initialPosition.x, initialPosition.y);
-            ctx.stroke();
-            break;
-        case '/':
-            ctx.moveTo(initialPosition.x, initialPosition.y);
-            initialPosition.SetVector(initialPosition.x - Math.floor(Math.random() * 10), initialPosition.y - Math.floor(Math.random() * 5));
-            ctx.lineTo(initialPosition.x, initialPosition.y);
-            ctx.stroke();
-            break;
-        case '[':
-            console.log("start");
-            transformStack.push(new Vector2(initialPosition.x, initialPosition.y));
-            break;
-        case ']':
-            console.log("move back");
-            pos = transformStack.pop();
-            initialPosition.SetVector(pos.x, pos.y);
-            break;
-        case 'C':
-            initialPosition.SetVector(initialPosition.x, initialPosition.y + Math.random());
-            break;
-        default:
-            console.log("Rule not in stack" + tempChar);
-            clearInterval(interval);
-            break;
+        if (canvasContext.lineWidth > 0.0001) {
+            canvasContext.lineWidth -= 0.00001;
+        } else {
+            console.log("STop shriking");
+        }
+       
+        //console.log(result);
+    } else {
+        clearInterval(interval);
+        clearInterval(interval2);
     }
+    
 
     
 
-    treeStack.pop();
 }
 
+var commands = {
+    "A": function () {
 
-/*
-var x1 = 0;
-var y1 = 0;
-var length = 50;
-var theta = 45;
-ctx.moveTo(x1, y1);
-ctx.lineTo(x1 + length * Math.cos(Math.PI * theta / 180.0), y1 + length * Math.sin(Math.PI * theta / 180.0));
-ctx.stroke();
-*/
 
+        /*
+        canvasContext.strokeStyle = "green";
+        canvasContext.beginPath();
+        canvasContext.moveTo(0, currentPosition.y);
+        currentPosition.y += len;
+        canvasContext.lineTo(0, currentPosition.y);
+        canvasContext.closePath();
+        canvasContext.stroke();
+        */
+    },
+    "B": function () {
+        
+        canvasContext.strokeStyle = "black";
+        canvasContext.beginPath();
+        canvasContext.moveTo(currentPosition.x, currentPosition.y);
+        currentPosition.y += lineLenght + (Math.random() / 1000);
+        canvasContext.lineTo(currentPosition.x, currentPosition.y);
+        canvasContext.closePath();
+        canvasContext.stroke();
+    },
+    "[": function () {
+        
+        canvasContext.translate(0, currentPosition.y);
+        currentPosition.y = 0;
+        canvasContext.save();
+        //canvasContext.rotate(+25 * (Math.PI / 180));
+    },
+    "]": function () {
+
+        currentPosition.y = 0;
+        canvasContext.restore();
+        //canvasContext.rotate(-25 * (Math.PI / 180));
+    },
+    "+": function () {
+        //canvasContext.translate(0, currentPosition.y);
+        //currentPosition.y = 0;
+        //currentPosition.y = 0;
+        canvasContext.rotate((Math.PI / 180) * angle);
+        canvasContext.translate(0, currentPosition.y);
+        currentPosition.y = 0;
+        
+        
+    },
+    "-": function () {
+
+        
+        currentPosition.y = 0;
+        canvasContext.rotate((Math.PI / 180) * -angle);
+        
+    }
+};
 
 
 
