@@ -85,7 +85,11 @@ var iterations = 8;
 //Declare tree rules
 var ruleset1 = {
     "A": "B[+A]B[-A]+A",
+<<<<<<< Updated upstream
     "B": "BB",
+=======
+    "B": "BAB",
+>>>>>>> Stashed changes
 
 };
 /*
