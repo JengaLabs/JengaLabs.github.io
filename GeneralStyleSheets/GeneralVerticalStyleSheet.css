@@ -5,12 +5,6 @@
 /* Orbitron for headers / titles, Open Sans for regul  */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Orbitron&display=swap');
 
-
-
-
-
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +18,43 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	font-family: 'Open sans';
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Open sans';
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 body {
-	line-height: 1;
-	background-color: #f2f2f2;
+    line-height: 1;
+    background-color: #f2f2f2;
 }
 
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none;
-	}
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
-
-
 
 
 
@@ -71,36 +63,40 @@ table {
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Orbitron';
-	color: black;
+    font-family: 'Orbitron';
+    color: black;
 }
 
 /*Header Sizes*/
 h1 {
-	font-size: calc(1em + 6vw);
+    font-size: calc(1em + 10vw);
 }
-h2{
-	font-size: calc(1em + 5vw);
+
+h2 {
+    font-size: calc(1em + 9vw);
 }
-h3{
-	font-size: calc(1em + 4vw);
+
+h3 {
+    font-size: calc(1em + 8vw);
 }
-h4{
-	font-size: calc(1em + 3vw);
+
+h4 {
+    font-size: calc(1em + 7vw);
 }
+
 h5 {
-	font-size: calc(1em + 2vw);
+    font-size: calc(1em + 6vw);
 }
-h6{
-	font-size: calc(1em + 1vw);
+
+h6 {
+    font-size: calc(1em + 5vw);
 }
 
 /* General text */
 p {
-	font-size: calc(0.5em + 1vw);
+    font-size: calc(0.5em + 4vw);
 }
 
-/* Links */
 a {
-	
+    font-size: calc(0.5em + 4vw);
 }
