@@ -31,8 +31,6 @@ const canvas = document.getElementById("Lcanvas");
 //Find canvas 2d
 const canvasContext = canvas.getContext("2d");
 
-
-
 //method that builds l system string 
 var lsystem = function (startString, rules, iterations) {
     //Current generation string
@@ -44,6 +42,8 @@ var lsystem = function (startString, rules, iterations) {
     //Return finished string
     return currentString;
 }
+
+
 
 var nextGeneration = function (currentString, rules) {
     var result = "";
@@ -72,15 +72,93 @@ function DrwaTree() {
 
     //Generate the tree
     interval = setInterval("CreateBranch()", 1);
-    interval2 = setInterval("CreateBranch()", 1)
 }
 
 
-//L system string generated
-//Store how many times a generation is created
-var iterations = 8;
+function remove_character(str, char_pos) {
+    let part1 = str.substring(0, char_pos);
+    let part2 = str.substring(char_pos + 1, str.length);
+    return (part1 + part2);
+}
 
+function ModifyTree() {
+    let newResult = "";
+    let currentGenNum = 0;
+    let genNum = 0;
 
+    let resultL = result.length;
+    for (let i = 0; i <= resultL; i++) {
+        //check if valid to add to new string
+        if (genNum < 3) {
+            //Check if update gen num
+            switch (result.charAt(i)) {
+                case "[":
+                    genNum++;
+                    break;
+                case "]":
+                    genNum--;
+                    break;
+                default:
+                    //do nothing
+                    break;
+            }
+            //Add to new result
+            newResult += result.charAt(i);
+
+        } else {
+            switch (result.charAt(i)) {
+                case "[":
+                    genNum++;
+                    if (newResult.charAt(newResult.length - 1) != "[")
+                    {
+                        newResult += result.charAt(i);
+                    }
+                    
+                    break;
+                case "]":
+                    genNum--;
+                    if (newResult.charAt(newResult.length - 1) != "]") {
+                        newResult += result.charAt(i);
+                    }
+                    
+                    break;
+                default:
+                    //do nothing
+                    break;
+            }
+        }
+
+        
+    }
+
+    //loop through all of results to refine them
+    for (let c = 0; c < newResult.length; c++) {
+        //check if current char is the start of branch
+        if (newResult.charAt(c) == "[") {
+            if (newResult.charAt(c + 1) == "]") {
+                if (newResult.charAt(c + 3) == "]") {
+                    newResult = remove_character(newResult, c);
+                    newResult = remove_character(newResult, c);
+                    c = 0;
+                }
+            }
+            
+
+            
+        }
+    }
+    
+
+    
+    //result = newResult.replace("[]", "");
+    //result = newResult.replace(/[]\)/g, "" );
+    result = newResult
+    console.log(result);
+    return result;
+}
+
+//Interval to build tree over time instead of instant
+var interval;
 
 //Declare tree rules
 var ruleset1 = {
@@ -91,59 +169,38 @@ var ruleset1 = {
     //"B": "BAB",
 
 };
-/*
-var ruleset1 = {
-    "A": "A[+A]BA[-A]",
-    "B": "BBA",
-    var axiom = "A[+A]BA[-A]";
-};
-*/
 
 //Starting string
 var axiom = "A";
 
+//L system string generated
+//Store how many times a generation is created
+var iterations = 8;
 
-
-
-//Create l system results 
-var result = lsystem(axiom, ruleset1, iterations);
-
-
-
-
-//
-var lineLenght = 1 / (Math.pow(2, iterations + 2));
-//Current position
+//Current position on canvas
 var currentPosition = {
     y: 0,
     x: 0,
 };
 
-
-
-//Draw the tree using result
-DrwaTree();
-
-
-
+//lines length on the tree determined by how many generation
+var lineLenght = 1 / (Math.pow(2, iterations + 2));
+//Angle the branches span
+var angle = 20;
 
 //Start pos = center of screen 
 var initialPosition = new Vector2(canvas.width / 2, canvas.height);
 
 
+//Create l system results 
+var result = lsystem(axiom, ruleset1, iterations);
 
-var interval;
-var interval2;
-var angle = 20;
-
-
-
+//Modify result to have less detail, but be just as big
+result = ModifyTree();
 
 
-
-
-
-
+    //Draw the tree using result
+    DrwaTree();
 
 
 
@@ -151,7 +208,7 @@ var angle = 20;
 
 
 function CreateBranch() {
-    
+
     if (result.length > 1) {
         commands[result.charAt(0)]();
         //Remove last char from string
@@ -161,21 +218,16 @@ function CreateBranch() {
         if (canvasContext.lineWidth > 0.0001) {
             canvasContext.lineWidth -= 0.00001;
         } else {
-            console.log("STop shriking");
+            
         }
-       
+
         //console.log(result);
     } else {
         clearInterval(interval);
-        clearInterval(interval2);
     }
-    
-
-    
-
 }
 
-var commands = {
+var check = {
     "A": function () {
 
 
@@ -190,7 +242,7 @@ var commands = {
         */
     },
     "B": function () {
-        
+
         canvasContext.strokeStyle = "black";
         canvasContext.beginPath();
         canvasContext.moveTo(currentPosition.x, currentPosition.y);
@@ -200,7 +252,7 @@ var commands = {
         canvasContext.stroke();
     },
     "[": function () {
-        
+
         canvasContext.translate(0, currentPosition.y);
         currentPosition.y = 0;
         canvasContext.save();
@@ -219,15 +271,73 @@ var commands = {
         canvasContext.rotate((Math.PI / 180) * angle);
         canvasContext.translate(0, currentPosition.y);
         currentPosition.y = 0;
-        
-        
+
+
     },
     "-": function () {
 
-        
+
         currentPosition.y = 0;
         canvasContext.rotate((Math.PI / 180) * -angle);
-        
+
+    }
+};
+
+
+
+var commands = {
+    "A": function () {
+
+
+        /*
+        canvasContext.strokeStyle = "green";
+        canvasContext.beginPath();
+        canvasContext.moveTo(0, currentPosition.y);
+        currentPosition.y += len;
+        canvasContext.lineTo(0, currentPosition.y);
+        canvasContext.closePath();
+        canvasContext.stroke();
+        */
+    },
+    "B": function () {
+
+        canvasContext.strokeStyle = "black";
+        canvasContext.beginPath();
+        canvasContext.moveTo(currentPosition.x, currentPosition.y);
+        currentPosition.y += lineLenght + (Math.random() / 1000);
+        canvasContext.lineTo(currentPosition.x, currentPosition.y);
+        canvasContext.closePath();
+        canvasContext.stroke();
+    },
+    "[": function () {
+
+        canvasContext.translate(0, currentPosition.y);
+        currentPosition.y = 0;
+        canvasContext.save();
+        //canvasContext.rotate(+25 * (Math.PI / 180));
+    },
+    "]": function () {
+
+        currentPosition.y = 0;
+        canvasContext.restore();
+        //canvasContext.rotate(-25 * (Math.PI / 180));
+    },
+    "+": function () {
+        //canvasContext.translate(0, currentPosition.y);
+        //currentPosition.y = 0;
+        //currentPosition.y = 0;
+        canvasContext.rotate((Math.PI / 180) * angle);
+        canvasContext.translate(0, currentPosition.y);
+        currentPosition.y = 0;
+
+
+    },
+    "-": function () {
+
+
+        currentPosition.y = 0;
+        canvasContext.rotate((Math.PI / 180) * -angle);
+
     }
 };
 
