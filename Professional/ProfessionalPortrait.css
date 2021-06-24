@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+    margin: 2% 9%;
+}
+
+body header {
+    display: flex;
+    margin-bottom: 2%;
+}
+
+body header div h1 {
+    font-size: calc(1em + 8vw);
+}
+
+body header div p {
+    font-size: calc(1em + 1vw);
+}
+
+h5 {
+    text-align: center;
+    color: dodgerblue;
+    font-size: calc(1em + 2vw);
+}
+
+header div#Summary {
+    flex: 1;
+}
+
+header aside {
+    flex: 1;
+    text-align: right;
+}
+
+    header aside ul {
+        font-size: calc(0.2em + 1vw);
+        margin-top: 8%;
+    }
+
+        header aside ul li {
+            margin-top: 4%;
+        }
+
+body article {
+    display: flex;
+}
+
+    body article div#projects {
+        flex: 1.5;
+        padding-right: 5%;
+    }
+
+    body article div {
+        flex: 1;
+    }
+
+
+
+        body article div h6 {
+            padding-top: 5%;
+            font-size: calc(1em + 3vw);
+        }
+
+            body article div h6:first-of-type {
+                padding-top: 10%;
+            }
+
+        body article div#projects aside h6 i {
+            font-size: calc(0.1em + 2vw);
+            font-style: italic;
+        }
+
+        body article div aside p {
+            margin-top: 2%;
+            font-size: calc(1em + 0.5vw);
+        }
+
+body div ul li {
+    margin-top: 4%;
+}
+
+body div ul {
+    margin-top: 2%;
+}
+
+body article div aside h5 {
+    margin-top: 5%;
+}
+
+
+
+body footer {
+    margin-top: 5%;
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+    body footer p {
+        font-size: 1em;
+    }
