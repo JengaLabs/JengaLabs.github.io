@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-
+/* Whole page */
 body {
     height: 100vh;
     color: blue;
@@ -9,6 +9,7 @@ body {
     flex-direction: column;
 }
 
+/* Text area */
 section {
     flex: 1;
     width: 90vw;
@@ -18,10 +19,12 @@ section {
     text-align: center;
 }
 
+/* Page Title / My name */
 section h2 {
     margin-top: 5vh;
 }
 
+/* Summary */
 section h6 {
     width: 60vw;
     margin: 3vh 15vw;
@@ -42,17 +45,18 @@ section nav a {
    color: black;
 }
 
-
-
-
-nav a:first-child:hover ~ div {
-    left: 10vw;
-}
-
+/* highlight hover area */
 nav a:hover ~ div {
     background-color: #aeb0b5;
 }
 
+/* highlight hover area */
+nav a:first-child:hover ~ div {
+    left: 10vw;
+}
+
+
+/* Highlight div for hover*/
 section nav div {
     position: fixed;
     z-index: -1;
@@ -65,6 +69,7 @@ section nav div {
 }
 
 
+/* JS L-systems canvas*/
 canvas {
     flex: 1;
     transform: rotate(180deg);

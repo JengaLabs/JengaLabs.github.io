@@ -2,67 +2,69 @@
 
 
 
-
+/* Whole page */
 body {
     display: flex;
     height: 100vh;
     color: black;
 }
 
-
+/* Text area */
 section {
     width: 38vw;
     padding: 15% 6%;
 }
 
-
-
-
-h6 {
+/* Summary */
+section h6 {
     text-align: right;
-    margin-bottom: 5%;
+    margin: 5% 0;
+    padding-right: 7%;
 }
 
-nav {
+section nav {
     margin-top: 2vh;
     display: flex;
     justify-content: space-around;
     
 }
 
-nav a {
+section nav a {
     flex: 1;
     font-size: calc(1em + 1.5vw);
     text-align: center;
     text-decoration: none;
     color: black;
-    
 }
 
-nav a:hover ~ div{
+/* highlight hover area */
+nav a:hover ~ div {
     background-color: #aeb0b5;
-    left: 25vw;
+    left: 26.5vw;
 }
 
-nav a:first-child:hover ~ div {
+/* highlight hover area */
+section nav a:first-child:hover ~ div {
     transform: translate(-6v);
-    left: 6vw;
+    left: 7.5vw;
 }
 
-nav div {
+/* Highlight div for hover*/
+section nav div {
     position: fixed;
     z-index: -1;
     background-color: none;
-    width: 19vw;
-    height: calc(1em + 2vw);
+    width: 16vw;
+    height: calc(1em + 3vw);
     transform: translateY();
-    left: 25vw;
+    
+    margin-top: -0.5%;
     color: transparent;
     transition: left 0.1s linear;
 }
 
 
-
+/* JS L-systems canvas*/
 canvas {
     
     width: 50vw;
