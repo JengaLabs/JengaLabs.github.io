@@ -1,37 +1,110 @@
+/*Whole page*/
 html {
     background-color: black;
 }
 
+/*Body*/
 body {
-    background-color: red;
     margin: 0 5%;
-    height: 100vh;
-    padding: 5vh 5vw;
-}
-
-body header {
-    padding: 5vh 2vw;
-    display: flex;
-    flex-direction: row;
-    height: 50vh;
-    border: 5px solid black;
-    border-radius: 5%;
-}
-
-/* The frame of my profile pic */
-body header div {
-    width: 50%;
-}
-
-body header div img{
-    background-color: lightblue;
-    border: 5px solid black;
-    border-radius: 30%;
-    height: 100%;
-}
-
-body header article {
+    height: 300vh;
+    padding: 0vh 5vw;
+    background-color: black;
+    background-image: linear-gradient(to right, black, indigo, purple,indigo,black);
     
-    padding: 2% 5%;
-    width: 45%;
 }
+
+    /* Introductions Block */
+    body header {
+        display: flex;
+        padding: 5vh 2vw;
+        height: 50vh;
+        border: 10px solid white;
+        background-color: purple;
+        
+    }
+
+        /* Profile picture */
+        body header img {
+            background-color: lightblue;
+            border: 5px solid black;
+            border-radius: 30%;
+            max-height: 100%;
+        }
+
+        /* Introduction text box*/
+        body header article {
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+            padding: 5vh 2vw;
+            width: 100%;
+            height: 100%;
+
+        }
+        
+        /* Page text */
+        body header article h5 {
+            padding: 2.5% 0;
+        }
+
+        /* My Name on title*/
+        body header article h5 strong{
+            font-size: calc(1em + 2vw);
+            
+        }
+
+        /* Description of me text */
+        body header article h6 {
+            padding: 1%;
+        }
+
+        /* Header quote */
+        body header article p {
+            padding: 2.5% 0;
+        }
+
+        /*Navagaton section*/
+        body section {
+            display: flex;
+        }
+
+        body section div {
+            flex: 1;
+        }
+        
+        /* Navagation bar */
+        body section nav {
+            position: relative;
+                top: 0;
+            flex: 1;
+        }
+
+            body section nav::after {
+                
+            }
+
+
+        /* Navagation list */
+        body section nav ul{
+            display: flex;
+            flex-direction: row;
+        }
+        
+
+        /* Navigation List items*/
+        body section nav ul li {
+            flex: 1;
+            text-align: center;
+            padding: 2% 0;
+            background-color: white;
+            border: 5px solid black;
+            background-color: white;
+            border-right: none;
+            
+        }
+
+        body section nav ul li:first-of-type {
+
+        }
+
+        
