@@ -103,8 +103,10 @@ body {
             
         }
 
-        body section nav ul li:first-of-type {
-
+        /* Each section */
+        body article {
+            height: 25vh;
+            
         }
 
         
