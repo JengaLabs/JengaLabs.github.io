@@ -61,7 +61,6 @@ section nav div {
     position: fixed;
     z-index: -1;
     width: 35vw;
-    
     left: 55vw;
     color: transparent;
     font-size: calc(0.5em + 4vw);
@@ -74,3 +73,24 @@ canvas {
     flex: 1;
     transform: rotate(180deg);
 }
+
+/* Reset button */
+button {
+    position: absolute;
+    z-index: 1;
+    right: 3%;
+    bottom: 1%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+    /*Button text */
+    button h4 {
+        color: black;
+        transition: transform 0.25s ease-in;
+    }
+    /* Hover button text*/
+    button:hover h4 {
+        transform: rotate(-360deg);
+    }

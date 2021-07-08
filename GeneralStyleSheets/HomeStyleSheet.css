@@ -72,6 +72,29 @@ canvas {
     
 }
 
+/* Reset button styling */
+button {
+    position: absolute;
+    z-index: 1;
+    right: 2%;
+    bottom: 1%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/*Button text */
+    button h4 {
+        color: black;
+        transition: transform 0.25s ease-in;
+        
+    }
+/* Hover button text*/
+button:hover h4{
+    transform: rotate(-360deg);
+}
+
 
 
 
