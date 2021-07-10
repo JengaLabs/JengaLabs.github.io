@@ -141,6 +141,12 @@ function Reset() {
     //Stop drawing path
     canvasContext.closePath();
 
+    //Reset the position of pen
+    currentPosition = {
+        y: 0,
+        x: 0,
+    };
+    
     //Reset Results
     result = lsystem(axiom, ruleset1, iterations);
     result = ModifyTree();
@@ -148,6 +154,8 @@ function Reset() {
     //Reset whole canvas
     canvasContext.resetTransform();
     canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+    //Move context over
+    canvasContext.translate(0.5, 1);
 
     DrwaTree();
 }
@@ -265,16 +273,23 @@ var commands = {
 };
 
 function DrwaTree() {
+
+    
     canvasContext.save();
     //change line width
     canvasContext.lineWidth = 0.01;
     canvasContext.scale(canvas.width, canvas.height);
+
     //Move context over
     canvasContext.translate(0.5, 1);
+    
 
     //reverse canvas so drawing is easier with math
     canvasContext.scale(1, -1);
+    
     canvasContext.save();
+    
+    
 
     //Generate the tree
     interval = setInterval("CreateBranch()", 1);
@@ -335,9 +350,6 @@ var ruleset1 = {
 var lineLenght = 1 / (Math.pow(2, iterations + 2));
 //Angle the branches span
 var angle = 20;
-
-//Start pos = center of screen 
-var initialPosition = new Vector2(canvas.width / 2, canvas.height);
 
 
 //Create l system results 
