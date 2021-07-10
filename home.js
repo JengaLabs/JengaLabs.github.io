@@ -26,10 +26,7 @@ class Vector2 {
 
 }
 
-//Get the canvas 
-const canvas = document.getElementById("Lcanvas");
-//Find canvas 2d
-const canvasContext = canvas.getContext("2d");
+
 
 //method that builds l system string 
 var lsystem = function (startString, rules, iterations) {
@@ -43,8 +40,6 @@ var lsystem = function (startString, rules, iterations) {
     return currentString;
 }
 
-
-
 var nextGeneration = function (currentString, rules) {
     var result = "";
     for (let e = 0; e < currentString.length; e++) {
@@ -57,23 +52,6 @@ var nextGeneration = function (currentString, rules) {
     }
     return result;
 }
-
-function DrwaTree() {
-    canvasContext.save();
-    //change line width
-    canvasContext.lineWidth = 0.01;
-    canvasContext.scale(canvas.width, canvas.height);
-    //Move context over
-    canvasContext.translate(0.5, 1);
-
-    //reverse canvas so drawing is easier with math
-    canvasContext.scale(1, -1);
-    canvasContext.save();
-
-    //Generate the tree
-    interval = setInterval("CreateBranch()", 1);
-}
-
 
 function remove_character(str, char_pos) {
     let part1 = str.substring(0, char_pos);
@@ -153,78 +131,25 @@ function ModifyTree() {
     //result = newResult.replace("[]", "");
     //result = newResult.replace(/[]\)/g, "" );
     result = newResult
-    console.log(result);
+    //console.log(result);
     return result;
 }
 
-//Interval to build tree over time instead of instant
-var interval;
+function Reset() {
+    //End any current drawing process 
+    clearInterval(interval);
+    //Stop drawing path
+    canvasContext.closePath();
 
-//Declare tree rules
-var ruleset1 = {
-    "A": "B[+A]B[-A]+A",
+    //Reset Results
+    result = lsystem(axiom, ruleset1, iterations);
+    result = ModifyTree();
 
-    "B": "BB",
+    //Reset whole canvas
+    canvasContext.resetTransform();
+    canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
-    //"B": "BAB",
-
-};
-
-//Starting string
-var axiom = "A";
-
-//L system string generated
-//Store how many times a generation is created
-var iterations = 8;
-
-//Current position on canvas
-var currentPosition = {
-    y: 0,
-    x: 0,
-};
-
-//lines length on the tree determined by how many generation
-var lineLenght = 1 / (Math.pow(2, iterations + 2));
-//Angle the branches span
-var angle = 20;
-
-//Start pos = center of screen 
-var initialPosition = new Vector2(canvas.width / 2, canvas.height);
-
-
-//Create l system results 
-var result = lsystem(axiom, ruleset1, iterations);
-
-//Modify result to have less detail, but be just as big
-result = ModifyTree();
-
-
-    //Draw the tree using result
     DrwaTree();
-
-
-
-
-
-
-function CreateBranch() {
-
-    if (result.length > 1) {
-        commands[result.charAt(0)]();
-        //Remove last char from string
-        //console.log(result.charAt(result.length - 1));
-        result = result.slice(1, result.length);
-
-        if (canvasContext.lineWidth > 0.0001) {
-            canvasContext.lineWidth -= 0.00001;
-        } else {
-            
-        }
-
-        //console.log(result);
-    } else {
-        clearInterval(interval);
-    }
 }
 
 var check = {
@@ -283,8 +208,6 @@ var check = {
     }
 };
 
-
-
 var commands = {
     "A": function () {
 
@@ -341,9 +264,88 @@ var commands = {
     }
 };
 
+function DrwaTree() {
+    canvasContext.save();
+    //change line width
+    canvasContext.lineWidth = 0.01;
+    canvasContext.scale(canvas.width, canvas.height);
+    //Move context over
+    canvasContext.translate(0.5, 1);
+
+    //reverse canvas so drawing is easier with math
+    canvasContext.scale(1, -1);
+    canvasContext.save();
+
+    //Generate the tree
+    interval = setInterval("CreateBranch()", 1);
+}
+
+function CreateBranch() {
+    //Draw until no more tree in result
+    if (result.length > 1) {
+        commands[result.charAt(0)]();
+        //Remove last char from string
+        //console.log(result.charAt(result.length - 1));
+        result = result.slice(1, result.length);
+
+        if (canvasContext.lineWidth > 0.0001) {
+            canvasContext.lineWidth -= 0.00001;
+        } 
+        //console.log(result);
+    } else {
+        clearInterval(interval);
+    }
+}
 
 
 
+//Get the canvas 
+const canvas = document.getElementById("Lcanvas");
+//Find canvas 2d
+const canvasContext = canvas.getContext("2d");
+
+//Current position on canvas
+var currentPosition = {
+    y: 0,
+    x: 0,
+};
+
+//Interval to build tree over time instead of instant
+var interval;
+
+//Starting string
+var axiom = "A";
+
+//L system string generated
+//Store how many times a generation is created
+var iterations = 8;
+
+//Declare tree rules
+var ruleset1 = {
+    "A": "B[+A]B[-A]+A",
+
+    "B": "BB",
+
+    //"B": "BAB",
+
+};
 
 
+//lines length on the tree determined by how many generation
+var lineLenght = 1 / (Math.pow(2, iterations + 2));
+//Angle the branches span
+var angle = 20;
 
+//Start pos = center of screen 
+var initialPosition = new Vector2(canvas.width / 2, canvas.height);
+
+
+//Create l system results 
+var result = lsystem(axiom, ruleset1, iterations);
+
+//Modify result to have less detail, but be just as big
+result = ModifyTree();
+
+
+//Draw the tree using result
+DrwaTree();
