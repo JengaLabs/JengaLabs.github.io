@@ -33,39 +33,27 @@ section h6 {
 section nav {
     margin-top: 6vh;
     width: 90vw;
-    display: flex;
-    justify-content: space-around;
+
     
 }
 
-section nav a {
-   flex: 1;
-   text-align: center;
-   text-decoration: none;
-   color: black;
+section nav ul {
+    display: flex;
+    justify-content: space-around;
 }
 
-/* highlight hover area */
-nav a:hover ~ div {
-    background-color: #aeb0b5;
+section nav ul li a {
+    text-decoration: none;
+    color: black;
 }
 
-/* highlight hover area */
-nav a:first-child:hover ~ div {
-    left: 10vw;
+section nav ul li a:hover {
+    background-color: grey;
 }
 
 
-/* Highlight div for hover*/
-section nav div {
-    position: fixed;
-    z-index: -1;
-    width: 35vw;
-    left: 55vw;
-    color: transparent;
-    font-size: calc(0.5em + 4vw);
-    transition: left 0.1s linear;
-}
+
+
 
 
 /* JS L-systems canvas*/
