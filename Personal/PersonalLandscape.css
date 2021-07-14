@@ -1,112 +1,120 @@
-/*Whole page*/
-html {
-    background-color: black;
-}
 
-/*Body*/
+
+
+
+/* Page body */
 body {
-    margin: 0 5%;
-    height: 300vh;
-    padding: 0vh 5vw;
     background-color: black;
-    background-image: linear-gradient(to right, black, indigo, purple,indigo,black);
+    background-image: url("../Pictures/MoonSurface.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     
 }
 
-    /* Introductions Block */
-    body header {
+/* Each Section of the page */
+body section {
+    height: 100vh;
+    width: 40vw;
+}
+
+
+
+    /* The Side navigation menu */
+    body div#SideNav {
+        background-color: hsla(120, 100%, 50%, 0.3);
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.2s;
+        padding-top: 60px;
+        color: white;
+    }
+
+    /* Side navigation menu close button */
+    body div#SideNav a.closebtn {
+        position: absolute;
+        top: 0;
+        right: 1vw;
+        font-size: calc(1em + 3vw);
+        text-decoration: none;
+        color: white;
+    }
+
+    /*Side navigation Name Displayed */
+    body div#SideNav h1 {
+        color: white;
+        text-align: center;
+        height:  calc(1em + 3vw);
+        background-color: hsla(150, 100%, 50%, 0.3);
+    }
+
+    /* Side navigation list container*/
+    body div#SideNav nav {
+        margin: 2vh 2vw;
+        width: 31vw;
         display: flex;
-        padding: 5vh 2vw;
-        height: 50vh;
-        border: 10px solid white;
-        background-color: purple;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: space-evenly
+    }
+
+    /* Side navigation list items */
+    body div#SideNav nav a {
+        background-color: hsla(150, 100%, 50%, 0.3);
+        flex: 1;
+        margin: 1vh 1vw;
+        height: 10vh;
+        flex-basis: 12vw;
+        font-size: calc(1em + 1vw);
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+
+        body div#SideNav:hover ~ div#SpacePigContainer {
+            width: 5vw;
+            transform: translateX(-3vw) translateY(-10vh-calc(1em + 3vw)vh);
+        }
+
+
+
+
+    /* Space pig */
+    div#SpacePigContainer {
+        display: block;
+        pointer-events: none;
+        z-index: 1;
+        /*Space pig always sticky */
+        position: fixed;
+        height: 0vh;
+        width: 30vw;
+        top: 25vh;
+        left: 10vw;
+        margin: 0 auto;
+        transition: all 0.5s ease-in-out;
         
     }
 
-        /* Profile picture */
-        body header img {
-            background-color: lightblue;
-            border: 5px solid black;
-            border-radius: 30%;
-            max-height: 100%;
+     img#SpacePig {
+        /*Hide pig clickable */
+        pointer-events: none;
+        /*Set pig to width of container*/
+        width: 100%;
+        /*Set spinning forever */
+        animation: rotation 5s infinite linear;
+    }
+
+     /*Animation for pig rotating*/
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
         }
 
-        /* Introduction text box*/
-        body header article {
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
-            padding: 5vh 2vw;
-            width: 100%;
-            height: 100%;
-
+        to {
+            transform: rotate(359deg);
         }
-        
-        /* Page text */
-        body header article h5 {
-            padding: 2.5% 0;
-        }
-
-        /* My Name on title*/
-        body header article h5 strong{
-            font-size: calc(1em + 2vw);
-            
-        }
-
-        /* Description of me text */
-        body header article h6 {
-            padding: 1%;
-        }
-
-        /* Header quote */
-        body header article p {
-            padding: 2.5% 0;
-        }
-
-        /*Navagaton section*/
-        body section {
-            display: flex;
-        }
-
-        body section div {
-            flex: 1;
-        }
-        
-        /* Navagation bar */
-        body section nav {
-            position: relative;
-                top: 0;
-            flex: 1;
-        }
-
-            body section nav::after {
-                
-            }
-
-
-        /* Navagation list */
-        body section nav ul{
-            display: flex;
-            flex-direction: row;
-        }
-        
-
-        /* Navigation List items*/
-        body section nav ul li {
-            flex: 1;
-            text-align: center;
-            padding: 2% 0;
-            background-color: white;
-            border: 5px solid black;
-            background-color: white;
-            border-right: none;
-            
-        }
-
-        /* Each section */
-        body article {
-            height: 25vh;
-            
-        }
-
-        
+    }
