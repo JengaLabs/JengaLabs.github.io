@@ -1,0 +1,52 @@
+/*
+    General style sheet for fance page of the fly medina website
+
+
+*/
+@charset "UTF-8";
+
+/*Font faces will be default for now */
+
+
+html {
+    /*Font face*/
+    font-family: Arial, Arial, Helvetica, sans-serif;
+
+    /* Change padding functionality */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+/*  Whole page */
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*Page header */
+body header {
+    background-color: rgb(43, 181, 255);
+    color: white;
+}
+
+    /* Navigation list colors*/
+    body header nav ul li a {
+        text-decoration: none;
+        color: rgb(38, 179, 255);
+    }
+
+    /*Navigation list items on hover*/
+        body header nav ul li a:hover {
+            color:rgb(38, 103, 255) ;
+        }
+
+    /* Navigation item that leads to current page */
+    body header nav ul li a.currentPage {
+        color: #0000EE;
+    }
+
+
+
+

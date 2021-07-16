@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <head>
 
+    <!-- example of site i would make for medina municipal airport -->
+    <title>
+        Pig's Fly Medina
+    </title>
+
+    <!-- Meta data -->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="portfolio, resume, planes, job">
+
+    <!-- Style sheet reset -->
+    <link href="../../GeneralStyleSheets/reset.css" type="text/css" rel="stylesheet" />
+    <!-- General styles -->
+    <link href="FlyMedinaGeneral.css" type="text/css" rel="stylesheet" />
+    <!-- Specific style for landscape screen -->
+    <link rel="stylesheet" type="text/css" media="screen and (orientation: landscape)" href="FlyMeddinaLandscape.css" />
+    <!-- Specific style for vertical screen-->
+    <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="FlyMedinaPortrait.css" />
+
+
 </head>
 <body>
     <header>
 
-    </header>
-    <section>
 
+        <!-- Location name -->
+        <h1>
+            Medina Municipal Airport
+        </h1>
+
+        <!-- Menu button -->
+        <span id="openbtn" style="cursor:pointer" onclick="openNav()"> &#9776; </span>
+
+        <nav id="SideNav">
+
+
+            <!-- Exit burger menu button -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+            <ul>
+                <li>
+                    <a href="javascript:void(0)" class="currentPage" onclick="closeNav()"> 
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Example
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Home
+                    </a>
+                </li>
+                
+
+            </ul>
+
+
+            <p> this is not an offcial site</p>
+        </nav>
+
+
+
+    </header>
+
+    
+
+    <!-- -->
+    <section>
+        <img src="images/homedisplay.jpg" style="width: 100%;"/>
     </section>
+
+
+
+
+
+    <script>
+        function openNav() {
+            document.getElementById("SideNav").style.right = "0px";
+        }
+
+        function closeNav() {
+            document.getElementById("SideNav").style.right = "-500px";
+            document.getElementById("openbtn").style.visibility = "visible";
+        }
+    </script>
+
+
+
+
 </body>
