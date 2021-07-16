@@ -28,8 +28,8 @@ body header span#openbtn {
 
 /*Navigation menu */
     body header nav {
-        position: absolute;
-        width: 800px;
+        position: fixed;
+        width: 0px;
         right: -500px;
         max-width: 40vw;
         height: 100vh;
