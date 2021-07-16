@@ -47,6 +47,13 @@ body header {
         color: #0000EE;
     }
 
+    /* Disclaimer */
+    body header nav p {
+        font-size: 0px;
+        width: 0px;
+        
+    }
+
 
 
 

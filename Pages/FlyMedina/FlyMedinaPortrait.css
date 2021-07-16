@@ -2,9 +2,9 @@
 /*Airport header */
 body header {
     display: flex; 
-    height: 200px;
-    max-height: 10vh;
-
+    min-height: 100px;
+    
+    height: 10vh
 }
 
 /* Airport title */
