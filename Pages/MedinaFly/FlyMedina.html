@@ -19,6 +19,7 @@
     <!-- Specific style for vertical screen-->
     <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="FlyMedinaPortrait.css" />
 
+    
 
 </head>
 <body>
@@ -44,7 +45,7 @@
 
             <ul>
                 <li>
-                    <a href="FlyMedina">
+                    <a href="../MedinaFly/FlyMedina.html" class="currentPage">
                         Home
                     </a>
                 </li>
@@ -78,13 +79,6 @@
                         Home
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        Home
-                    </a>
-                </li>
-
-
 
             </ul>
 
@@ -109,13 +103,23 @@
 
     <script>
         function openNav() {
-            document.getElementById("SideNav").style.right = "0px";
-            document.getElementById("SideNav").style.width = "800px";
+            if (document.getElementById('style') == null) {
+                var sheet = document.createElement('style');
+                sheet.setAttribute("id", "style");
+            } else {
+                var sheet = document.getElementById('style');
+            }
+            
+            
+            sheet.innerHTML = " @media (orientation: landscape) { nav#SideNav { width: 60%; color: red;} } @media (orientation: portrait) { nav#SideNav { right: 0px; width: 800px; } }";
+            document.body.appendChild(sheet);
+            
         }
-
+        
         function closeNav() {
-            document.getElementById("SideNav").style.right = "-500px";
-            document.getElementById("SideNav").style.width = "0px";
+            var sheet = document.getElementById('style');
+            sheet.innerHTML = " @media (orientation: landscape) { nav#SideNav { width: 60%; } } @media (orientation: portrait) { nav#SideNav { right: -500px; width: 0px; } }";
+            document.body.appendChild(sheet);
             
         }
     </script>
