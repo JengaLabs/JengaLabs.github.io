@@ -12,9 +12,11 @@
 
 
 html {
+    height: 100%;
+    /* Sky background */
+    background: linear-gradient(158deg, rgba(118,232,255,1) 0%, rgba(92,184,255,1) 53%, rgba(0,143,255,1) 100%);
     /*Font face*/
     font-family: Arial, Arial, Helvetica, sans-serif;
-
     /* Change padding functionality */
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -23,9 +25,9 @@ html {
 
 /*  Whole page */
 body {
+    
     display: flex;
     flex-direction: column;
-
 }
 
 /*Page header */
@@ -55,6 +57,11 @@ body header {
         font-size: 0px;
         width: 0px;
         
+    }
+
+    body section {
+        background-color: white;
+
     }
 
 

@@ -1,0 +1,38 @@
+/* Style sheet for the fly medina home page */
+
+
+/* Brief information section box*/
+body section article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Breif information section text box */
+body section article aside {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Breif information section head text */
+body section article aside h2 {
+    color: black;
+    flex-basis: 8%;
+    font-size: clamp(1.2em, 2vw, 2em);
+    text-align: center;
+    margin-top: 2%;
+}
+
+/* Brief information section body text */
+body section article aside p {
+    flex-basis: 90%;
+    padding: 2% 2%;
+    font-size: clamp(1em, 1.5vw, 1.5em);
+}
+
+/* Breif information section image */
+body section article img {
+    min-width: 400px;
+    flex: 1 1 50%;
+}
