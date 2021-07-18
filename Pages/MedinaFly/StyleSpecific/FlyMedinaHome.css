@@ -34,5 +34,27 @@ body section article aside p {
 /* Breif information section image */
 body section article img {
     min-width: 400px;
-    flex: 1 1 50%;
+    
 }
+
+body section article aside aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body section article aside aside ul {
+    min-width: 250px;
+    padding: 2% 2%;
+}
+
+body section article aside aside p {
+    flex: 1 1 30%;
+    max-height: 400px;
+    min-width: 200px;
+}
+
+body section article aside aside ul li {
+    font-size: clamp(1em, 1.5vw, 1.5em);
+}
+
