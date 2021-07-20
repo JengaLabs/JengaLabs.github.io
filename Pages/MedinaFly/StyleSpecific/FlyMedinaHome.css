@@ -34,7 +34,7 @@ body section article aside p {
 /* Breif information section image */
 body section article img {
     min-width: 400px;
-    
+    flex: 1 1 50%;
 }
 
 body section article aside aside {
