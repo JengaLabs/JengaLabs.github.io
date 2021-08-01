@@ -1,87 +1,222 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-
-    <!-- My cornor of the web, enjoy your stay. -->
-
-    <meta charset="utf-8">
-    <meta name="keywords" content="portfolio, resume, code, research">
-    <meta name="author" content="Pig">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="portfolio, resume, code" />
+    <meta name="author" content="Pig" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
-        Pig's Corner
+        Pig's World
     </title>
 
-    <!-- Icon of the page -->
+    <!--Page icon -->
     <link rel="icon" href="Pictures/SpacePig.png" />
 
-    <!-- Links to style sheets -->
-    <!--General Style sheet for landscape screens-->
+    <!-- Style sheets -->
+    <!-- General style sheet for landscape -->
     <link rel="stylesheet" type="text/css" media="screen and (orientation: landscape)" href="GeneralStyleSheets/GeneralHorizontalStyleSheet.css" />
-    <!--General Style sheet for vertical screens-->
+
+    <!-- General style sheet for portrait-->
     <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="GeneralStyleSheets/GeneralVerticalStyleSheet.css" />
 
-    <!--Page specific style sheet for horizontal screens-->
-    <link rel="stylesheet" type="text/css" media="screen and (orientation: landscape)" href="GeneralStyleSheets/HomeStyleSheet.css" />
-    <!--Page specific style sheet for vertical screen-->
-    <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="GeneralStyleSheets/VerticalHomeStyleSheet.css" />
-
-
-    <!--Get L systems script -->
-    <script src="home.js" defer></script>
-
+    <!-- Home Page general style sheet -->
+    <link rel="stylesheet" type="text/css" href="GeneralStyleSheets/HomeStyle.css" />
+    <!-- Home Page Landscape Style Sheet -->
+    <link rel="stylesheet" type="text/css" media="screen and (orientation: landscape)" href="GeneralStyleSheets/LandscapeHomeStyle.css" /> 
+    <!-- Home Page Portrait Style Sheet -->
+    <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="GeneralStyleSheets/PortraitHomeStyle.css" />
 
 </head>
 
+
 <body>
 
-    <section>
+    <header class="intersection">
 
-        <h2>
-            Captain Pig
-        </h2>
 
-        <h6>
-            Software Developer
-        </h6>
+        <!-- Flex box containing information about me -->
+        <div>
+            <h1> Pig </h1>
+            <ul>
+                <li>
+                    Software Developer
+                </li>
+                <li>
+                    Philomath / Geek
+                </li>
+                <li>
+                    Internet Nomad
+                </li>
+            </ul>
 
-        <nav>
+            <span id="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()"> &#9776; </span>
+
+        </div>
+
+
+        <!-- Space Pig Logo / Me -->
+        <img id="SpacePig" src="Pictures/SpacePig.png" />
+
+        <!-- Burger menu to open navigation menu -->
+
+        <nav id="NavigationsMenu">
+
+            <section>
+                <!-- Exit menu button -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <h4>
+                    Navigation
+                </h4>
+
+            </section>
 
             <ul>
                 <li>
-                    <!-- https://pig240.github.io/Personal/Personal-->
-                    <a href="Personal/Personal.html">
-                        Personal
-                    </a>
+                    About me
                 </li>
-                <li>
-                    <!--Using a permalink to create pretty urls -->
-                    <a href="https://pig240.github.io/Professional/Professional">
-                        Professional
-                    </a>
-                </li>
-                
             </ul>
-         
-            
-
-            
 
         </nav>
 
+
+    </header>
+
+    <section class="intersection" id="aboutMe">
+        <!-- Space station pig container -->
+        <aside>
+            <img src="Pictures/SpaceStationPig.png" alt="PigSpaceStation" />
+        </aside>
+
+
+        <article>
+
+            <!-- Quick breifing -->
+            <p>
+                I was only knee deep in my understanding of most technologies. Always fascinated with how the planes I watched worked and how the magic screens knew which colors to produce. Around late elementary school I began to use computers more, playing games like Kerbal Space Program and watching guides on redstone. Soon enough I found Unity and attempted to run it on a laptop that was a year older than me. Quickly I crashed the whole computer with a small script, I was hooked. Freshman year and I'm taking every STEM related class I can find, finally learning about planes and how to program. I made the decision to attend a Career Center in High school and study Software Engineering and Web Design. A year in and with plenty of studying, I earned the certifications available and in my Senior year I will attend an online school.  Then I can focus more on diving into technologie and getting my career in Software started.
+            </p>
+        </article>
+
+
     </section>
 
-    <canvas id="Lcanvas">
-    </canvas>
+    <section class="intersection" id="Projects">
 
-    <button type="button" onclick="Reset()">
-        <h4>
-            &#8634;
-        </h4>
-       
-    </button>
+        
 
+        <article>
+            <ul>
+                <li>
+                    <div>
+                        <h5>
+                            The Sims
+                        </h5>
+
+                        <img src="Pictures/PianoPig.png" alt="Sims picture" />
+
+                        <p>
+                            Reimmagination of EA's series "The Sims" in Unity.
+                            Building a life simulation that can have content expanded
+                            upon later.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h5>
+                            Fly Medina
+                        </h5>
+
+                        <img src="Pages/MedinaFly/Images/FrontDesk.jpg" alt="Sims picture" />
+
+                        <p>
+                            Rebuilding my home towns municpul aiports website.
+                            Hope to one day publish the site under the domain
+                            name. (Proper image coming soon)
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h5>
+                            Rotten Carrots
+                        </h5>
+
+                        <img src="Pictures/PianoPig.png" alt="Sims picture" />
+
+                        <p>
+                            Contributing to the World Wide Web can be difficult, but it's
+                            important to share oppions on parts of life. Reviwing entertainment
+                            and games.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <h5>
+                            PY4E
+                        </h5>
+
+                        <img src="Pictures/PianoPig.png" alt="Sims picture" />
+
+                        <p>
+                            I'm Microsoft certified in Python, but mastering the basics
+                            is what learning is all about. My journy through Python 4 Everyone.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+
+        <!-- White Board to represent projects -->
+        <aside>
+            <img src="Pictures/WhiteBoard.png" alt="Projcets" />
+        </aside>
+    </section>
+
+    <section class="intersection" id="Sims">
+    </section>
+
+    <section class="intersection" id="FlyMedina">
+    </section>
+
+    <section class="intersection" id="Pig">
+    </section>
+
+    <section class="intersection">
+    </section>
+
+    <section class="intersection">
+    </section>
+
+    <section class="intersection">
+    </section>
+
+    <section class="intersection">
+    </section>
+
+
+
+
+    <!-- Script for opening and closing menu -->
+    <script>
+        function openNav() {
+            //Set width of the nav menu
+            document.getElementById("NavigationsMenu").style.width = "40vw";
+            //Set visibilty of the open menu button
+            document.getElementById("openbtn").style.visibility = "hidden";
+        }
+
+        function closeNav() {
+            //Set width of the nav menu
+            document.getElementById("NavigationsMenu").style.width = "0vw";
+            //Set visibilty of the open menu button
+            document.getElementById("openbtn").style.visibility = "visible";
+        }
+    </script>
 
 </body>
+
 </html>

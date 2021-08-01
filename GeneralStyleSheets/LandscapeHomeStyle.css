@@ -1,0 +1,132 @@
+
+/*Change background size when page exceeds image width*/
+html {
+    background-size: cover;
+}
+
+/* Page margins */
+html body {
+    margin: 0 auto;
+    width: 80vw;
+    height: 60vh;
+}
+
+/* Header section style */
+html body header {
+    width: 60vw;
+    height: 50vh;
+    min-height: 400px; 
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+/* Header Text Section Box */
+html body header div {
+    flex: 2;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-height: 400px; 
+    border-radius: 5%;
+}
+
+/*Header Title text */
+html body header div h1 {
+    color: white;
+    text-align: center;
+    flex: 1;
+}
+
+/* Header traits about me */
+body header div ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* List items about me */
+    body header div ul li {
+        flex: 1;
+        color: white;
+        font-size: calc(1em + 1vw);
+        text-align: center;
+        margin: min(20px, 5%) auto;
+    }
+
+
+
+/* Space pig image */
+img#SpacePig {
+    /*Set Pigs max size to container*/
+    height: 100%;
+}
+
+
+
+/* Every sectoin on the page */
+html body section.intersection {
+    min-height: 400px;
+    min-width: 1000px;
+}
+
+   
+
+/* About me text section container */
+section.intersection#aboutMe article {
+    width: 60%;
+    height: 80%;
+    margin: auto 0;
+    border-radius: 5%; 
+}
+
+/* About me text */
+section.intersection#aboutMe article p {
+    font-size: calc(1em + 0.25vw);
+    color: white;
+    width: 90%;
+    height: 80%;
+    
+}
+
+/* Project container box  */
+section.intersection#Projects article {
+    border-radius: 5%;
+    max-width: 60%;
+}
+
+/*Project section horizontal list*/
+section.intersection#Projects article ul {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    height: 100%;
+}
+
+/*Project section hoirzontal list items */
+section.intersection#Projects article ul li {
+    border-left: 5px black solid;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/*Individual projects title */
+section.intersection#Projects article ul li div h5 {
+    width: 100%; 
+    text-align: center;
+    flex: 1;
+    font-size: min(30px ,calc(1em + 2vw));
+    max-height: 10%;
+}
+
+
+/*Individual projects images */
+section.intersection#Projects article ul li div img {
+    flex: 1;   
+}
+
+/* Project description */
+section.intersection#Projects article ul li div p {
+    flex: 1;
+    font-size: min(15px ,calc(1em + 0.2vw));
+}

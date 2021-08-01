@@ -1,60 +1,194 @@
 
-
-body {
-	background-color: black;
-}
-body div#sun {
-	
-	
-	
-	border-radius: 50%;
-	overflow: hidden;
-	/*Glow */
-	/*
-	box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
-	*/
-
-	box-shadow: 0 0 50px 10px rgba(255, 189, 3, 0.72);
-
-	width: 50%;
-	height: 300px;
-	
+/* Whole Page Styling*/
+html {
+    background-color: black;
+    background-image: url("../Pictures/MoonSurface.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
+/* Page margins */
+    html body {
+        background-color: transparent;
+        margin: 0 auto;
+        width: 90vw;
+    }
 
-
-body div#sun div.mask {
-	
-	width: 100%;
-	height: 100%; 
-	
-	
-	/*box-shadow:inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);*/
-
-	 border-radius:50%;
+/* Header section styling */
+html body header {
+    display: flex; 
 }
 
+/*Header text section box */ 
+html body header div {
+    background-color: hsla(333, 100%, 79%, 0.2);
+     border: 5px solid black;
+     position: relative;
+}
 
-#sun .background {
-	background: url(../Pictures/SunSurface.jpg) repeat-x;
-	background-size: cover;
-	width: 100%;
-	height: 300px;
-	animation: translateBackground 30s infinite linear;
-	opacity: 0.9;
-	transform: rotate(180deg);
+/*Space pig image */
+img#SpacePig {  
+    /*Flip image */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 
-@keyframes translateBackground {
-	0% {
-		background-position-x: 0;
-		
-	}
-
-	100% {
-		background-position-x: -1000px;
-	}
+/*Header Burger menu button */
+body header span {
+    position: absolute;
+    color: red;
+    right: 5%;
+    top: 5%;
 }
 
+/* Header navigation menu */
+body header nav#NavigationsMenu {
+    position: fixed;
+    height: 100%;
+    width: 0px;
+    max-width: 500px;
+    right: 0;
+    background-color: hsla(333, 100%, 79%, 1);
+    border-left: 5px black solid;
+    transition: width linear 0.1s;
+}
+
+/*Navigation menu storage */
+body header nav#NavigationsMenu section {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    min-height: 100px;
+    max-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation menu exit button */
+body header nav#NavigationsMenu section a.closebtn {
+    
+    text-align: right;
+    width: 95%;
+    color: red;
+    text-decoration: none;
+    font-size: calc(1em + 2vw);
+}
+
+/* Navigation title */
+    body header nav#NavigationsMenu section h4 {
+        font-size: min(45px ,calc(1em + 2vw));
+        text-align: center;
+        height: 100%;
+    }
+
+/* Navigation unordered list */
+body header nav#NavigationsMenu ul {
+    width: 100%; 
+    height: 100%;
+    background-color: blue;
+}
+
+/* Every section on the page */
+html body section.intersection {
+    height: 50vh;
+    width: 100%;
+}
+
+
+/* About me section */
+section.intersection#aboutMe {
+    flex-direction: row;
+    display: flex;   
+}
+
+/* About me section image container */
+section.intersection#aboutMe aside {
+    
+    flex: 1;
+   
+}
+
+/* About me section image*/
+section.intersection#aboutMe aside img {
+    object-fit: contain;
+    height: 100%;
+
+}
+
+/* About me text section container */
+section.intersection#aboutMe article {
+    background-color: hsla(333, 100%, 79%, 1);
+    border: 5px black solid;
+}
+
+/* About me text */
+section.intersection#aboutMe article p{
+    color: white;
+    margin: auto;
+}
+
+/*Projects section */
+section.intersection#Projects {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Project section image container */
+section.intersection#Projects aside {
+    flex: 1;
+} 
+
+/* Project section image */
+section.intersection#Projects aside img {
+    object-fit: contain;
+    height: 100%;
+}
+
+/*Project section text area */
+section.intersection#Projects article {
+    flex: 1;
+    background-color: hsla(333, 100%, 79%, 1);
+    border: 5px black solid;
+    margin: auto;
+    height: 80%;
+    
+}
+
+/*Project section horizontal list*/
+section.intersection#Projects article ul {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    margin: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/*Individual projects */
+section.intersection#Projects article ul li div {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 100%;
+    
+}
+
+/*Individual projects title */
+section.intersection#Projects article ul li div h5 {
+    width: 100%; 
+    text-align: center;
+    flex: 1;
+}
+
+/*Individual projects images */
+section.intersection#Projects article ul li div img {
+    flex: 1;   
+}
+
+/* Project description */
+section.intersection#Projects article ul li div p {
+    flex: 1;
+    font-size: min(15px ,calc(1em + 0.5vw));
+}
 

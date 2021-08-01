@@ -1,0 +1,133 @@
+
+    /* Page margins */
+    html body {
+        margin: 0 auto;
+        width: 90vw;
+        height: 60vh;
+
+    }
+
+        /* Header section style */
+        html body header {
+            width: 100%;
+            height: 50vh;
+            min-height: 250px;
+            margin: 0 auto;
+            max-height: 300px;
+        }
+
+            /* Header Text Section Box */
+            html body header div {
+                flex: 1;
+                margin: 5% 0;
+                display: flex;
+                flex-direction: row;
+                border-radius: 10%;
+                
+                
+            }
+
+                /*Header Title text */
+                html body header div h1 {
+                    color: white;
+                    text-align: center;
+                    flex: 1;
+                    vertical-align: central;
+                    margin: auto;
+                }
+
+/* Header traits about me */
+body header div ul {
+    margin: auto;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+    /* List items about me */
+    body header div ul li {
+        flex: 1;
+        color: white;
+        font-size: calc(1em + 1vw);
+        text-align: center;
+        margin: min(10px, 5%);
+    }
+
+
+
+/* Space pig image */
+img#SpacePig {
+    /*Set Pigs max size to container*/
+    display: none;
+}
+
+
+/* Every sectoin on the page */
+html body section.intersection {
+
+    min-height: 500px;
+}
+
+
+/*About me section img */
+section.intersection aside {
+    display: none;
+}
+/* About me text section container */
+section.intersection#aboutMe article {
+    width: 100%;
+    height: 80%;
+    margin: auto 0;
+    border-radius: 10%;
+}
+
+/* About me text */
+    section.intersection#aboutMe article p {
+        font-size: calc(0.5em + 2vw);
+        color: white;
+        margin: 5% auto;
+        width: 95%;
+    }
+
+/* Project container box  */
+section.intersection#Projects article {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    width: 100%;
+}
+
+/* Project section image container */
+section.intersection#Projects aside {
+    flex: 0;
+    width: 0;
+} 
+
+/*Project section horizontal list*/
+section.intersection#Projects article ul {
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    height: 100%;
+}
+
+/*Project section hoirzontal list items */
+section.intersection#Projects article ul li {
+    border-left: 5px black solid;
+    width: 50%;
+}
+
+/*Individual projects title */
+section.intersection#Projects article ul li div h5 {
+    width: 100%; 
+    text-align: center;
+    flex: 1;
+    font-size: min(50px ,calc(1em + 3vw));
+    max-height: 10%;
+}
+
+
+/*Individual projects images */
+section.intersection#Projects article ul li div img {
+    flex: 1;   
+}
