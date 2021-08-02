@@ -91,6 +91,8 @@ body header nav#NavigationsMenu ul {
 
 /* Every section on the page */
 html body section.intersection {
+    display: flex;
+    flex-direction: row;
     height: 50vh;
     width: 100%;
 }
@@ -128,11 +130,6 @@ section.intersection#aboutMe article p{
     margin: auto;
 }
 
-/*Projects section */
-section.intersection#Projects {
-    display: flex;
-    flex-direction: row;
-}
 
 /* Project section image container */
 section.intersection#Projects aside {
@@ -199,4 +196,24 @@ section.intersection#Projects article ul li div p {
     flex: 1;
     font-size: min(15px ,calc(1em + 0.5vw));
 }
+
+/* Sims sections image container*/
+section.intersection#Sims aside {
+    flex: 1;
+}
+
+/* Sims section image */
+section.intersection#Sims aside img {
+    height: 100%;
+    object-fit: contain;
+}
+
+section.intersection#Sims article {
+    flex: 1;
+    background-color: hsla(333, 100%, 79%, 1);
+    border: 5px black solid;
+    margin: auto;
+    height: 80%;
+}
+
 
