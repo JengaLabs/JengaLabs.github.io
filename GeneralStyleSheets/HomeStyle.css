@@ -1,17 +1,19 @@
 
 /* Whole Page Styling*/
 html {
-    background-color: black;
-    background-image: url("../Pictures/MoonSurface.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: black
+    
 }
 
 /* Page margins */
     html body {
         background-color: transparent;
         margin: 0 auto;
+        background-image: url("../Pictures/MoonSurface.png");
+        background-repeat: no-repeat;
+        background-size: contain;
         width: 90vw;
+        
     }
 
 /* Header section styling */
@@ -102,6 +104,7 @@ html body section.intersection {
 section.intersection#aboutMe {
     flex-direction: row;
     display: flex;   
+    width: 100%;
 }
 
 /* About me section image container */
@@ -197,15 +200,25 @@ section.intersection#Projects article ul li div p {
     font-size: min(15px ,calc(1em + 0.5vw));
 }
 
+section.intersection#Sims {
+    height: 70vh;
+}
+
 /* Sims sections image container*/
 section.intersection#Sims aside {
     flex: 1;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
 }
 
 /* Sims section image */
 section.intersection#Sims aside img {
-    height: 100%;
+    width: 100%;
+    margin: auto;
     object-fit: contain;
+    
 }
 
 section.intersection#Sims article {

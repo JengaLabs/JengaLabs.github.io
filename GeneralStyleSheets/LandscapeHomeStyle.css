@@ -1,7 +1,7 @@
 
 /*Change background size when page exceeds image width*/
 html {
-    background-size: cover;
+    
 }
 
 /* Page margins */
@@ -9,6 +9,7 @@ html body {
     margin: 0 auto;
     width: 80vw;
     height: 60vh;
+    background-size: cover;
 }
 
 /* Header section style */
@@ -56,6 +57,8 @@ body header div ul {
 
 
 
+
+
 /* Space pig image */
 img#SpacePig {
     /*Set Pigs max size to container*/
@@ -74,10 +77,11 @@ html body section.intersection {
 
 /* About me text section container */
 section.intersection#aboutMe article {
-    width: 60%;
+    width: 90%;
     height: 80%;
     margin: auto 0;
     border-radius: 5%; 
+    flex: 1;
 }
 
 /* About me text */
@@ -85,9 +89,15 @@ section.intersection#aboutMe article p {
     font-size: calc(1em + 0.25vw);
     color: white;
     width: 90%;
-    height: 80%;
-    
+    height: 80%;   
 }
+
+/* About me section image container */
+section.intersection#aboutMe aside {
+    max-width: 40%;
+}
+
+
 
 /* Project container box  */
 section.intersection#Projects article {
@@ -129,4 +139,10 @@ section.intersection#Projects article ul li div img {
 section.intersection#Projects article ul li div p {
     flex: 1;
     font-size: min(15px ,calc(1em + 0.2vw));
+}
+
+/* The Sims text container */
+section.intersection#Sims article {
+    border-radius: 5%;
+    width: 60%;
 }
