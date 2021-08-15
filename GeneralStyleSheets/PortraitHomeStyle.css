@@ -127,5 +127,11 @@ section.intersection#Projects article ul li div h5 {
 
 /*Individual projects images */
 section.intersection#Projects article ul li div img {
-    flex: 1;   
+    
+    width: 20vh;
+}
+
+/*Sims section img container */
+section.intersection#Sims aside {
+    display: none;
 }
