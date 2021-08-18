@@ -1,8 +1,8 @@
 
 header {
-    width: 80%;
-    background-color: grey;
-    color: darkorange;
+    width: 90%;
+    background-color: #3C230F;
+    color: #fcb318;
     margin: auto;
     text-align: center;
 }
@@ -20,10 +20,9 @@ article {
     display: flex;
     flex-flow: row wrap;
     background-color: darkgoldenrod;
-    width: 80%;
+    width: 90%;
     margin: auto;
-    
-    color: darkorange;
+    color: #fcb318;
     justify-content: flex-start;
     align-items: stretch;
 }
