@@ -1,4 +1,41 @@
 
+header {
+    width: 80%;
+    background-color: grey;
+    color: darkorange;
+    margin: auto;
+    text-align: center;
+}
 
 
+header h1 {
+    font-size: calc(1em + 5vw);
+}
 
+header p {
+    font-size: calc(1em + 2vw);
+}
+
+article {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    background-color: darkgoldenrod;
+    width: 80%;
+    margin: auto;
+    height: 800px;
+}
+
+article aside {
+    flex: 1;
+    min-width: 500px;
+    margin: 10px;
+    height: 200px;
+    background-color: grey;
+    text-align: center;
+}
+
+article aside h2 {
+    font-size: calc(1em + 2vw);
+     
+}
