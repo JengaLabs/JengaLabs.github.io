@@ -128,7 +128,8 @@ section.intersection#Projects article ul li div h5 {
 /*Individual projects images */
 section.intersection#Projects article ul li div img {
     
-    width: 20vh;
+    
+    height: auto;
 }
 
 /*Sims section img container */
