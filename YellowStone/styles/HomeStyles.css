@@ -18,22 +18,24 @@ header p {
 
 article {
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     background-color: darkgoldenrod;
     width: 80%;
     margin: auto;
-    height: 800px;
+    
     color: darkorange;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 article aside {
     flex: 1;
-    height: auto;
+    height: max-content;
     margin: 10px;
     background-color: grey;
     text-align: center;
-    min-width: 500px;
+    min-width: 200px;
+    
 }
 
 article aside h2 {
