@@ -24,18 +24,23 @@ article {
     width: 80%;
     margin: auto;
     height: 800px;
+    color: darkorange;
 }
 
 article aside {
     flex: 1;
-    min-width: 500px;
+    height: auto;
     margin: 10px;
-    height: 200px;
     background-color: grey;
     text-align: center;
+    min-width: 500px;
 }
 
 article aside h2 {
     font-size: calc(1em + 2vw);
      
+}
+
+article aside img {
+    width: 100%;
 }
