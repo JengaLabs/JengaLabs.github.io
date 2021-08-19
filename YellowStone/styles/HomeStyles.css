@@ -1,47 +1,44 @@
-
-header {
-    width: 90%;
-    background-color: #3C230F;
-    color: #fcb318;
-    margin: auto;
-    text-align: center;
+/* Page background */
+html {
+    background-image: url("../aidenPictures/lake.jpg");
 }
 
 
-header h1 {
-    font-size: calc(1em + 5vw);
-}
 
-header p {
-    font-size: calc(1em + 2vw);
-}
 
+
+/* Container for content on main page */
 article {
     display: flex;
     flex-flow: row wrap;
     background-color: darkgoldenrod;
-    width: 90%;
+    justify-content: space-evenly;
     margin: auto;
     color: #fcb318;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-
-article aside {
-    flex: 1;
-    height: max-content;
-    margin: 10px;
-    background-color: grey;
-    text-align: center;
-    min-width: 200px;
+    align-content: center;
     
 }
 
+/* Content containers */
+article aside {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    min-width: 300px;
+    
+    
+}
+
+/* Content titles  */
 article aside h2 {
     font-size: calc(1em + 2vw);
+     background-color: grey;
      
 }
 
-article aside img {
+/* Content pictures */
+article aside a img {
     width: 100%;
+    
 }
+
