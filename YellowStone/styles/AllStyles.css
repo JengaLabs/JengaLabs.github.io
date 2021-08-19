@@ -88,7 +88,9 @@ a:visited {
     color: #fcb318;
 }
 
-
+a:link {
+    color: #fcb318;
+}
 
 footer aside {
     flex-basis: 20%;
