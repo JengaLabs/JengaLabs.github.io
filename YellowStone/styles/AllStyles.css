@@ -80,7 +80,7 @@ footer nav ul li {
 /* hyperlinks */
 footer nav ul li a {
     text-decoration: underline;
-    
+    color: #fcb318;
 }
 
 a:visited {
