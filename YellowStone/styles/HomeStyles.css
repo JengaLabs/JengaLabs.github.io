@@ -1,41 +1,44 @@
-
-header {
-    width: 80%;
-    background-color: grey;
-    color: darkorange;
-    margin: auto;
-    text-align: center;
+/* Page background */
+html {
+    background-image: url("../aidenPictures/lake.JPG");
 }
 
 
-header h1 {
-    font-size: calc(1em + 5vw);
-}
 
-header p {
-    font-size: calc(1em + 2vw);
-}
 
+
+/* Container for content on main page */
 article {
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     background-color: darkgoldenrod;
-    width: 80%;
+    justify-content: space-evenly;
     margin: auto;
-    height: 800px;
+    color: #fcb318;
+    align-content: center;
+    
 }
 
+/* Content containers */
 article aside {
     flex: 1;
-    min-width: 500px;
     margin: 10px;
-    height: 200px;
-    background-color: grey;
     text-align: center;
+    min-width: 300px;
+    
+    
 }
 
+/* Content titles  */
 article aside h2 {
     font-size: calc(1em + 2vw);
+     background-color: grey;
      
 }
+
+/* Content pictures */
+article aside a img {
+    width: 100%;
+    
+}
+

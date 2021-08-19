@@ -1,0 +1,95 @@
+/* Page background */
+html {
+    background-image: src("../aidenPictures/lake.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: #fcb318;
+    background-attachment: fixed;
+}
+
+/* Whole page centered */
+body {
+    width: 80%;
+    margin: auto;
+    border: 5px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+
+/* Head of main page */
+header {
+    
+    background-color: #3C230F;
+    color: #fcb318;
+    margin: auto;
+    text-align: center;
+}
+
+/* Head text of main page */
+header h1 {
+    font-size: calc(1em + 5vw);
+}
+
+/* Head description on main page */
+header p {
+    font-size: calc(1em + 2vw);
+}
+
+
+
+
+
+/* Footer section  --------------- */
+footer {
+    border: 5px solid black;
+    border-left: none;
+    border-right: none;
+    background-color: #3C230F;
+    display: flex;
+    flex-direction: row;
+}
+
+/*Footer titles */
+footer nav h2 {
+    color: #fcb318;
+    font-size: calc(1em + 1vw);
+}
+
+/*Quick links */
+footer nav {
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+    min-width: 190px;
+}
+
+/* Unordered list */
+footer nav ul {
+    display: flex;
+    color: #fcb318;
+    flex-direction: column;
+    
+}
+
+/*List items */
+footer nav ul li {
+    margin: 5px;
+}
+
+/* hyperlinks */
+footer nav ul li a {
+    text-decoration: underline;
+    color: #fcb318;
+}
+
+a:visited, a:hover, :active:active, a:focus {
+    
+    color: #fcb318;
+}
+
+footer aside {
+    flex-basis: 20%;
+}
+
+/* --------------*/
