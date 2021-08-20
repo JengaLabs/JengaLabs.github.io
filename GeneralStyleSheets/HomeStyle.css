@@ -18,7 +18,11 @@ html {
 
 /* Header section styling */
 html body header {
-    display: flex; 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
 }
 
 /*Header text section box */ 
@@ -93,6 +97,9 @@ body header nav#NavigationsMenu ul {
 
 /* Every section on the page */
 html body section.intersection {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     height: 50vh;
@@ -102,8 +109,11 @@ html body section.intersection {
 
 /* About me section */
 section.intersection#aboutMe {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     flex-direction: row;
-    display: flex;   
     width: 100%;
 }
 
@@ -157,6 +167,9 @@ section.intersection#Projects article {
 
 /*Project section horizontal list*/
 section.intersection#Projects article ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-flow: row;
     height: 100%;
@@ -173,6 +186,9 @@ section.intersection#Projects article ul li:last-of-type {
 
 /*Individual projects */
 section.intersection#Projects article ul li div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     width: 100%; 
@@ -208,6 +224,9 @@ section.intersection#Sims {
 section.intersection#Sims aside {
     flex: 1;
     max-width: 30%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     align-items: center;
     flex-flow: column;
