@@ -1,25 +1,42 @@
-.photos {
-    width: 500px;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    margin: 12px;
-    flex: 1;
-
+/* Page background */
+html {
+    background-image: url(../aidenPictures/River1.JPG);
 }
 
-#article {
-    background-color: gray;
+
+/*Whole section */
+article {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Container for each image sectino */
+article aside {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    width: 100%;
+    margin: 10px;
+    flex: 1;
+   justify-content: center;
 }
-#body{
-    background-image: url(../aidenPictures/River1.JPG);
+
+/* Image container */
+article aside div {
+    flex: 1;
     
 }
- .description {
-     margin: 4px;
-     font-weight: 100px;
-     flex: 1;
- }
+
+/*Image its self*/
+article aside div img {
+    width: 100%;
+}
+
+article aside p {
+    flex: 1;
+    text-align: left;
+    width: 50%;
+    padding: 2%;
+
+}
