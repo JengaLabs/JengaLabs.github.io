@@ -42,3 +42,8 @@ article aside a img {
     
 }
 
+/* content descriptions */
+article aside p {
+    background-color: #3c230f;
+    border: 5px solid black;
+}
