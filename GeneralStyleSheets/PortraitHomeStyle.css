@@ -20,11 +20,12 @@
             html body header div {
                 flex: 1;
                 margin: 5% 0;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
                 display: flex;
                 flex-direction: row;
                 border-radius: 10%;
-                
-                
             }
 
                 /*Header Title text */
@@ -104,6 +105,9 @@ section.intersection#Projects aside {
 
 /*Project section horizontal list*/
 section.intersection#Projects article ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-flow: row;
     width: 100%;
@@ -134,5 +138,8 @@ section.intersection#Projects article ul li div img {
 
 /*Sims section img container */
 section.intersection#Sims aside {
-    display: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }

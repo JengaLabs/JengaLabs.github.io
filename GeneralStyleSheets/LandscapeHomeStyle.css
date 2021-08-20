@@ -73,7 +73,11 @@ html body section.intersection {
     min-width: 1000px;
 }
 
-   
+/* About me section image*/
+section.intersection#aboutMe aside img {
+    height: 100%;
+    width: auto;
+}
 
 /* About me text section container */
 section.intersection#aboutMe article {
@@ -107,6 +111,9 @@ section.intersection#Projects article {
 
 /*Project section horizontal list*/
 section.intersection#Projects article ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-flow: row;
     width: 90%;
