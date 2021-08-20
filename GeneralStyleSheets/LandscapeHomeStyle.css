@@ -73,7 +73,11 @@ html body section.intersection {
     min-width: 1000px;
 }
 
-   
+/* About me section image*/
+section.intersection#aboutMe aside img {
+    height: 100%;
+    width: auto;
+}
 
 /* About me text section container */
 section.intersection#aboutMe article {

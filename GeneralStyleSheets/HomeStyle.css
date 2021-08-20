@@ -116,8 +116,8 @@ section.intersection#aboutMe aside {
 
 /* About me section image*/
 section.intersection#aboutMe aside img {
-    object-fit: contain;
-    height: 100%;
+    
+    width: 100%;
 
 }
 
