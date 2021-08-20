@@ -56,13 +56,18 @@ body header div ul {
     }
 
 
-
-
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 
 /* Space pig image */
-img#SpacePig {
+aside img#SpacePig {
     /*Set Pigs max size to container*/
-    height: 100%;
+    width: 100%;
+    margin: auto;
+    
 }
 
 

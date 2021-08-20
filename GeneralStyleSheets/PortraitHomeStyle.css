@@ -58,7 +58,7 @@ body header div ul {
 
 
 /* Space pig image */
-img#SpacePig {
+aside img#SpacePig {
     /*Set Pigs max size to container*/
     display: none;
 }

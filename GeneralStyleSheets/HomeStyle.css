@@ -33,7 +33,7 @@ html body header div {
 }
 
 /*Space pig image */
-img#SpacePig {  
+aside img#SpacePig {  
     /*Flip image */
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
