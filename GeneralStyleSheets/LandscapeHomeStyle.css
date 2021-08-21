@@ -70,18 +70,12 @@ aside img {
     
 }
 
-
-
 /* Every section on the page */
 html body section.intersection {
     min-height: 400px;
 
 }
 
-/* About me section image*/
-section.intersection#aboutMe aside img {
-    
-}
 
 /* About me text section container */
 section.intersection#aboutMe article {
