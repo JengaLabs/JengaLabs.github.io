@@ -63,7 +63,7 @@ aside {
 }
 
 /* Space pig image */
-aside img#SpacePig {
+aside img {
     /*Set Pigs max size to container*/
     width: 100%;
     margin: auto;
@@ -72,16 +72,15 @@ aside img#SpacePig {
 
 
 
-/* Every sectoin on the page */
+/* Every section on the page */
 html body section.intersection {
     min-height: 400px;
-    min-width: 1000px;
+
 }
 
 /* About me section image*/
 section.intersection#aboutMe aside img {
-    height: 100%;
-    width: auto;
+    
 }
 
 /* About me text section container */

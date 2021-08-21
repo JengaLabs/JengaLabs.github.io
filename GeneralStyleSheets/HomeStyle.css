@@ -102,8 +102,7 @@ html body section.intersection {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    height: 50vh;
-    width: 100%;
+    
 }
 
 
@@ -117,19 +116,7 @@ section.intersection#aboutMe {
     width: 100%;
 }
 
-/* About me section image container */
-section.intersection#aboutMe aside {
-    
-    flex: 1;
-   
-}
 
-/* About me section image*/
-section.intersection#aboutMe aside img {
-    
-    width: 100%;
-
-}
 
 /* About me text section container */
 section.intersection#aboutMe article {
