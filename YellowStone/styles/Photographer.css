@@ -25,6 +25,7 @@ article aside {
 /* Image container */
 article aside div {
     flex: 1;
+    margin: auto;
     
 }
 
@@ -36,7 +37,9 @@ article aside div img {
 article aside p {
     flex: 1;
     text-align: left;
-    width: 50%;
-    padding: 2%;
-
-}
+    padding: 3%;
+    font-size: 2em;
+    margin: auto;
+    width: 80%;
+    background-color: rgb(77, 43, 18);
+} .flex-center { align-items: center; justify-content: center; flex-direction: column; } 
