@@ -83,7 +83,7 @@ footer nav ul li a {
     color: #fcb318;
 }
 
-a:visited, a:hover, :active:active, a:focus {
+a:visited, a:hover, :active:active, a:focus, a:link {
     
     color: #fcb318;
 }
