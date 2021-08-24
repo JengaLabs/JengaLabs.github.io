@@ -1,85 +1,51 @@
+/* Whole Page */
+html {
 
-    /* Page margins */
-    html body {
-        margin: 0 auto;
-        width: 90vw;
-        height: 60vh;
-
-    }
-
-        /* Header section style */
-        html body header {
-            width: 100%;
-            height: 50vh;
-            min-height: 250px;
-            margin: 0 auto;
-            max-height: 300px;
-        }
-
-            /* Header Text Section Box */
-            html body header div {
-                flex: 1;
-                margin: 5% 0;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                flex-direction: row;
-                border-radius: 10%;
-            }
-
-                /*Header Title text */
-                html body header div h1 {
-                    color: white;
-                    text-align: center;
-                    flex: 1;
-                    vertical-align: central;
-                    margin: auto;
-                }
-
-                /* Header graphic container */
-                html body header aside {
-                    display: none;
-                }
-
-/* Header traits about me */
-body header div ul {
-    margin: auto;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
 }
 
-    /* List items about me */
-    body header div ul li {
-        flex: 1;
-        color: white;
-        font-size: calc(1em + 1vw);
-        text-align: center;
-        margin: min(10px, 5%);
-    }
+/* Page margins */
+html body {
+    margin: 0 auto;
+    width: 90vw;
+}
 
 
-    section.intersection article {
-        border-radius: 10%;
-        height: 100%;
-    }
 
-/* All images that should be hidden on portrait mode */
-section.intersection aside {
+/* Default Section CSS ---------------------------- */
+
+/* Every Section */
+html body .intersection {
+    min-height: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Every section content cotainer */
+html body .intersection article {
+    height: 100%;
+    border-radius: 10%;
+}
+
+/* Every sections collapsible image */
+html body .intersection aside {
     display: none;
     flex: 0;
 }
 
-/* Every sectoin on the page */
-html body section.intersection {
-
-    min-height: 600px;
-}
+/*--------------------------------------*/
 
 
+/* Specific Project ---------------------*/
 
+/* Header */
+
+
+
+
+
+/* */
+
+/*----------------------------------------*/
 
 /* About me text */
     section.intersection#aboutMe article p {
