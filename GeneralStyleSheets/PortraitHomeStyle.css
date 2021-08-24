@@ -37,6 +37,11 @@
                     margin: auto;
                 }
 
+                /* Header graphic container */
+                html body header aside {
+                    display: none;
+                }
+
 /* Header traits about me */
 body header div ul {
     margin: auto;
@@ -56,13 +61,16 @@ body header div ul {
     }
 
 
+    section.intersection article {
+        border-radius: 10%;
+        height: 100%;
+    }
 
-/* Space pig image */
-aside img#SpacePig {
-    /*Set Pigs max size to container*/
+/* All images that should be hidden on portrait mode */
+section.intersection aside {
     display: none;
+    flex: 0;
 }
-
 
 /* Every sectoin on the page */
 html body section.intersection {
@@ -71,17 +79,7 @@ html body section.intersection {
 }
 
 
-/*About me section img */
-section.intersection aside {
-    display: none;
-}
-/* About me text section container */
-section.intersection#aboutMe article {
-    width: 100%;
-    height: 80%;
-    margin: auto 0;
-    border-radius: 10%;
-}
+
 
 /* About me text */
     section.intersection#aboutMe article p {
@@ -93,15 +91,8 @@ section.intersection#aboutMe article {
 
 /* Project container box  */
 section.intersection#Projects article {
-    
     width: 100%;
 }
-
-/* Project section image container */
-section.intersection#Projects aside {
-    flex: 0;
-    width: 0;
-} 
 
 /*Project section horizontal list*/
 section.intersection#Projects article ul {
@@ -129,12 +120,6 @@ section.intersection#Projects article ul li div h5 {
     max-height: 10%;
 }
 
-/*Individual projects images */
-section.intersection#Projects article ul li div img {
-    
-    
-    
-}
 
 /*Sims section img container */
 section.intersection#Sims aside {

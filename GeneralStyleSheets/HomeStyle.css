@@ -13,7 +13,6 @@ html {
         background-repeat: no-repeat;
         background-size: contain;
         width: 90vw;
-        
     }
 
 /* Header section styling */
@@ -22,7 +21,6 @@ html body header {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
 }
 
 /*Header text section box */ 
@@ -32,7 +30,8 @@ html body header div {
      position: relative;
 }
 
-/*Space pig image */
+
+/*Space pig image flip  */
 aside img#SpacePig {  
     /*Flip image */
     -webkit-transform: scaleX(-1);
@@ -102,57 +101,35 @@ html body section.intersection {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    
 }
 
+/*Every article section */
+section.intersection article {
+    flex: 1;
+    background-color: hsla(333, 100%, 79%, 1);
+    border: 5px black solid;
+    margin: auto;
+}
 
-/* About me section */
-section.intersection#aboutMe {
+/* Every sections image container box thats collaspeable*/
+section.intersection aside {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    flex-flow: column;
+    flex: 1;
+}
+
+
+/* Every sections image width*/
+section.intersection aside img {
     width: 100%;
-}
-
-
-
-/* About me text section container */
-section.intersection#aboutMe article {
-    background-color: hsla(333, 100%, 79%, 1);
-    border: 5px black solid;
-}
-
-/* About me text */
-section.intersection#aboutMe article p{
-    color: white;
     margin: auto;
 }
 
-
-/* Project section image container */
-section.intersection#Projects aside {
-    flex: 1;
-} 
-
-/* Project section image */
-section.intersection#Projects aside img {
-    object-fit: contain;
-    height: 100%;
-}
-
-/*Project section text area */
-section.intersection#Projects article {
-    flex: 1;
-    background-color: hsla(333, 100%, 79%, 1);
-    border: 5px black solid;
-    margin: auto;
-    height: 80%;
-    
-}
-
-/*Project section horizontal list*/
+/*Project section list of project styling */
 section.intersection#Projects article ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -168,7 +145,6 @@ section.intersection#Projects article ul {
 /*Project section hoirzontal list items */
 section.intersection#Projects article ul li:last-of-type {
     border-right: 5px black solid;
-    
 }
 
 /*Individual projects */
@@ -182,8 +158,6 @@ section.intersection#Projects article ul li div {
     height: 100%;
     
 }
-
-
 
 /*Individual projects title */
 section.intersection#Projects article ul li div h5 {
@@ -203,36 +177,17 @@ section.intersection#Projects article ul li div p {
     font-size: min(15px ,calc(1em + 0.5vw));
 }
 
-section.intersection#Sims {
-    height: 70vh;
-}
 
-/* Sims sections image container*/
-section.intersection#Sims aside {
-    flex: 1;
-    max-width: 30%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-}
 
-/* Sims section image */
-section.intersection#Sims aside img {
-    width: 100%;
-    margin: auto;
-    object-fit: contain;
-    
-}
 
-section.intersection#Sims article {
+
+
+
+section.intersection article {
     flex: 1;
     background-color: hsla(333, 100%, 79%, 1);
     border: 5px black solid;
     margin: auto;
     height: 80%;
 }
-
 
