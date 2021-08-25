@@ -180,14 +180,22 @@ section.intersection#Projects article ul li div p {
 
 
 
-
-
-
-section.intersection article {
-    flex: 1;
-    background-color: hsla(333, 100%, 79%, 1);
-    border: 5px black solid;
+/* Yellow stone container */
+html body section.intersection#Yellowstone article {
+    width: 80%;
     margin: auto;
-    height: 80%;
+    flex: 0;
 }
+
+/* Yeloow stone text container */
+html body section.intersection#Yellowstone article div {
+    margin: 15px;
+    text-align: center;
+}
+
+/* Yellow stone image */
+html body section.intersection#Yellowstone article img {
+    width: 100%;
+}
+
 

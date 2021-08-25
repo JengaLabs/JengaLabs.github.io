@@ -15,7 +15,7 @@ html body {
 
 /* Every Section */
 html body .intersection {
-    min-height: 600px;
+    min-height: 400px;
     width: 100%;
     margin: 0 auto;
 }
@@ -57,7 +57,8 @@ html body .intersection aside {
 
 /* Project container box  */
 section.intersection#Projects article {
-    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
 }
 
 /*Project section horizontal list*/
