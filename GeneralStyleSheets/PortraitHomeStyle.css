@@ -86,11 +86,3 @@ section.intersection#Projects article ul li div h5 {
     max-height: 10%;
 }
 
-
-/*Sims section img container */
-section.intersection#Sims aside {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}

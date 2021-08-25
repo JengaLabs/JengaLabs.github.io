@@ -1,4 +1,3 @@
-
 /* Whole Page Styling*/
 html {
     background-color: black
@@ -13,34 +12,70 @@ html {
         background-repeat: no-repeat;
         background-size: contain;
         width: 90vw;
+
     }
 
-/* Header section styling */
-html body header {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+/* Default Section CSS ---------------------------- */
+
+/* Every Section */
+html body .intersection {
+    color: white;
     display: flex;
+    flex-direction: row;
 }
 
-/*Header text section box */ 
-html body header div {
-    background-color: hsla(333, 100%, 79%, 0.2);
-     border: 5px solid black;
-     position: relative;
+/* Every section content cotainer */
+html body .intersection article {
+    border: 5px solid black;
+    flex: 1;
+    background-color: hsla(333, 100%, 79%, 1);
+    border: 5px black solid;
+    margin: auto;
 }
 
+/* Every sections collapsible image */
+html body .intersection aside {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    flex: 1;
+}
+
+
+/*---------------------------------*/
+
+/* Specific CSS ------------------ */
+
+/* Page Header */
 
 /*Space pig image flip  */
-aside img#SpacePig {  
+html body header.intersection aside img#SpacePig {  
     /*Flip image */
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 
+/*Header Article */
+html body header.intersection article {
+    
+    text-align: center;
+}
+
+/*Header title */
+html body header.intersection article h1 {
+    font-size: calc(1em + 5vw);
+    margin: 15px;
+}
+
+/* Header list items */
+html body header.intersection article ul li {
+    font-size: calc(1em + 1vw);
+    margin: 10px;
+}
+
 
 /*Header Burger menu button */
-body header span {
+html body header span {
     position: absolute;
     color: red;
     right: 5%;
@@ -48,7 +83,7 @@ body header span {
 }
 
 /* Header navigation menu */
-body header nav#NavigationsMenu {
+html body header.intersection nav#NavigationsMenu {
     position: fixed;
     height: 100%;
     width: 0px;
@@ -72,7 +107,6 @@ body header nav#NavigationsMenu section {
 
 /* Navigation menu exit button */
 body header nav#NavigationsMenu section a.closebtn {
-    
     text-align: right;
     width: 95%;
     color: red;
@@ -94,40 +128,10 @@ body header nav#NavigationsMenu ul {
     background-color: blue;
 }
 
-/* Every section on the page */
-html body section.intersection {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-}
-
-/*Every article section */
-section.intersection article {
-    flex: 1;
-    background-color: hsla(333, 100%, 79%, 1);
-    border: 5px black solid;
-    margin: auto;
-}
-
-/* Every sections image container box thats collaspeable*/
-section.intersection aside {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    flex: 1;
-}
 
 
-/* Every sections image width*/
-section.intersection aside img {
-    width: 100%;
-    margin: auto;
-}
+
+/* Project Section --------------------*/
 
 /*Project section list of project styling */
 section.intersection#Projects article ul {
@@ -142,21 +146,17 @@ section.intersection#Projects article ul {
     overflow-y: hidden;
 }
 
-/*Project section hoirzontal list items */
+/*Project section hoirzontal last item */
 section.intersection#Projects article ul li:last-of-type {
     border-right: 5px black solid;
 }
 
-/*Individual projects */
+/*Individual projects containers */
 section.intersection#Projects article ul li div {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     width: 100%; 
     height: 100%;
-    
 }
 
 /*Individual projects title */
