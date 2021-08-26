@@ -132,6 +132,12 @@ body header nav#NavigationsMenu ul {
     background-color: blue;
 }
 
+/* About me seciont */
+
+html body section.intersection#aboutMe article p {
+    margin: 15px auto;
+}
+
 
 
 
