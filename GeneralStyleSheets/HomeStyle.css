@@ -178,7 +178,9 @@ section.intersection#Projects article ul li div h5 {
 
 /*Individual projects images */
 section.intersection#Projects article ul li div img {
-   
+   flex: 1;
+   width: auto;
+   height: auto;
 }
 
 /* Project description */
