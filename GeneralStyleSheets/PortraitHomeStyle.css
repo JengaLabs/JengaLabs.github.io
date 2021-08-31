@@ -75,7 +75,9 @@ section.intersection#Projects article ul {
 /*Project section hoirzontal list items */
 section.intersection#Projects article ul li {
     border-left: 5px black solid;
-    width: 50%;
+    min-width: 200px;
+    max-width: 300px;
+
 }
 
 /*Individual projects title */

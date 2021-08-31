@@ -102,8 +102,7 @@ html body header.intersection nav#NavigationsMenu {
 body header nav#NavigationsMenu section {
     position: relative;
     width: 100%;
-    height: 20%;
-    min-height: 100px;
+    min-height: 80px;
     max-height: 120px;
     display: flex;
     flex-direction: column;
@@ -178,9 +177,16 @@ section.intersection#Projects article ul li div h5 {
 }
 
 /*Individual projects images */
-section.intersection#Projects article ul li div img {
-   flex: 1;
-   width: auto;
+section.intersection#Projects article ul li div aside {
+  
+   width: 100%;
+   display: block;
+
+}
+
+/*Individual projects images */
+section.intersection#Projects article ul li div aside img {
+   width: 100%;
    height: auto;
 
 }
