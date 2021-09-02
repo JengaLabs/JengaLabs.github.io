@@ -202,9 +202,9 @@ section.intersection#Projects article ul li div p {
 
 /* Yellow stone container */
 html body section.intersection#Yellowstone article {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    flex: 0;
+    flex: 0.5;
 }
 
 /* Yeloow stone text container */
