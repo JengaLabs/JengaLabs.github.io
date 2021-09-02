@@ -195,9 +195,9 @@ section.intersection#Projects article ul li div p {
 
 /* Yellow stone container */
 html body section.intersection#Yellowstone article {
-    width: 100%;
+    width: 80%;
     margin: auto;
-    flex: 1;
+    flex: 80%;
 }
 
 /* Yellow stone text container */
@@ -253,5 +253,13 @@ html body section.intersection article div#video iframe {
     min-height: 200px;
 }
 
+html body section.intersection#FlyMedina article h6 {
+    text-align: center;
+    margin: 15px;
+}
+
+html body section.intersection#FlyMedina article {
+    border-radius: 5%;
+}
 
 
