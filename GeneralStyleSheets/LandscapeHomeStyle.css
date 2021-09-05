@@ -80,17 +80,20 @@ html body section.intersection {
 section.intersection#aboutMe article {
     width: 90%;
     height: 80%;
+    min-height: 300px;
     margin: auto 0;
     border-radius: 5%; 
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* About me text */
 section.intersection#aboutMe article p {
-    font-size: calc(1em + 0.25vw);
+    font-size: calc(1em + 0.6vw);
     color: white;
     width: 90%;
-    height: 80%;   
 }
 
 /* About me section image container */

@@ -97,8 +97,8 @@ html body header.intersection nav#NavigationsMenu {
 body header nav#NavigationsMenu section {
     position: relative;
     width: 100%;
-    min-height: 80px;
-    max-height: 120px;
+    min-height: 100px;
+    max-height: 150px;
     display: flex;
     flex-direction: column;
 }
@@ -250,7 +250,7 @@ html body section.intersection article div#video {
 html body section.intersection article div#video iframe {
     width: 90%;
     height: auto;
-    min-height: 200px;
+    min-height: 300px;
 }
 
 html body section.intersection#FlyMedina article h6 {
