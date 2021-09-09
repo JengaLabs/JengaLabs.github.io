@@ -1,0 +1,28 @@
+﻿@charset "UTF-8";
+
+/*Fonts ------------ */
+
+
+/*Import Font Face */
+@font-face {
+    font-family: "Saitamaar";
+    src: url(../../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff2) format("woff2"), 
+        url(../../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff) format("woff"), 
+        url(../../GeneralStyleSheets/Fonts/Saitamaar/Saitamaarttf) format("ttf");
+    font-display: swap;
+}
+
+/*----------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lucida Sans';
+}
+
+p {
+    font-family: Saitamaar;    
+}
+
+
+
+
+
