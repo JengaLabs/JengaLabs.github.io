@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    
+
     <meta charset="utf-8" />
     <meta name="keywords" content="blog, code, science" />
     <meta name="author" content="Pig" />
@@ -16,24 +16,85 @@
     <link rel="icon" href="" />
 
     <!--Style Sheets -->
-
     <!-- Reset Style Sheet -->
-    <link href="../../GeneralStyleSheets/reset.css" type="text/css" rel="stylesheet"/>
+    <link href="../../GeneralStyleSheets/reset.css" type="text/css" rel="stylesheet" />
     <!-- General blog style -->
     <link href="BlogStyle.css" type="text/css" rel="stylesheet" />
+
+    <!-- Small Screens Style -->
+    <link href="BlogSmallStyle.css" media="screen and (max-width: 600px)" type="text/css" rel="stylesheet" />
+
+    <!-- Medium Screen Style -->
+    <link href="BlogMediumStyle.css" media="screen and (max-width: 1000px) and (min-width: 601px)" type="text/css" rel="stylesheet" />
+
+    <!-- Large Screen Style -->
+    <link href="BlogBigStyle.css" media="screen and (min-width: 1001px)" type="text/css" rel="stylesheet" />
 
 </head>
 
 <body>
-    
-    <ul>
-        <li>
 
-        </li>
-        <li>
 
-        </li>
-    </ul>
+    <!--Side Section -->
+    <aside>
+        <div id="SideLogoContainer">
+            <img alt="Side Logo Image " />
+        </div>
+
+    </aside>
+
+    <main>
+
+        <header>
+            <div id="HeaderLogoContainer">
+                <img alt="Blog Header Image " />
+            </div>
+            <form>
+
+                <!-- List of search queries available. -->
+                <ul>
+                    <li>
+                        <label for="_SortBy">
+                            Sort By :
+
+                            <select id="_SortBy" name="SortBy">
+                                <option selected value="_All">New - Old</option>
+                                <option value="_Science">Old - New</option>
+                            </select>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="_Filter">
+                            Catagory :
+
+                            <select id="_Filter" name="Category">
+                                <option selected value="_All">All Options</option>
+                                <option value="_Science">Science</option>
+                                <option value="_Programming">Programming</option>
+                                <option value="_Opinion">Opinion Piece</option>
+                                <option value="_Research">Research</option>
+                                <option value="_Finished">Finished</option>
+
+                            </select>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            Search :
+                            <input type="text" id="ByName" placeholder="Search by name..." />
+                        </label>
+
+                    </li>
+                    <li>
+                        <input type="submit" value="Submit" id="Submit" />
+                    </li>
+                </ul>
+            </form>
+
+        </header>
+
+
+    </main>
 
 </body>
 </html>
