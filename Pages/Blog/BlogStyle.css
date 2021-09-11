@@ -1,6 +1,6 @@
 ﻿@charset "UTF-8";
 
-/*Fonts ------------ */
+/*Fonts ----------------------------- */
 
 
 /*Import Font Face */
@@ -12,55 +12,139 @@
     font-display: swap;
 }
 
-/*----------------*/
+/*-----------------------------------*/
 
+/* General Text ---------------- */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lucida Sans';
 }
 
-p {
+p, label {
     font-family: Saitamaar;    
 }
 
+h1 {
+    font-size: clamp(1em, 6vw, 4vw);
+}
+
+h2{
+    font-size: clamp(1em, 4vw, 4vw);
+
+}
+
+h3 {
+    font-size: clamp(1em, 3vw, 4vw);
+}
+
+h4 {
+    font-size: clamp(1em, 2vw, 4vw);
+}
+
+p {
+    font-size: clamp(1em, 1vw, 2vw);
+}
+
+/*-----------------------------------*/
+
+/* Page */
 html {
     height: 100%;
     width: 100%;
+    color: white;
 }
 
-/*The whole page*/
+/*The whole content */
 html body {
+    margin: auto;
     height: 100%;
     display: flex;
     flex-direction: row;
+    background-color: #101016;
 }
 
-/* Main Section */
-html body main {
-    border-left: 5px solid black;
-    border-right: 5px solid black;
+/* All logo containers images */
+#ImageWidthContainer img {
+    width: 100%;
 }
+
+#ImageHeightContainer img {
+    height: 100%;
+}
+
+/*-------------- SIDE SECTION ---------------*/
+
+/*Side Section */
+html body aside#SideSection {
+    height: 100%;
+    background-color: #202024;
+}
+
+/* Side Section Title */
+html body aside#SideSection h1 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+ /*-----------------------------------*/
+
+/*-------------- MAIN SECTION ---------------*/
+ 
 
 /* Main header*/
 html body main header {
     display: flex;
     flex-direction: column;
+    background-color: #101016;
+
 }
+
 
 /* Search query list */
 html body main header form  ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 50px;
+    background-color:#202024;
 }
 
 /* Search query list items */
 html body main header form ul li {
-    flex: 1;
+    text-align: center;
 }
 
-/* All logo containers images */
-#LogoContainer img {
-    width: 100%;
+/* Article container box */
+html body main article {
+    height: 100%;
 }
+
+
+/* List of blogs */
+html body main article ul#Articles {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Blog list items */
+    html body main article ul#Articles li {
+        flex: 1 1 40%;
+        background-color: #202024;
+        margin: 5px;
+        min-width: 20%;
+    }
+
+/* Blog Items titles */
+html body main article ul#Articles li aside h3 {
+    text-align: center;
+}
+
 
 
 

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
-        Pig's Archive
+        Pig's Vault
     </title>
 
     <!--Page Icon-->
@@ -37,9 +37,11 @@
 
     <!--Side Section -->
     <aside id="SideSection">
-        <div id="SideLogoContainer">
-            <img alt="Side Logo Image " />
-        </div>
+
+        <h1> Pig's Vault </h1>
+
+        
+
 
     </aside>
 
@@ -47,7 +49,7 @@
     <main>
 
         <header>
-            <div id="LogoContainer">
+            <div id="ImageWidthContainer">
                 <img alt="Blog Header Image"  src="BlogPictures/HeaderLogo.png"/>
             </div>
             <form>
@@ -56,7 +58,7 @@
                 <ul>
                     <li>
                         <label for="_SortBy">
-                            Sort By :
+                            Sort By 
                             <select id="_SortBy" name="SortBy">
                                 <option selected value="_NewFirst">New - Old</option>
                                 <option value="_OldFirst">Old - New</option>
@@ -65,7 +67,7 @@
                     </li>
                     <li>
                         <label for="_Filter">
-                            Catagory :
+                            Catagory 
 
                             <select id="_Filter" name="Category">
                                 <option selected value="_All">All Options</option>
@@ -80,7 +82,7 @@
                     </li>
                     <li>
                         <label>
-                            Search :
+                            Search 
                             <input type="text" id="ByName" placeholder="Search by name..." />
                         </label>
 
@@ -97,24 +99,72 @@
         <article>
 
             <!-- List of articles -->
-            <ul>
-                <li>
+            <ul id="Articles">
+                <!-- Individual Blog Container -->
+                <li class="Blog">
+
+                    <!-- Image for blog -->
+                    <div id="ImageHeightContainer">
+                        <img alt="Blog Image" src="" />
+                    </div>
+                    <!-- Blog Text Content-->
                     <aside>
-                        <h2>
-                            Oxygen 
-                        </h2>
+                        <!-- Blog Title -->
+                        <h3>
+                            DIY Solid Rocket 
+                        </h3>
+                        <!-- Blog Description -->
                         <p>
-
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            . Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum
                         </p>
-
-                        <div>
-                            <img alt="Oxygen Image" src=""/>
-                        </div>
                     </aside>
                 </li>
-                <li>
-                    <aside>
 
+                <li class="Blog">
+
+                    <div id="ImageHeightContainer">
+                        <img alt="Website Image" src="" />
+                    </div>
+                    <aside>
+                        <h3>
+                            What is W3
+                        </h3>
+                        <p>
+                            A research peice on W3, The World Wide Web Consortium.
+                        </p>
+                    </aside>
+                </li>
+                <!-- Individual Blog Container -->
+                <li class="Blog">
+
+                    <!-- Image for blog -->
+                    <div id="ImageHeightContainer">
+                        <img alt="Blog Image" src="" />
+                    </div>
+                    <!-- Blog Text Content-->
+                    <aside>
+                        <!-- Blog Title -->
+                        <h3>
+                            Blog Title
+                        </h3>
+                        <!-- Blog Description -->
+                        <p>
+                            Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            . Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum
+                        </p>
                     </aside>
                 </li>
             </ul>
