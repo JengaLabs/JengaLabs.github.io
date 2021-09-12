@@ -134,10 +134,7 @@ html body main article ul#Articles {
 
 /* Blog list items */
     html body main article ul#Articles li {
-        flex: 1 1 40%;
         background-color: #202024;
-        margin: 5px;
-        min-width: 20%;
     }
 
 /* Blog Items titles */

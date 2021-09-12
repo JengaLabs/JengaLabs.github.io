@@ -5,3 +5,10 @@
 html body aside#SideSection {
     display: none;
 }
+
+/* Blog list items */
+html body main article ul#Articles li {
+    flex: 1 1 100%;
+    margin: 5px;
+    min-width: 100%;
+}
