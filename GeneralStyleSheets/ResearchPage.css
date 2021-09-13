@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*Fonts ----------------------------- */
+
+
+/*Import Font Face */
+@font-face {
+    font-family: "Saitamaar";
+    src: url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff2) format("woff2"),
+        url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff) format("woff"), 
+        url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaarttf) format("ttf");
+    font-display: swap;
+}
+
+/*-----------------------------------*/
+
+/* General Text ---------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lucida Sans';
+}
+
+p, label {
+    font-family: Saitamaar;
+}
+
+h1 {
+    font-size: clamp(1em, 6vw, 4vw);
+}
+
+h2 {
+    font-size: clamp(1em, 4vw, 4vw);
+}
+
+h3 {
+    font-size: clamp(1em, 3vw, 4vw);
+}
+
+h4 {
+    font-size: clamp(1em, 2vw, 4vw);
+}
+
+p {
+    font-size: clamp(1em, 1vw, 2vw);
+}
+
+/*-----------------------------------*/
+
+/* Expandable sections */
+
+#Expandable {
+    flex: 1;
+}
+
+.ReadLess {
+
+}
+
+.ReadMore {
+
+}
+
+
+
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+/* Change read more button text to show more */
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Read more';
+}
+
+/* Change read more button text to show less */
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Read less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+}
