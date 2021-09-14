@@ -6,9 +6,7 @@
 /*Import Font Face */
 @font-face {
     font-family: "Saitamaar";
-    src: url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff2) format("woff2"),
-        url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff) format("woff"), 
-        url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaarttf) format("ttf");
+    src: url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff2) format("woff2"), url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff) format("woff"), url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaarttf) format("ttf");
     font-display: swap;
 }
 
@@ -51,50 +49,48 @@ p {
     flex: 1;
 }
 
-.ReadLess {
-
-}
-
-.ReadMore {
-
-}
-
-
-
+/* Read more section is automaticly hidden */
 .read-more-state {
-  display: none;
+    display: none;
 }
 
 .read-more-target {
-  opacity: 0;
-  max-height: 0;
-  font-size: 0;
-  transition: .25s ease;
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
 }
 
-.read-more-state:checked ~ .read-more-wrap .read-more-target {
-  opacity: 1;
-  font-size: inherit;
-  max-height: 999em;
+/* Select the read more button when checked, first sibling that is a read more target*/
+.read-more-state:checked + .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
 }
 
 /* Change read more button text to show more */
 .read-more-state ~ .read-more-trigger:before {
-  content: 'Read more';
+    content: 'read more...';
 }
 
 /* Change read more button text to show less */
 .read-more-state:checked ~ .read-more-trigger:before {
-  content: 'Read less';
+    content: 'collapse!';
 }
 
+/*Read more button trigger  */
 .read-more-trigger {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 .5em;
-  color: #666;
-  font-size: .9em;
-  line-height: 2;
-  border: 1px solid #ddd;
-  border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    color: #666;
+    text-decoration: underline;
+}
+
+/* All logo containers images */
+#ImageWidthContainer img {
+    width: 100%;
+}
+
+#ImageHeightContainer img {
+    height: 100%;
 }
