@@ -1,0 +1,30 @@
+/* Default layout for research pages */
+html {
+    height: 100%;
+    width: 100%;
+}
+
+html body {
+    margin: auto;
+}
+
+/* Small devises */
+@media only screen and (max-width: 600px) {
+    html body {
+        width: 100%;
+    }
+}
+
+/* Medium devises */
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+    html body {
+        width: 95%;
+    }
+}
+
+/* Large devises */
+@media only screen and (min-width: 1001px) {
+    html body {
+        width: 80%;
+    }
+}
