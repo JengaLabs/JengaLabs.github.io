@@ -8,6 +8,32 @@ html {
         margin: auto;
     }
 
+    html body header {
+        width: 100%;
+        position: relative;
+
+    }
+    html body header div {
+        display: flex;
+    }
+
+    html body header div h2, html body header div img {
+        width: 50%;
+    }
+
+    
+
+    html body header a#Return {
+        color: white;
+        font-size: 5vw;
+        font-weight: bold;
+        text-decoration: none;
+        position: absolute;
+        top: 2%;
+        right: 5%;
+    }
+
+
     html body article {
         display: flex;
         flex-direction: row;
@@ -36,4 +62,7 @@ html {
     html body {
         width: 80%;
     }
+
+    
+    
 }
