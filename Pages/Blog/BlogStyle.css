@@ -8,7 +8,7 @@ html {
 /*The whole content */
 html body {
     margin: auto;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     background-color: #101016;
@@ -20,7 +20,7 @@ html body {
 
 /*Side Section */
 html body aside#SideSection {
-    height: 100%;
+    height: auto;
     background-color: #202024;
 }
 
@@ -87,6 +87,11 @@ html body main article ul#Articles li aside h3 {
     text-align: center;
 }
 
+/* Blog Items titles */
+html body main article ul#Articles li aside p {
+    width: 95%;
+    margin: 5px auto;
+}
 
 
 
