@@ -2,27 +2,38 @@
 html {
     height: 100%;
     width: 100%;
+    background-color: #101016;
+    color: white;
 }
 
     html body {
         margin: auto;
+        height: 100%;
+        border-right: 5px solid black;
+        border-left: 5px solid black;
     }
 
+    /*Page header */
     html body header {
         width: 100%;
         position: relative;
-
+        background-color: #333366;
+        text-align: center;
+        border-bottom: 5px solid black;
     }
+
+    /* Header div for alignment*/
     html body header div {
         display: flex;
+        align-items: center;
     }
 
+    /* Header picture and header cut in half*/
     html body header div h2, html body header div img {
         width: 50%;
     }
 
-    
-
+    /* Return to blog page button */
     html body header a#Return {
         color: white;
         font-size: 5vw;
@@ -33,20 +44,46 @@ html {
         right: 5%;
     }
 
-
+    /* Contains all article sections about topic*/
     html body article {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    html body aside {
+    /* Aside containing content about page*/
+    html body article aside {
         flex: 1;
+        margin: 5px;
+        min-width: 45%;
+        background-color: #333333;
+    }
+
+    /* Aside Header */
+    html body article aside h3 {
+        text-align: center;
+        margin: 2% auto;
+    }
+
+    /* Aside paragraph */
+    html body article aside p {
+        margin: 0 auto;
+        margin-bottom: 1%;
+        min-height: 4em;
+
     }
 
 /* Small devises */
 @media only screen and (max-width: 600px) {
     html body {
         width: 100%;
+        border: none;
+    }
+
+    /* Content needs to get its own row*/
+    html body article aside {
+        min-width: 100%;
+        text-align: center;
     }
 }
 
@@ -54,6 +91,11 @@ html {
 @media only screen and (max-width: 1000px) and (min-width: 601px) {
     html body {
         width: 95%;
+    }
+
+    /* Aside paragraph */
+    html body article aside p {
+        width: 90%;
     }
 }
 
@@ -63,6 +105,10 @@ html {
         width: 80%;
     }
 
+    /* Aside paragraph */
+    html body article aside p {
+        width: 80%;
+    }
     
     
 }
