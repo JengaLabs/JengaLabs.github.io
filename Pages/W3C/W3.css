@@ -73,6 +73,18 @@ html {
 
     }
 
+    /* Aside vertical list of sources*/
+    html body article aside ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Aside individual list items */
+    html body article aside ul li {
+        flex: 1;
+    }
+
 /* Small devises */
 @media only screen and (max-width: 600px) {
     html body {

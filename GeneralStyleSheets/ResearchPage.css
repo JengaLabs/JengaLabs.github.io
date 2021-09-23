@@ -94,3 +94,14 @@ p {
 #ImageHeightContainer img {
     height: 100%;
 }
+
+/* Links */
+a:active, a:visited, a:link {
+    color: white;
+}
+
+/* Links of sources*/
+aside ul {
+    width: 100%;
+    text-align: center;
+}
