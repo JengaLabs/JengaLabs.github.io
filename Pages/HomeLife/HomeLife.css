@@ -1,0 +1,34 @@
+html body header a#Return {
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    text-decoration: none;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+
+html body header div {
+    display: flex;
+    align-items: center;
+}
+
+/*Page header */
+html body main header {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    border-bottom: 5px solid black;
+    background-color: #333366;
+}
+
+    /* Header div for alignment*/
+    html body header div {
+        display: flex;
+        align-items: center;
+    }
+
+        /* Header picture and header cut in half*/
+        html body header div h2, html body header div img {
+            width: 50%;
+        }

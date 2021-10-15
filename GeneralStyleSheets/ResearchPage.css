@@ -38,7 +38,7 @@ h4 {
 }
 
 p {
-    font-size: clamp(1em, 1vw, 2vw);
+    font-size: clamp(1.4em, 1vw, 2vw);
 }
 
 /*-----------------------------------*/
@@ -89,6 +89,12 @@ p {
 /* All logo containers images */
 #ImageWidthContainer img {
     width: 100%;
+}
+
+#ImageWidthContainer iframe{
+    width: 100%;
+    height: auto;
+    min-height: contain;
 }
 
 #ImageHeightContainer img {
