@@ -1,0 +1,20 @@
+/* Page Body */
+html body {
+    width: 95%;
+    height: 100%;
+    max-width: 1400px;
+    gap: 2vw;
+}
+
+/* Main section */
+html body main {
+    width: 75%;
+    max-width: 1000px;
+}
+
+/* Side Section */
+html body aside#SideSection {
+    height: 100%;
+    width: 25%;
+    max-width: 400px;
+}

@@ -1,0 +1,127 @@
+/*Set Charset */
+@charset "UTF-8";
+
+/*Import Font Face */
+@font-face {
+	font-family: "Saitamaar";
+	src: url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff2) format("woff2"), url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaar.woff) format("woff"), url(../GeneralStyleSheets/Fonts/Saitamaar/Saitamaarttf) format("ttf");
+	font-display: swap;
+}
+
+
+/* Whole Page*/
+html {
+	color: white;
+	background-color: #101016;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Text areas */
+aside {
+	background-color: #202024;
+}
+
+/* Body */
+body {
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+/*Main Section*/
+main {
+	background-color: transparent;
+}
+
+/* General Text ---------------- */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lucida Sans';
+}
+
+p, label {
+	font-family: Saitamaar;
+}
+
+h1 {
+	font-size: clamp(1em, 6vw, 4vw);
+}
+
+h2 {
+	font-size: clamp(1em, 4vw, 4vw);
+}
+
+h3 {
+	font-size: clamp(1em, 3vw, 4vw);
+}
+
+h4 {
+	font-size: clamp(1em, 2vw, 4vw);
+}
+
+p {
+	font-size: clamp(1.4em, 1vw, 2vw);
+}
+
+/* Expandable sections */
+
+#Expandable {
+	flex: 1;
+}
+
+/* Read more section is automaticly hidden */
+.read-more-state {
+	display: none;
+}
+
+.read-more-target {
+	opacity: 0;
+	max-height: 0;
+	font-size: 0;
+	transition: .25s ease;
+}
+
+/* Select the read more button when checked, first sibling that is a read more target*/
+.read-more-state:checked + .read-more-target {
+	opacity: 1;
+	font-size: inherit;
+	max-height: 999em;
+}
+
+/* Change read more button text to show more */
+.read-more-state ~ .read-more-trigger:before {
+	content: 'read more...';
+}
+
+/* Change read more button text to show less */
+.read-more-state:checked ~ .read-more-trigger:before {
+	content: 'collapse!';
+}
+
+/*Read more button trigger  */
+.read-more-trigger {
+	cursor: pointer;
+	display: inline-block;
+	color: #666;
+	text-decoration: underline;
+}
+
+/* All logo containers images */
+#ImageWidthContainer img {
+	width: 100%;
+}
+
+#ImageWidthContainer iframe {
+	width: 100%;
+	height: auto;
+	min-height: contain;
+}
+
+#ImageHeightContainer img {
+	height: 100%;
+}
+
+/* Links */
+a:active, a:visited, a:link {
+	color: white;
+}
