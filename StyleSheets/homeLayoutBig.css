@@ -18,3 +18,26 @@ html body aside#SideSection {
     width: 25%;
     max-width: 400px;
 }
+
+/* Blogs Section */
+ul#Sections {
+    gap: 2vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+/* Blog list items*/ 
+ul#Sections li {
+    flex: 1 1 80%;
+}
+
+ul#Sections li aside {
+    width: 90%;
+    margin: auto;
+}
+
+ul#Sections li aside div#title {
+    text-align: center;
+    min-width: 30%;
+}

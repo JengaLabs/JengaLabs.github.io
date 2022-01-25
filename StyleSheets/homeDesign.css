@@ -13,8 +13,8 @@
 html {
 	color: white;
 	background-color: #101016;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 
 /* Text areas */
@@ -32,6 +32,10 @@ body {
 /*Main Section*/
 main {
 	background-color: transparent;
+}
+
+article {
+	max-width: 100%;
 }
 
 /* General Text ---------------- */
@@ -125,3 +129,25 @@ p {
 a:active, a:visited, a:link {
 	color: white;
 }
+
+/* Blogs Section*/
+ul#Sections {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+}
+
+/* Blog storage */
+ul#Sections li {
+	background-color: #202024; 
+}
+
+/* Blog Images */
+ul#Sections li aside {
+	display: flex;
+}
+
+
+

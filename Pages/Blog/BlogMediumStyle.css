@@ -17,5 +17,6 @@ html body aside#SideSection {
 html body main article ul#Articles li {
     flex: 1 1 40%;
     margin: 5px;
-    min-width: 40%;
+    min-width: 60%;
+
 }
