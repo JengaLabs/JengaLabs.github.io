@@ -25,17 +25,23 @@ aside {
 /* Body */
 body {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: row;
+	height: auto;
+	width: 100%;
 	margin: auto;
 }
+
+
 
 /*Main Section*/
 main {
 	background-color: transparent;
+
 }
 
 article {
 	max-width: 100%;
+	display: flex;
 }
 
 /* General Text ---------------- */
@@ -147,6 +153,16 @@ ul#Sections li {
 /* Blog Images */
 ul#Sections li aside {
 	display: flex;
+}
+
+
+
+html body aside#SideSection > * {
+	flex-shrink: 0;
+}
+#expand {
+	flex-grow: 1;
+	background-color: red;
 }
 
 

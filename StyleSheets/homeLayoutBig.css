@@ -14,7 +14,6 @@ html body main {
 
 /* Side Section */
 html body aside#SideSection {
-    height: 100%;
     width: 25%;
     max-width: 400px;
 }
