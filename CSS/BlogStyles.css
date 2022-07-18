@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* Page */
+html {
+	height: 100%;
+	width: 100%;
+	color: white;
+}
+
+/*The whole content */
+html body {
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #101016;
+
+    width: 95%;
+    height: 100%;
+    max-width: 1400px;
+    gap: 2vw;
+}
+
+
+/*-------------- SIDE SECTION ---------------*/
+
+/* IGNORE, coming back maybe eventually idk */
+
+/*Side Section */
+html body aside#SideSection {
+    height: auto;
+    background-color: #202024;
+}
+
+/* Side Section Title */
+html body aside#SideSection h1 {
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+/*-------------- MAIN SECTION ---------------*/
+
+/* Main Header */
+html body main header {
+    display: flex; 
+    flex-direction: column;
+    background-color: #101016;
+}
+
+/* Article Container Box */
+html body main article {
+    height: 100%;
+}
+
+/* List of blogs */
+html body main article ul#Articles {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Blog list items */
+html body main article ul#Articles li {
+    background-color: #202024;
+}
+
+/* Blog items titles */
+html body main article ul#Articles li aside h3 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Blog list items */
+html body main article ul#Articles li {
+    flex: 1 1 40%;
+    margin: 5px;
+    min-width: 20%;
+}

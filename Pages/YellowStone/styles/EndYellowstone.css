@@ -1,5 +1,0 @@
-/* Change font size of general text */
-html body article aside div p {
-    font-size: calc(1em + 1vw);
-}
-
