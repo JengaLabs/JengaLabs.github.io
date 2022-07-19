@@ -41,12 +41,25 @@ html body aside#SideSection h1 {
 
 /*-------------- MAIN SECTION ---------------*/
 
+
+html body main {
+    margin: 0 auto;
+}
 /* Main Header */
 html body main header {
     display: flex; 
     flex-direction: column;
     background-color: #101016;
 }
+
+/* Header title return */
+html body main header a:any-link {
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+
 
 /* Article Container Box */
 html body main article {
