@@ -1,0 +1,42 @@
+body {
+    color: black;
+}
+
+a[target="_blank"] {
+    color: red;
+}
+
+ul li:nth-child(2) {
+    list-style: square;
+}
+
+h1:first-letter {
+    color: blue;
+}
+
+h1::after {
+    content: "!";
+}
+
+
+#box1 {
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: justify;
+    float: left;
+}
+
+#box2 {
+    margin: 20px;
+    padding: 50px;
+    border: 5px solid black;
+    width: 100px;
+    height: 100px;
+    text-align: justify;
+    float: left;
+}
+
+
