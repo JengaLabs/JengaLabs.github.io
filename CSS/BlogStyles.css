@@ -74,11 +74,13 @@ html body main article ul#Articles {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    
 }
 
 /* Blog list items */
 html body main article ul#Articles li {
     background-color: #202024;
+    padding: 10px;
 }
 
 /* Blog items titles */
