@@ -22,7 +22,6 @@
     <link href="CSS/BlogStyles.css" type="text/css" rel="stylesheet" />
 
     <!-- Large Screen Style Sheet -->
-
     <!-- Small Screen Style Sheet -->
 
 </head>
@@ -30,7 +29,7 @@
 <body>
 
     <main>
-    
+
         <!-- Top of main content page -->
         <header>
             <a href="index.html">
@@ -50,23 +49,31 @@
             <!-- Contain Articles -->
             <ul id="Articles">
 
+
+
                 <!-- Article Container -->
                 <li class="Blog">
                     <!-- Article Content -->
-                    <aside>
-                        <!-- Article Title -->
-                        <h3>
-                            Rotten Carrots
-                        </h3>
+                    <aside class="dropdown">
+                        <div>
 
-                        <!-- Article Image Container -->
-                        <div id="ImageWidthContainer">
-                            <!-- Article Link-->
-                            <a href="Pages/LearnCSSInOneDay/PigReviewLCSSIOD.html">
-                                <img alt="" src="Images/PigsVaultIcon.png" />
-                            </a>
+
+
+                            <button onclick="myFunction()" class="dropbtn" id="ImageWidthContainer">
+                                <img alt="Blog Header Image" src="Images/HeaderLogo.png"  style=" pointer-events: none;"/>
+                            </button>
+                            <ul id="myDropdown" class="dropdown-content">
+                                <li>hi</li>
+                                <li>hi</li>
+                                <li>hi</li>
+                                <li>hi</li>
+                                
+                            </ul>
+
                         </div>
+                        
                     </aside>
+
                 </li>
 
                 <!-- Article Container -->
@@ -75,7 +82,7 @@
                     <aside>
                         <!-- Article Title -->
                         <h3>
-                            Joining the Military 
+                            Joining the Military
                         </h3>
 
                         <!-- Article Image Container -->
@@ -88,14 +95,36 @@
                     </aside>
                 </li>
 
-                
+
 
             </ul>
 
 
         </article>
-    
+
     </main>
+
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 
 
 </body>

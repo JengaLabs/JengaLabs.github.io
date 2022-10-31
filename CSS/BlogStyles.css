@@ -112,7 +112,7 @@ html body main article ul#Articles li aside p {
 
 /* Blog list items */
 html body main article ul#Articles li {
-    flex: 1 1 40%;
+    flex: 1 90%;
     margin: 5px;
     min-width: 20%;
 }
