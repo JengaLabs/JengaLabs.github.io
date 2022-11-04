@@ -49,32 +49,40 @@
             <!-- Contain Articles -->
             <ul id="Articles">
 
-
-
                 <!-- Article Container -->
                 <li class="Blog">
-                    <!-- Article Content -->
-                    <aside class="dropdown">
-                        <div>
+                    
 
+                        
 
+                        <input type="checkbox" id="myCheckbox1" />
+                        <label for="myCheckbox1"> 
+                            
+                            <img src="Images/HeaderLogo.png" />
+                        </label>
 
-                            <button onclick="myFunction()" class="dropbtn" id="ImageWidthContainer">
-                                <img alt="Blog Header Image" src="Images/HeaderLogo.png"  style=" pointer-events: none;"/>
-                            </button>
-                            <ul id="myDropdown" class="dropdown-content">
-                                <li>hi</li>
-                                <li>hi</li>
-                                <li>hi</li>
-                                <li>hi</li>
-                                
+                        
+                        <div class="dropdown-content">
+                            <ul>
+
+                                <li>
+                                    afdfasd
+                                </li>
+                                <li>
+                                    adsfasdfas
+                                </li>
+                                <li>
+                                    fasdfa
+                                </li>
+
                             </ul>
-
                         </div>
                         
-                    </aside>
 
                 </li>
+
+
+
 
                 <!-- Article Container -->
                 <li class="Blog">
@@ -96,6 +104,30 @@
                 </li>
 
 
+                <!-- Article Container -->
+                <li class="Blog">
+                    <!-- Article Content -->
+                    <aside class="dropdown">
+                        <div>
+
+
+
+                            <button onclick="myFunction()" class="dropbtn" id="ImageWidthContainer">
+                                <img alt="Blog Header Image" src="Images/HeaderLogo.png" style=" pointer-events: none;" />
+                            </button>
+                            <ul id="myDropdown" class="dropdown-content">
+                                <li>hi</li>
+                                <li>hi</li>
+                                <li>hi</li>
+
+                            </ul>
+
+                        </div>
+
+                    </aside>
+
+                </li>
+
 
             </ul>
 
@@ -104,27 +136,7 @@
 
     </main>
 
-    <script>
-        /* When the user clicks on the button,
-        toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
+    
 
 
 </body>

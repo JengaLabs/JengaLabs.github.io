@@ -2,9 +2,9 @@
 
 /* Page */
 html {
-	height: 100%;
-	width: 100%;
-	color: white;
+    height: 100%;
+    width: 100%;
+    color: white;
 }
 
 /*The whole content */
@@ -64,6 +64,8 @@ html body main header a:any-link {
 /* Article Container Box */
 html body main article {
     height: 100%;
+        
+
 }
 
 /* List of blogs */
@@ -74,19 +76,17 @@ html body main article ul#Articles {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
-    
 }
 
 /* Blog list items */
-html body main article ul#Articles li {
-    background-color: #202024;
-    padding: 10px;
-}
+    html body main article ul#Articles li {
+        background-color: #202024;
+        padding: 10px;
+    }
 
-/* Blog items titles */
-html body main article ul#Articles li aside h3 {
-    text-align: center;
-}
+
+
+
 
     /* Blog items titles */
     html body main article ul#Articles li aside h4 {
@@ -105,14 +105,25 @@ html body main article ul#Articles li aside p {
     margin: 5px auto;
 }
 
-
-
-
-
-
 /* Blog list items */
 html body main article ul#Articles li {
     flex: 1 90%;
     margin: 5px;
     min-width: 20%;
 }
+
+
+/* Drop down menus content*/
+
+div.dropdown-content ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Center text*/
+div.dropdown-content ul li{
+    text-align: center;
+}
+
+
+

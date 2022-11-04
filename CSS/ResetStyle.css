@@ -155,41 +155,31 @@ aside ul {
 
 /* Clickable drop down sections TEMP SOLUTION  ----------------- */
 
-.dropbtn {
-	color: white;
-	border: none;
+
+/* Hide the literal checkbox*/
+input {
+	display: none;
+
+	
+}
+
+/*Image inside expandable label*/
+label img {
 	cursor: pointer;
 }
 
-	.dropbtn:hover, .dropbtn:focus {
-		background-color: #2980B9;
-	}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
+/*Checked state brining out the content*/
+input:checked ~ .dropdown-content {
+	transform: scaleY(1);
+	width: 100%;
+	height: auto;
+	max-height: 800px;
 }
 
+	/*Make box expadsion animated*/
 .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	overflow: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-}
-
-	.dropdown-content a {
-		color: black;
-		text-decoration: none;
-		display: block;
-	}
-
-.dropdown a:hover {
-	background-color: #ddd;
-}
-
-.show {
-	display: block;
+	max-height: 0px;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: all 0.3s linear;
 }
