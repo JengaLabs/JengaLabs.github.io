@@ -153,33 +153,6 @@ aside ul {
 	text-align: center;
 }
 
-/* Clickable drop down sections TEMP SOLUTION  ----------------- */
 
 
-/* Hide the literal checkbox*/
-input {
-	display: none;
 
-	
-}
-
-/*Image inside expandable label*/
-label img {
-	cursor: pointer;
-}
-
-/*Checked state brining out the content*/
-input:checked ~ .dropdown-content {
-	transform: scaleY(1);
-	width: 100%;
-	height: auto;
-	max-height: 800px;
-}
-
-	/*Make box expadsion animated*/
-.dropdown-content {
-	max-height: 0px;
-	transform: scaleY(0);
-	transform-origin: top;
-	transition: all 0.3s linear;
-}

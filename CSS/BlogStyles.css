@@ -45,6 +45,7 @@ html body aside#SideSection h1 {
 html body main {
     margin: 0 auto;
 }
+
 /* Main Header */
 html body main header {
     display: flex; 
@@ -61,15 +62,14 @@ html body main header a:any-link {
 
 
 
-/* Article Container Box */
+/* Article contnet Container Box */
 html body main article {
     height: 100%;
         
-
 }
 
 /* List of blogs */
-html body main article ul#Articles {
+html body main article ul#content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -78,52 +78,21 @@ html body main article ul#Articles {
     align-content: flex-start;
 }
 
-/* Blog list items */
-    html body main article ul#Articles li {
+    /* Blog list items */
+    html body main article ul#content li {
         background-color: #202024;
         padding: 10px;
     }
-
-
-
-
-
-    /* Blog items titles */
-    html body main article ul#Articles li aside h4 {
-        margin: 0px 20px;
-    }
-
-
-    /* Blog items titles */
-    html body main article ul#Articles li aside h5 {
-        text-align: center;
-    }
-
-
-html body main article ul#Articles li aside p {
-    width: 95%;
-    margin: 5px auto;
-}
-
+    
 /* Blog list items */
-html body main article ul#Articles li {
+html body main article ul#content li {
     flex: 1 90%;
     margin: 5px;
     min-width: 20%;
 }
 
 
-/* Drop down menus content*/
 
-div.dropdown-content ul {
-    display: flex;
-    flex-direction: row;
-}
-
-/*Center text*/
-div.dropdown-content ul li{
-    text-align: center;
-}
 
 
 
