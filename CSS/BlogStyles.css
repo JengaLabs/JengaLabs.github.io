@@ -2,9 +2,10 @@
 
 /* Page */
 html {
-    height: 100%;
+    height: auto;
     width: 100%;
     color: white;
+    background-color: #101016;
 }
 
 /*The whole content */
@@ -12,87 +13,93 @@ html body {
     margin: auto;
     height: auto;
     display: flex;
-    flex-direction: row;
-    background-color: #101016;
-
+    flex-direction: column;
+    background-color: #202024;
     width: 95%;
     height: 100%;
     max-width: 1400px;
-    gap: 2vw;
 }
 
+header {
+}
 
-/*-------------- SIDE SECTION ---------------*/
-
-/* IGNORE, coming back maybe eventually idk */
-
-/*Side Section */
-html body aside#SideSection {
+header img {
+    width: 100%;
     height: auto;
+}
+
+/* Main content of the page*/
+main {
+    height: 100%;
+    width: 100%;
     background-color: #202024;
 }
 
-/* Side Section Title */
-html body aside#SideSection h1 {
-    text-align: center;
-    margin: 5px 0;
+
+footer {
+    height: 100px;
+    background-color: #202024;
 }
 
 
-/*-------------- MAIN SECTION ---------------*/
 
 
-html body main {
-    margin: 0 auto;
+
+
+/*--- Main section for image navigation display ---*/
+
+ul.card-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center
 }
 
-/* Main Header */
-html body main header {
-    display: flex; 
-    flex-direction: column;
-    background-color: #101016;
+ul.card-holder li{
+    flex: 0 0 30%;
+    transition: all linear 0.3s;
 }
 
-/* Header title return */
+ul.card-holder li:hover {
+    flex: 0 0 31%;
+    transition: all linear 0.3s;
+}
+
+ul.card-holder li a {
+}
+
+
+
+
+
+    
+/* Header title return 
 html body main header a:any-link {
     text-decoration: none;
     text-align: center;
     margin: 10px 0px;
 }
 
+*/
 
 
-/* Article contnet Container Box */
-html body main article {
-    height: 100%;
-        
-}
-
-/* List of blogs */
-html body main article ul#content {
+/* All logo containers images */
+.ImageWidthContainer img {
     width: 100%;
+}
+
+.ImageWidthContainer iframe {
+    width: 100%;
+    height: auto;
+    min-height: contain;
+}
+
+.ImageHeightContainer img {
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
 }
 
-    /* Blog list items */
-    html body main article ul#content li {
-        background-color: #202024;
-        padding: 10px;
-    }
-    
-/* Blog list items */
-html body main article ul#content li {
-    flex: 1 90%;
-    margin: 5px;
-    min-width: 20%;
+/* Links */
+a:active, a:visited, a:link {
+    color: white;
 }
-
-
-
-
-
-

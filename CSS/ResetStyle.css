@@ -127,25 +127,8 @@ p {
 	text-decoration: underline;
 }
 
-/* All logo containers images */
-#ImageWidthContainer img {
-	width: 100%;
-}
 
-#ImageWidthContainer iframe {
-	width: 100%;
-	height: auto;
-	min-height: contain;
-}
 
-#ImageHeightContainer img {
-	height: 100%;
-}
-
-/* Links */
-a:active, a:visited, a:link {
-	color: white;
-}
 
 /* Links of sources*/
 aside ul {
