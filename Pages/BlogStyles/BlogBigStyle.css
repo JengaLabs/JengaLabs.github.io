@@ -1,0 +1,28 @@
+
+/* Page Body */
+html body {
+    width: 95%;
+    max-width: 1400px;
+}
+
+/* Main section */
+html body main {
+    width: 75%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+/* Side Section */
+html body aside#SideSection {
+    width: 25%;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+/* Blog list items */
+html body main article ul#Articles li {
+    flex: 1 1 40%;
+    margin: 5px;
+    min-width: 20%;
+}

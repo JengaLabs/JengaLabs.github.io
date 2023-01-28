@@ -4,7 +4,6 @@
 /* Whole page */
 body {
     height: 100vh;
-    color: blue;
     display: flex;
     flex-direction: column;
 }

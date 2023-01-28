@@ -1,6 +1,15 @@
 "use strict";
 
 
+//Get the canvas 
+const canvas = document.getElementById("Lcanvas");
+//Find canvas 2d
+const canvasContext = canvas.getContext("2d");
+
+//Set lines stroke to be smooth as possible
+canvasContext.lineCap = 'round';
+canvasContext.lineJoine = 'round';
+
 //Vector 2 class to store positions
 class Vector2 {
 
@@ -25,8 +34,6 @@ class Vector2 {
     }
 
 }
-
-
 
 //method that builds l system string 
 var lsystem = function (startString, rules, iterations) {
@@ -157,7 +164,7 @@ function Reset() {
     //Move context over
     canvasContext.translate(0.5, 1);
 
-    DrwaTree();
+    DrawTree();
 }
 
 var check = {
@@ -179,7 +186,6 @@ var check = {
         canvasContext.strokeStyle = "black";
         canvasContext.beginPath();
         canvasContext.moveTo(currentPosition.x, currentPosition.y);
-        currentPosition.y += lineLenght + (Math.random() / 1000);
         canvasContext.lineTo(currentPosition.x, currentPosition.y);
         canvasContext.closePath();
         canvasContext.stroke();
@@ -232,7 +238,13 @@ var commands = {
     },
     "B": function () {
 
-        canvasContext.strokeStyle = "black";
+        /*Random color
+        canvasContext.strokeStyle = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+        canvasContext.strokeStyle = "#" + ((1 << 24) * Math.random() | 0).toString(14) + "98";
+        */
+
+        canvasContext.strokeStyle = "#08E9" + ((1 << 24) * Math.random() | 0).toString(16).substring(0,2);
+
         canvasContext.beginPath();
         canvasContext.moveTo(currentPosition.x, currentPosition.y);
         currentPosition.y += lineLenght + (Math.random() / 1000);
@@ -272,15 +284,20 @@ var commands = {
     }
 };
 
-function DrwaTree() {
+function DrawTree() {
 
     
     canvasContext.save();
+
+    //Set the width and height
+    canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+
     //change line width
-    canvasContext.lineWidth = 0.01;
+    canvasContext.lineWidth = 0.015;
     canvasContext.scale(canvas.width, canvas.height);
 
-    //Move context over
+    //Move context over to center the frame
     canvasContext.translate(0.5, 1);
     
 
@@ -314,10 +331,9 @@ function CreateBranch() {
 
 
 
-//Get the canvas 
-const canvas = document.getElementById("Lcanvas");
-//Find canvas 2d
-const canvasContext = canvas.getContext("2d");
+
+
+
 
 //Current position on canvas
 var currentPosition = {
@@ -337,9 +353,9 @@ var iterations = 8;
 
 //Declare tree rules
 var ruleset1 = {
-    "A": "B[+A]B[-A]+A",
+    "A": "B[[+A]B]B[-A]+A",
 
-    "B": "BB",
+    "B": "B",
 
     //"B": "BAB",
 
@@ -347,7 +363,7 @@ var ruleset1 = {
 
 
 //lines length on the tree determined by how many generation
-var lineLenght = 1 / (Math.pow(2, iterations + 2));
+var lineLenght = 0.02 ;
 //Angle the branches span
 var angle = 20;
 
@@ -360,4 +376,4 @@ result = ModifyTree();
 
 
 //Draw the tree using result
-DrwaTree();
+DrawTree();

@@ -1,0 +1,22 @@
+/* Page Body */
+html body {
+    width: 100%;
+}
+
+/* Main section */
+html body main {
+    width: 80%;
+}
+
+/* Side Section */
+html body aside#SideSection {
+    width: 20%;
+}
+
+/* Blog list items */
+html body main article ul#Articles li {
+    flex: 1 1 40%;
+    margin: 5px;
+    min-width: 60%;
+
+}

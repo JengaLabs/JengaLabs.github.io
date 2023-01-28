@@ -4,48 +4,17 @@
 
 /* Whole page */
 body {
-    display: flex;
-    height: 100vh;
     color: black;
+    background-color: cornflowerblue;
 }
 
 /* Text area */
 section {
-    width: 38vw;
-    padding: 20vh 8vw;
-}
-
-/*My name */
-body section h2 {
-    white-space: nowrap;
-}
-
-/* Summary */
-section h6 {
-    text-align: right;
-    margin: 4vh 0;
-    padding-right: 0vw;
-}
-
-/* Navigation to site areas */
-section nav {
-    margin-top: 2vh;
-    height: 10vh;
-    justify-content: space-around;
-   
-    white-space: nowrap;
+    
 }
 
 
-    section nav ul li {
-        width: 20vw;
-        display: inline-block;
-        height: 7vh;
-        list-style: none;
-        text-decoration: none;
-        text-align: center;
-        font-size: calc(1em + 1.5vw);
-    }
+
 
   
     section nav ul li a {
@@ -67,10 +36,12 @@ section nav {
 
 /* JS L-systems canvas*/
 canvas {
-    
-    width: 50vw;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 70%;
     height: 100%;
-    
+    image-rendering: optimizeQuality;
 }
 
 /* Reset button styling */
