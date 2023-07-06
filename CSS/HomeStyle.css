@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+html {
+    width: 100%;
+    height: auto;
+    background-image: url(../images/concrete-wall.png);
+    background-color: #1a1a1a;
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    border-top: clamp(10px, 5vh, 100px) solid pink;
+    border-bottom: clamp(10px, 5vh, 100px) solid pink;
+    border-image: repeating-linear-gradient( 15deg, #000, #000 50px, #fbff00 20px, #fbff00 100px ) 10;
+}
+
+header h1 {
+    color: white;
+}
+
+
