@@ -1,5 +1,60 @@
 @charset "UTF-8";
 
+/* Page */
+html {
+    width: 100%;
+    height: auto;
+    color: white;
+    background-image: url(../images/whiteboard.jpg);
+    background-size: cover;
+    border: 10px solid black;
+}
+
+
+html body {
+    width: 100%;
+    height: auto;
+
+}
+
+html body header {
+    width: 95vw;
+    height: 70vh;
+    margin: 5px auto;
+    display: flex;
+}
+
+div.picDesc {
+    flex: 65%;
+    background-color: purple;
+}
+
+div.picFilm {
+    transform: rotate(2deg);
+
+    flex: 35%;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    border: 5px black solid;
+}
+
+div.picFilm img {
+    flex: 80%;
+    width: 100%;
+    border: 5px black solid;
+}
+
+div.picFilm  h1 {
+    flex: 20%;
+    text-align: center;
+    color: black;
+}
+
+
+
+/*
 html {
     width: 100%;
     height: auto;
@@ -19,5 +74,7 @@ body {
 header h1 {
     color: white;
 }
+
+    */
 
 
