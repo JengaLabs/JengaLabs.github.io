@@ -22,10 +22,6 @@ svg {
     background: linear-gradient(to right, #fff7cc, #f8fae8 );
 }
 
-    svg path.fill {
-        fill: #ff7700;
-        stroke : #f6ff54;
-    }
 
 
 

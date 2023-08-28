@@ -32,14 +32,40 @@
 
 <body>
 
+
+
     <!--Background test -->
     <svg class="curved-line" width="100%" height="100%" viewBox="0,0, 100, 100" preserveAspectRatio="none">
-        <path d="M0,70 L65,70 Q75, 70 80,60 L100, 0" stroke="#f2392c" fill="none" stroke-width="3" />
+        
 
-        <path d="M0,73 L67,73 Q76, 72 82,62 L102, 2" stroke="#ff7700" fill="none" stroke-width="3" />
-        <path d="M0,76 L69,76 Q77, 74 84,64 L104, 4" stroke="#f6ff54" fill="none" stroke-width="3" />
+        <!-- Center Colors -->
+        <path d="M0,70 L72,70 L87, -1" stroke="#f2392c" fill="none" stroke-width="3" />
+        <path d="M0,73 L74,73 L90, -1" stroke="#ff7700" fill="none" stroke-width="3" />
+        <path d="M0,76 L76,76 L92, -1" stroke="#fff200" fill="none" stroke-width="3" />
 
-        <path class="fill" d="M85, 100 L90, 60 Q" stroke-width="1" />
+
+      
+
+        <!-- Bottom Right Colors -->
+
+        <mask id="greenMask">
+
+            <rect x="0" y="50" width="100%" height="50" fill="white" />
+        </mask>
+        <path class="fill" d="M80, 110 L100, 50" stroke-width="10" stroke="#008f26" fill="#008f26" mask="url(#greenMask)" />
+
+        <mask id="blueMask">
+            <rect x="0" y="55" width="100%" height="45" fill="white" />x
+
+        </mask>
+        <path class="fill" d="M83, 110 L103, 50" stroke-width="10" stroke="#00a9bf" fill="#00a9bf" mask="url(#blueMask)" />
+
+        <mask id="purpleMask">
+            <rect x="0" y="60" width="100%" height="40" fill="white" />x
+
+        </mask>
+        <path class="fill" d="M85, 110 L105, 50" stroke-width="8" stroke="#37006e" fill="#37006e" mask="url(#purpleMask)" />
+
     </svg>
 
     <!--
