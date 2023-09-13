@@ -21,73 +21,61 @@
     <!-- General Blog Styles Sheet -->
     <link href="CSS/background.css" type="text/css" rel="stylesheet" />
 
-    <!-- Horizontal Screen -->
     <!--Page specific style sheet for horizontal screens-->
     <link rel="stylesheet" type="text/css" media="screen and (orientation: landscape)" href="CSS/landscape.css" />
 
+    <!--Page specific style sheet for vertical screen-->
+    <link rel="stylesheet" type="text/css" media="screen and (orientation: portrait)" href="CSS/Portrait.css" />
 
-    <!-- Small Screen Style Sheet -->
 
 </head>
 
 <body>
 
+    <h1>
+        dsa
+    </h1>
 
+    <svg width="100%" height="100%" viewBox="0 0, 100 100" preserveAspectRatio="none">
 
-    <!--Background test -->
-    <svg class="curved-line" width="100%" height="100%" viewBox="0,0, 100, 100" preserveAspectRatio="none">
-        
+        <g id="landscape">
+            <!-- Center Colors -->
+            <path d="M0,70 L72,70 L94, -1" stroke="#f2392c" fill="none" stroke-width="3" />
+            <path d="M0,73 L74,73 L97, -1" stroke="#ff7700" fill="none" stroke-width="3" />
+            <path d="M0,76 L76,76 L99, -1" stroke="#fff200" fill="none" stroke-width="3" />
 
-        <!-- Center Colors -->
-        <path d="M0,70 L72,70 L87, -1" stroke="#f2392c" fill="none" stroke-width="3" />
-        <path d="M0,73 L74,73 L90, -1" stroke="#ff7700" fill="none" stroke-width="3" />
-        <path d="M0,76 L76,76 L92, -1" stroke="#fff200" fill="none" stroke-width="3" />
-
-
-      
-
-        <!-- Bottom Right Colors -->
-
-        <mask id="greenMask">
-
-            <rect x="0" y="50" width="100%" height="50" fill="white" />
-        </mask>
-        <path class="fill" d="M80, 110 L100, 50" stroke-width="10" stroke="#008f26" fill="#008f26" mask="url(#greenMask)" />
-
-        <mask id="blueMask">
-            <rect x="0" y="55" width="100%" height="45" fill="white" />x
-
-        </mask>
-        <path class="fill" d="M83, 110 L103, 50" stroke-width="10" stroke="#00a9bf" fill="#00a9bf" mask="url(#blueMask)" />
-
-        <mask id="purpleMask">
-            <rect x="0" y="60" width="100%" height="40" fill="white" />x
-
-        </mask>
-        <path class="fill" d="M85, 110 L105, 50" stroke-width="8" stroke="#37006e" fill="#37006e" mask="url(#purpleMask)" />
-
-    </svg>
-
-    <!--
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="468.000000pt" height="84.000000pt" viewBox="0 0 468.000000 84.000000" preserveAspectRatio="xMidYMid meet">
-    <g transform="translate(0.000000,84.000000) scale(0.050000,-0.050000)" fill="#66fffc" stroke="none">
-        <path d="M6763 1590 c89 -74 121 -89 187 -88 93 1 195 34 114 37 -26 0 -41 9 -35 19 6 10 -3 23 -20 30 -19 7 -26 3 -18 -9 16 -26 -93 -2 -121 27 -13 13 -12 15 5 6 14 -8 25 -5 25 7 0 11 -13 21 -30 21 -16 0 -30 9 -30 20 0 11 -41 20 -92 20 l-92 0 107 -90z" />
-        <path d="M7379 1623 c-366 -233 -524 -780 -325 -1128 13 -22 177 81 171 107 -4 11 3 16 13 9 15 -9 85 12 137 40 3 2 -8 35 -25 75 -181 433 354 865 786 635 l122 -65 56 39 c44 30 383 220 586 328 18 10 -10 16 -73 16 -93 1 -112 -7 -185 -75 -45 -42 -145 -107 -222 -144 l-139 -67 -170 56 c-483 161 -850 -109 -851 -625 0 -222 -48 -259 -95 -74 -144 562 587 1083 1064 759 l68 -46 197 109 c189 104 193 108 120 108 -42 0 -94 -9 -115 -21 -29 -15 -39 -14 -39 4 0 20 -5 20 -24 1 -13 -13 -41 -24 -61 -24 -21 0 -33 -7 -27 -16 38 -62 -30 -67 -175 -15 -243 89 -601 59 -736 -62 -44 -40 -64 -3 -21 38 111 105 95 122 -37 38z" />
-        <path d="M8908 1528 c-157 -106 -190 -133 -180 -143 6 -6 47 13 91 42 94 62 120 66 124 18 2 -19 4 -46 5 -59 10 -107 52 -58 52 60 0 74 -3 134 -7 134 -4 0 -42 -24 -85 -52z" />
-        <path d="M8584 1245 c-46 -23 -61 -42 -52 -64 155 -362 26 -737 -317 -923 -177 -96 -478 -101 -663 -10 -117 57 -117 57 -180 20 -119 -71 -302 -167 -319 -168 -41 -1 44 67 202 163 193 116 227 121 395 58 442 -166 887 169 843 635 -7 76 -3 145 9 168 29 53 17 60 -59 31 -57 -22 -63 -30 -49 -75 152 -478 -350 -908 -779 -665 l-115 65 -213 -123 c-117 -67 -286 -162 -375 -209 l-162 -87 257 -1 c228 0 263 5 315 42 l58 41 68 -41 c61 -38 97 -42 424 -42 l358 0 102 59 c359 206 523 641 398 1056 -34 114 -46 119 -146 70z" /> <path d="M445 1245 l-445 -6 0 -49 0 -50 3405 -5 3405 -5 -3405 -5 c-3390 -5 -3405 -5 -3405 -45 0 -40 13 -40 3425 -40 l3425 0 24 75 c13 41 28 89 35 105 11 28 -4688 46 -6464 25z" /> <path d="M8850 1188 c16 -40 30 -90 30 -110 0 -29 15 -38 60 -38 59 0 60 1 60 110 l0 110 -90 0 -91 0 31 -72z" /> <path d="M7768 1178 c-84 -24 -118 -65 -80 -96 21 -18 44 -15 101 12 68 32 80 32 161 3 144 -51 179 16 38 75 -75 31 -129 33 -220 6z" />
-        <path d="M8263 1156 c-59 -37 -63 -45 -36 -72 34 -33 105 1 81 39 -6 10 -1 32 13 48 30 37 24 35 -58 -15z" />
-        <path d="M7591 1021 c-102 -196 60 -441 291 -441 242 0 391 275 259 480 -36 56 -94 -25 -65 -90 29 -62 30 -129 5 -169 -26 -42 -94 22 -149 139 l-42 90 -6 -88 c-6 -76 2 -96 57 -153 92 -95 15 -157 -133 -108 -83 27 -84 39 -8 96 54 40 60 55 59 149 l-2 104 -36 -80 c-38 -85 -132 -185 -154 -164 -22 23 -13 172 13 204 20 24 20 36 0 60 -36 44 -55 37 -89 -29z" />
-        <path d="M0 890 c0 -27 390 -30 3412 -30 2720 0 3410 5 3403 25 -14 41 -6815 46 -6815 5z" />
-        <path d="M8920 890 c0 -17 18 -30 40 -30 22 0 40 13 40 30 0 17 -18 30 -40 30 -22 0 -40 -13 -40 -30z" />
-        <path d="M0 700 c0 -46 -538 -40 4215 -41 1576 0 2525 -7 2525 -19 0 -11 -119 -19 -285 -18 -157 0 -1673 -1 -3370 -1 l-3085 -1 0 -50 0 -50 3462 0 c3289 0 3462 2 3449 35 -8 19 -24 69 -37 110 l-24 75 -3425 0 c-3412 0 -3425 0 -3425 -40z" />
-        <path d="M8880 699 c0 -22 -13 -71 -28 -108 l-28 -67 88 -7 88 -7 0 115 c0 114 0 115 -60 115 -47 0 -60 -9 -60 -41z" />
-        <path d="M7462 692 c-32 -18 -40 -31 -24 -41 18 -11 14 -23 -12 -44 -29 -23 -23 -23 28 2 43 21 63 44 61 71 -2 22 -4 40 -4 39 -1 0 -22 -12 -49 -27z" />
-        <path d="M8968 437 c-8 -12 -13 -49 -12 -80 1 -37 -7 -53 -20 -44 -15 9 -16 4 -5 -15 25 -39 29 -78 8 -78 -10 0 -13 -13 -7 -28 6 -15 1 -34 -11 -41 -12 -8 -18 -20 -13 -28 5 -7 -52 -16 -125 -18 -354 -12 -381 -45 -36 -45 l253 0 0 200 c0 198 -4 222 -32 177z" />
-        <path d="M6955 366 c-19 -5 -35 -17 -35 -27 0 -11 -23 -19 -51 -19 -28 0 -46 -9 -40 -19 7 -10 -20 -25 -58 -32 -39 -7 -67 -20 -61 -28 13 -22 -89 -64 -115 -48 -12 8 -15 4 -7 -10 9 -14 2 -23 -17 -23 -17 0 -31 -10 -31 -21 0 -12 -9 -16 -20 -9 -11 7 -20 5 -20 -4 0 -9 -835 -19 -1855 -22 -2229 -6 -2145 -5 -2145 -26 0 -10 869 -18 2002 -18 l2001 0 244 144 c300 177 318 191 208 162z" />
-        <path d="M5 160 l-3 -100 1243 0 c684 0 1234 7 1224 16 -10 9 -65 54 -122 100 l-103 84 -1118 0 -1119 0 -2 -100z m175 18 c0 -12 -13 -17 -29 -11 -15 6 -32 0 -36 -13 -6 -16 -19 -13 -43 11 -33 33 -31 35 37 35 39 0 71 -10 71 -22z" />
+            <!-- Bottom Right Colors -->
+            <mask id="greenMask">
+                <rect x="0" y="50" width="100%" height="50" fill="white" />
+            </mask>
+            <path class="fill" d="M80, 110 L100, 50" stroke-width="10" stroke="#008f26" fill="#008f26" mask="url(#greenMask)" />
+            <mask id="blueMask">
+                <rect x="0" y="55" width="100%" height="45" fill="white" />x
+            </mask>
+            <path class="fill" d="M83, 110 L103, 50" stroke-width="10" stroke="#00a9bf" fill="#00a9bf" mask="url(#blueMask)" />
+            <mask id="purpleMask">
+                <rect x="0" y="60" width="100%" height="40" fill="white" />x
+            </mask>
+            <path class="fill" d="M85, 110 L105, 50" stroke-width="8" stroke="#37006e" fill="#37006e" mask="url(#purpleMask)" />
         </g>
-    </svg>
-        -->
 
+        <g id="portrait">
+            <!-- Center Colors -->
+            <path d="M80 0, L80 90, L105 105" stroke="#f2392c" fill="none" stroke-width="7" />
+            <path d="M86 0, L86 88, L108 101" stroke="#ff7700" fill="none" stroke-width="7" />
+            <path d="M92 0, L92 86, L111 97" stroke="#fff200" fill="none" stroke-width="7" />
+
+        </g>
+
+    </svg>
+
+
+    
+
+   
+
+
+
+    
 </body>
 </html>

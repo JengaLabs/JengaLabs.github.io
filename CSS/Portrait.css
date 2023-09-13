@@ -1,9 +1,14 @@
 h1 {
-    color: purple;
+    color: green;
 }
+
+
 
 /* Background */
 
-svg g#portrait {
+    
+
+
+svg g#landscape {
     display : none;
 }
